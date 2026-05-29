@@ -1,0 +1,193 @@
+﻿namespace ProyPapeleta_GUI
+{
+    partial class InfraccionMan01
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            grpDatosPolicia = new GroupBox();
+            nudPuntos = new NumericUpDown();
+            label3 = new Label();
+            label2 = new Label();
+            nudUIT = new NumericUpDown();
+            btnAgregarInfraccion = new Button();
+            btnCancelar = new Button();
+            label10 = new Label();
+            cboCalificacion = new ComboBox();
+            txtDescripcion = new TextBox();
+            label1 = new Label();
+            grpDatosPolicia.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nudPuntos).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudUIT).BeginInit();
+            SuspendLayout();
+            // 
+            // grpDatosPolicia
+            // 
+            grpDatosPolicia.Controls.Add(nudPuntos);
+            grpDatosPolicia.Controls.Add(label3);
+            grpDatosPolicia.Controls.Add(label2);
+            grpDatosPolicia.Controls.Add(nudUIT);
+            grpDatosPolicia.Controls.Add(btnAgregarInfraccion);
+            grpDatosPolicia.Controls.Add(btnCancelar);
+            grpDatosPolicia.Controls.Add(label10);
+            grpDatosPolicia.Controls.Add(cboCalificacion);
+            grpDatosPolicia.Controls.Add(txtDescripcion);
+            grpDatosPolicia.Controls.Add(label1);
+            grpDatosPolicia.Location = new Point(12, 11);
+            grpDatosPolicia.Margin = new Padding(3, 2, 3, 2);
+            grpDatosPolicia.Name = "grpDatosPolicia";
+            grpDatosPolicia.Padding = new Padding(3, 2, 3, 2);
+            grpDatosPolicia.Size = new Size(535, 218);
+            grpDatosPolicia.TabIndex = 1;
+            grpDatosPolicia.TabStop = false;
+            grpDatosPolicia.Text = "Insertar Infracción";
+            // 
+            // nudPuntos
+            // 
+            nudPuntos.Location = new Point(82, 114);
+            nudPuntos.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            nudPuntos.Name = "nudPuntos";
+            nudPuntos.Size = new Size(44, 23);
+            nudPuntos.TabIndex = 9;
+            nudPuntos.Value = new decimal(new int[] { 3, 0, 0, 0 });
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(29, 116);
+            label3.Name = "label3";
+            label3.Size = new Size(47, 15);
+            label3.TabIndex = 8;
+            label3.Text = "Puntos:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(29, 154);
+            label2.Name = "label2";
+            label2.Size = new Size(28, 15);
+            label2.TabIndex = 7;
+            label2.Text = "UIT:";
+            // 
+            // nudUIT
+            // 
+            nudUIT.Location = new Point(63, 152);
+            nudUIT.Minimum = new decimal(new int[] { 15, 0, 0, 65536 });
+            nudUIT.Name = "nudUIT";
+            nudUIT.Size = new Size(55, 23);
+            nudUIT.TabIndex = 6;
+            nudUIT.Value = new decimal(new int[] { 15, 0, 0, 65536 });
+            // 
+            // btnAgregarInfraccion
+            // 
+            btnAgregarInfraccion.Location = new Point(197, 165);
+            btnAgregarInfraccion.Margin = new Padding(3, 2, 3, 2);
+            btnAgregarInfraccion.Name = "btnAgregarInfraccion";
+            btnAgregarInfraccion.Size = new Size(93, 24);
+            btnAgregarInfraccion.TabIndex = 1;
+            btnAgregarInfraccion.Text = "Agregar";
+            btnAgregarInfraccion.UseVisualStyleBackColor = true;
+            btnAgregarInfraccion.Click += btnAgregarInfraccion_Click;
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.Location = new Point(323, 166);
+            btnCancelar.Margin = new Padding(3, 2, 3, 2);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(95, 23);
+            btnCancelar.TabIndex = 1;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(23, 76);
+            label10.Name = "label10";
+            label10.Size = new Size(72, 15);
+            label10.TabIndex = 4;
+            label10.Text = "Calificación:";
+            // 
+            // cboCalificacion
+            // 
+            cboCalificacion.FormattingEnabled = true;
+            cboCalificacion.Items.AddRange(new object[] { "--Seleccione--", "General de Policía", "", "Teniente General", "", "General", "", "Coronel", "", "Comandante", "", "Mayor", "", "Capitán", "", "Teniente", "", "Alférez", "Suboficial Superior", "", "Suboficial Brigadier", "", "Suboficial Técnico de Primera", "", "Suboficial Técnico de Segunda", "", "Suboficial Técnico de Tercera", "", "Suboficial de Primera", "", "Suboficial de Segunda", "", "Suboficial de Tercera" });
+            cboCalificacion.Location = new Point(101, 72);
+            cboCalificacion.Margin = new Padding(3, 2, 3, 2);
+            cboCalificacion.Name = "cboCalificacion";
+            cboCalificacion.Size = new Size(168, 23);
+            cboCalificacion.TabIndex = 2;
+            cboCalificacion.SelectedIndexChanged += cboCalificacion_SelectedIndexChanged;
+            // 
+            // txtDescripcion
+            // 
+            txtDescripcion.Location = new Point(162, 24);
+            txtDescripcion.Margin = new Padding(3, 2, 3, 2);
+            txtDescripcion.Name = "txtDescripcion";
+            txtDescripcion.Size = new Size(283, 23);
+            txtDescripcion.TabIndex = 1;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(23, 27);
+            label1.Name = "label1";
+            label1.Size = new Size(133, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Descripción de Sanción:";
+            // 
+            // InfraccionMan01
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(564, 241);
+            Controls.Add(grpDatosPolicia);
+            Name = "InfraccionMan01";
+            Text = "Insertar Infracción";
+            Load += InfraccionMan01_Load;
+            grpDatosPolicia.ResumeLayout(false);
+            grpDatosPolicia.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nudPuntos).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudUIT).EndInit();
+            ResumeLayout(false);
+        }
+
+        #endregion
+
+        private GroupBox grpDatosPolicia;
+        private Label label2;
+        private NumericUpDown nudUIT;
+        private Button btnAgregarInfraccion;
+        private Button btnCancelar;
+        private Label label10;
+        private ComboBox cboCalificacion;
+        private TextBox txtDescripcion;
+        private Label label1;
+        private NumericUpDown nudPuntos;
+        private Label label3;
+    }
+}

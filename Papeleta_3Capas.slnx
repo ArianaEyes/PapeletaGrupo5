@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="ProyPapeletaADO/ProyPapeletaADO.csproj" />
+  <Project Path="ProyPapeletaBE/ProyPapeletaBE.csproj" />
+  <Project Path="ProyPapeletaBL/ProyPapeletaBL.csproj" />
+  <Project Path="ProyPapeleta_GUI/ProyPapeleta_GUI.csproj" Id="180eaeff-00e4-490c-868b-0a424f5ef0fe" />
+</Solution>
