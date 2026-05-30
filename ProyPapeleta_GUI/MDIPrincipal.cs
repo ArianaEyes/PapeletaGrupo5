@@ -39,6 +39,14 @@ namespace ProyPapeleta_GUI
 
         private void policíasToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f is PoliciaMan05)
+                {
+                    f.Activate();
+                    return;
+                }
+            }
             //Instancia el policíasMan01
             PoliciaMan05 poli05 = new PoliciaMan05();
             poli05.MdiParent = this;
@@ -48,6 +56,14 @@ namespace ProyPapeleta_GUI
 
         private void infractoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f is InfractorMan03)
+                {
+                    f.Activate();
+                    return;
+                }
+            }
             InfractorMan03 infr03 = new InfractorMan03();
             infr03.MdiParent = this;
             infr03.Show();
@@ -63,7 +79,15 @@ namespace ProyPapeleta_GUI
 
         private void consultarPorInfractorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            InfractorMan05 infr05 = new InfractorMan05();
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f is InfractorMan04)
+                {
+                    f.Activate();
+                    return;
+                }
+            }
+            InfractorMan04 infr05 = new InfractorMan04();
             infr05.MdiParent = this;
             infr05.Show();
         }
@@ -75,6 +99,14 @@ namespace ProyPapeleta_GUI
 
         private void infraccionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f is InfraccionMan05)
+                {
+                    f.Activate();
+                    return;
+                }
+            }
             InfraccionMan05 infracc05 = new InfraccionMan05();
             infracc05.MdiParent = this;
             infracc05.Show();
@@ -82,6 +114,14 @@ namespace ProyPapeleta_GUI
 
         private void consultarPorInfracciónToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f is InfraccionMan05)
+                {
+                    f.Activate();
+                    return;
+                }
+            }
             InfraccionMan03 infr03 = new InfraccionMan03();
             infr03.MdiParent = this;
             infr03.Show();

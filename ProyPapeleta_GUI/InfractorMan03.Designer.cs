@@ -70,10 +70,6 @@
             dtgInfractor.TabIndex = 3;
             dtgInfractor.CellContentDoubleClick += dtgInfractor_CellDoubleClick;
             // 
-            // infractorBLBindingSource
-            // 
-            infractorBLBindingSource.DataSource = typeof(ProyPapeletaBL.InfractorBL);
-            // 
             // btnEliminar
             // 
             btnEliminar.Location = new Point(689, 728);
@@ -136,6 +132,7 @@
             Controls.Add(txtFiltroo);
             Controls.Add(label1);
             Name = "InfractorMan03";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "InfractorMan03";
             Load += InfractorMan03_Load_1;
             ((System.ComponentModel.ISupportInitialize)dtgInfractor).EndInit();
