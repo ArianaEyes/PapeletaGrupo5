@@ -35,7 +35,6 @@
             label3 = new Label();
             btnSalir = new Button();
             btnEliminar = new Button();
-            btnRefrescar = new Button();
             btnInsertar = new Button();
             ((System.ComponentModel.ISupportInitialize)dtgPolicia).BeginInit();
             SuspendLayout();
@@ -103,7 +102,7 @@
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(502, 479);
+            btnEliminar.Location = new Point(200, 439);
             btnEliminar.Margin = new Padding(3, 2, 3, 2);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(131, 35);
@@ -112,20 +111,9 @@
             btnEliminar.UseVisualStyleBackColor = true;
             btnEliminar.Click += btnEliminar_Click;
             // 
-            // btnRefrescar
-            // 
-            btnRefrescar.Location = new Point(23, 430);
-            btnRefrescar.Margin = new Padding(3, 2, 3, 2);
-            btnRefrescar.Name = "btnRefrescar";
-            btnRefrescar.Size = new Size(131, 35);
-            btnRefrescar.TabIndex = 11;
-            btnRefrescar.Text = "Refrescar";
-            btnRefrescar.UseVisualStyleBackColor = true;
-            btnRefrescar.Click += btnRefrescar_Click;
-            // 
             // btnInsertar
             // 
-            btnInsertar.Location = new Point(237, 479);
+            btnInsertar.Location = new Point(31, 439);
             btnInsertar.Margin = new Padding(3, 2, 3, 2);
             btnInsertar.Name = "btnInsertar";
             btnInsertar.Size = new Size(123, 35);
@@ -144,7 +132,6 @@
             Controls.Add(label3);
             Controls.Add(btnSalir);
             Controls.Add(btnEliminar);
-            Controls.Add(btnRefrescar);
             Controls.Add(dtgPolicia);
             Controls.Add(txtFiltrooo);
             Controls.Add(label1);
@@ -166,7 +153,6 @@
         private Label label3;
         private Button btnSalir;
         private Button btnEliminar;
-        private Button btnRefrescar;
         private Button btnInsertar;
     }
 }
