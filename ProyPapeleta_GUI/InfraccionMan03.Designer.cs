@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             grpDatosPolicia = new GroupBox();
+            lblUIT = new Label();
+            lblPuntos = new Label();
             lblCalificacion = new Label();
             lblDescripcion = new Label();
             txtCod = new TextBox();
@@ -39,13 +41,15 @@
             btnCancelar = new Button();
             label10 = new Label();
             label1 = new Label();
-            lblPuntos = new Label();
-            lblUIT = new Label();
+            chkActivo = new CheckBox();
+            label6 = new Label();
             grpDatosPolicia.SuspendLayout();
             SuspendLayout();
             // 
             // grpDatosPolicia
             // 
+            grpDatosPolicia.Controls.Add(chkActivo);
+            grpDatosPolicia.Controls.Add(label6);
             grpDatosPolicia.Controls.Add(lblUIT);
             grpDatosPolicia.Controls.Add(lblPuntos);
             grpDatosPolicia.Controls.Add(lblCalificacion);
@@ -67,6 +71,22 @@
             grpDatosPolicia.TabStop = false;
             grpDatosPolicia.Text = "Consultar Infracción";
             grpDatosPolicia.Enter += grpDatosPolicia_Enter;
+            // 
+            // lblUIT
+            // 
+            lblUIT.BorderStyle = BorderStyle.FixedSingle;
+            lblUIT.Location = new Point(59, 188);
+            lblUIT.Name = "lblUIT";
+            lblUIT.Size = new Size(51, 23);
+            lblUIT.TabIndex = 15;
+            // 
+            // lblPuntos
+            // 
+            lblPuntos.BorderStyle = BorderStyle.FixedSingle;
+            lblPuntos.Location = new Point(82, 140);
+            lblPuntos.Name = "lblPuntos";
+            lblPuntos.Size = new Size(51, 23);
+            lblPuntos.TabIndex = 14;
             // 
             // lblCalificacion
             // 
@@ -159,21 +179,25 @@
             label1.TabIndex = 0;
             label1.Text = "Descripción de Sanción:";
             // 
-            // lblPuntos
+            // chkActivo
             // 
-            lblPuntos.BorderStyle = BorderStyle.FixedSingle;
-            lblPuntos.Location = new Point(82, 140);
-            lblPuntos.Name = "lblPuntos";
-            lblPuntos.Size = new Size(51, 23);
-            lblPuntos.TabIndex = 14;
+            chkActivo.AllowDrop = true;
+            chkActivo.Location = new Point(376, 102);
+            chkActivo.Margin = new Padding(3, 2, 3, 2);
+            chkActivo.Name = "chkActivo";
+            chkActivo.Size = new Size(110, 22);
+            chkActivo.TabIndex = 17;
+            chkActivo.Text = "Activo";
+            chkActivo.UseVisualStyleBackColor = true;
             // 
-            // lblUIT
+            // label6
             // 
-            lblUIT.BorderStyle = BorderStyle.FixedSingle;
-            lblUIT.Location = new Point(59, 188);
-            lblUIT.Name = "lblUIT";
-            lblUIT.Size = new Size(51, 23);
-            lblUIT.TabIndex = 15;
+            label6.AutoSize = true;
+            label6.Location = new Point(316, 104);
+            label6.Name = "label6";
+            label6.Size = new Size(45, 15);
+            label6.TabIndex = 16;
+            label6.Text = "Estado:";
             // 
             // InfraccionMan03
             // 
@@ -204,5 +228,7 @@
         private TextBox txtCod;
         private Label lblUIT;
         private Label lblPuntos;
+        private CheckBox chkActivo;
+        private Label label6;
     }
 }

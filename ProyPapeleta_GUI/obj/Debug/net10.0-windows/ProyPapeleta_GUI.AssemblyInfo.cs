@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProyPapeleta_GUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+816547d821b0dd45cffe1d002bf04371b3c824e1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f95ca3a13bfa6208e35c59d0f8f510ba0bd3d4c8")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProyPapeleta_GUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProyPapeleta_GUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
