@@ -39,6 +39,8 @@
             cboCalificacion = new ComboBox();
             txtDescripcion = new TextBox();
             label1 = new Label();
+            chkActivo = new CheckBox();
+            label6 = new Label();
             grpDatosPolicia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nudPuntos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudUIT).BeginInit();
@@ -46,6 +48,8 @@
             // 
             // grpDatosPolicia
             // 
+            grpDatosPolicia.Controls.Add(chkActivo);
+            grpDatosPolicia.Controls.Add(label6);
             grpDatosPolicia.Controls.Add(nudPuntos);
             grpDatosPolicia.Controls.Add(label3);
             grpDatosPolicia.Controls.Add(label2);
@@ -160,6 +164,28 @@
             label1.TabIndex = 0;
             label1.Text = "Descripción de Sanción:";
             // 
+            // chkActivo
+            // 
+            chkActivo.AllowDrop = true;
+            chkActivo.Checked = true;
+            chkActivo.CheckState = CheckState.Checked;
+            chkActivo.Location = new Point(364, 72);
+            chkActivo.Margin = new Padding(3, 2, 3, 2);
+            chkActivo.Name = "chkActivo";
+            chkActivo.Size = new Size(110, 22);
+            chkActivo.TabIndex = 16;
+            chkActivo.Text = "Activo";
+            chkActivo.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(304, 74);
+            label6.Name = "label6";
+            label6.Size = new Size(45, 15);
+            label6.TabIndex = 15;
+            label6.Text = "Estado:";
+            // 
             // InfraccionMan01
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -189,5 +215,7 @@
         private Label label1;
         private NumericUpDown nudPuntos;
         private Label label3;
+        private CheckBox chkActivo;
+        private Label label6;
     }
 }

@@ -143,7 +143,7 @@
             Controls.Add(label1);
             Controls.Add(dtgInfraccion);
             Name = "InfraccionMan05";
-            Text = "Actualizar Infracción";
+            Text = "Infraccion";
             Load += InfraccionMan05_Load;
             ((System.ComponentModel.ISupportInitialize)dtgInfraccion).EndInit();
             ResumeLayout(false);

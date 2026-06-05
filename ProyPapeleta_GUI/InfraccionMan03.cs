@@ -50,7 +50,8 @@ namespace ProyPapeleta_GUI
                 lblCalificacion.Text = objInfraccionBE.CALIFICACION;
                 lblPuntos.Text = objInfraccionBE.PUNTOS.ToString();
                 lblUIT.Text = objInfraccionBE.UIT.ToString();
-         
+                lblEstado.Text = objInfraccionBE.ESTADO; 
+
             }
             catch (Exception ex)
             {

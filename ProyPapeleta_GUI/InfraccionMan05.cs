@@ -29,6 +29,9 @@ namespace ProyPapeleta_GUI
                 {
                     // Se construye el DataView con el datatable del método ListarInfraccion
                     dtv = new DataView(objInfraccionBL.ListarInfraccion());
+                    dtgInfraccion.DataSource = dtv; // asignar ANTES de formatear
+                    FormatearGrid();
+
                 }
 
                 // Filtramos por el campo real de tu SP -> CODIGO
@@ -82,34 +85,35 @@ namespace ProyPapeleta_GUI
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
-        //private void FormatearGrid()
-        //{
-        //    if (dtgInfraccion.Columns.Count > 0)
-        //    {
-        //        // Configuraciones estéticas por defecto (Igualito a los anteriores)
-        //        dtgInfraccion.AllowUserToAddRows = false;
-        //        dtgInfraccion.AllowUserToDeleteRows = false;
-        //        dtgInfraccion.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-        //        dtgInfraccion.RowHeadersVisible = false;
-        //        dtgInfraccion.ReadOnly = true;
-        //        dtgInfraccion.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        private void FormatearGrid()
+        {
+            if (dtgInfraccion.Columns.Count > 0)
+            {
+                // Configuraciones estéticas por defecto (Igualito a los anteriores)
+                dtgInfraccion.AllowUserToAddRows = false;
+                dtgInfraccion.AllowUserToDeleteRows = false;
+                dtgInfraccion.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dtgInfraccion.RowHeadersVisible = false;
+                dtgInfraccion.ReadOnly = true;
+                dtgInfraccion.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
-        //        dtgInfraccion.Columns["COD_INFRACCION"].HeaderText = "Código";
-        //        dtgInfraccion.Columns["COD_INFRACCION"].Width = 70;
-        //        dtgInfraccion.Columns["DESCRIPCION_SANCION"].HeaderText = "Descripción de la Infracción";
-        //        dtgInfraccion.Columns["CALIFICACION"].HeaderText = "Calificación";
-        //        dtgInfraccion.Columns["PUNTOS"].HeaderText = "Puntos";
-        //        dtgInfraccion.Columns["UIT"].HeaderText = "UIT (%)";
+                dtgInfraccion.Columns["COD_INFRACCION"].HeaderText = "Código";
+                dtgInfraccion.Columns["COD_INFRACCION"].Width = 70;
+                dtgInfraccion.Columns["DESCRIPCION_SANCION"].HeaderText = "Descripción de la Infracción";
+                dtgInfraccion.Columns["CALIFICACION"].HeaderText = "Calificación";
+                dtgInfraccion.Columns["PUNTOS"].HeaderText = "Puntos";
+                dtgInfraccion.Columns["UIT"].HeaderText = "UIT (%)";
+                
 
-        //        if (dtgInfraccion.Columns.Contains("FEC_REGISTRO")) dtgInfraccion.Columns["FEC_REGISTRO"].Visible = false;
-        //        if (dtgInfraccion.Columns.Contains("USU_REGISTRO")) dtgInfraccion.Columns["USU_REGISTRO"].Visible = false;
-        //        if (dtgInfraccion.Columns.Contains("FEC_ULT_MODIFICACION")) dtgInfraccion.Columns["FEC_ULT_MODIFICACION"].Visible = false;
-        //        if (dtgInfraccion.Columns.Contains("USU_ULT_MODIFICACION")) dtgInfraccion.Columns["USU_ULT_MODIFICACION"].Visible = false;
+                if (dtgInfraccion.Columns.Contains("FEC_REGISTRO")) dtgInfraccion.Columns["FEC_REGISTRO"].Visible = false;
+                if (dtgInfraccion.Columns.Contains("USU_REGISTRO")) dtgInfraccion.Columns["USU_REGISTRO"].Visible = false;
+                if (dtgInfraccion.Columns.Contains("FEC_ULT_MODIFICACION")) dtgInfraccion.Columns["FEC_ULT_MODIFICACION"].Visible = false;
+                if (dtgInfraccion.Columns.Contains("USU_ULT_MODIFICACION")) dtgInfraccion.Columns["USU_ULT_MODIFICACION"].Visible = false;
 
-        //        //estiloxd
-        //        dtgInfraccion.AlternatingRowsDefaultCellStyle.BackColor = Color.AliceBlue;
-        //    }
-        //}
+                //estiloxd
+                dtgInfraccion.AlternatingRowsDefaultCellStyle.BackColor = Color.AliceBlue;
+            }
+        }
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {

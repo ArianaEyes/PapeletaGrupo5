@@ -40,6 +40,7 @@ namespace ProyPapeleta_GUI
                 lblCalificacion.Text = objBE.CALIFICACION;
                 lblPuntos.Text = objBE.PUNTOS.ToString();
                 lblUIT.Text = objBE.UIT.ToString();
+                lblEstado.Text = objBE.ESTADO;
 
 
             }

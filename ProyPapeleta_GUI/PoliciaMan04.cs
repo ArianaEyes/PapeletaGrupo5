@@ -61,7 +61,7 @@ namespace ProyPapeleta_GUI
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -103,6 +103,11 @@ namespace ProyPapeleta_GUI
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+        }
+
+        private void grpDatosPolicia_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             grpDatosPolicia = new GroupBox();
+            lblUIT = new Label();
+            lblPuntos = new Label();
+            lblCalificacion = new Label();
+            txtCod = new TextBox();
             lblDescripcion = new Label();
             label4 = new Label();
             label3 = new Label();
@@ -37,15 +41,15 @@
             btnCancelar = new Button();
             label10 = new Label();
             label1 = new Label();
-            txtCod = new TextBox();
-            lblCalificacion = new Label();
-            lblPuntos = new Label();
-            lblUIT = new Label();
+            lblEstado = new Label();
+            label6 = new Label();
             grpDatosPolicia.SuspendLayout();
             SuspendLayout();
             // 
             // grpDatosPolicia
             // 
+            grpDatosPolicia.Controls.Add(lblEstado);
+            grpDatosPolicia.Controls.Add(label6);
             grpDatosPolicia.Controls.Add(lblUIT);
             grpDatosPolicia.Controls.Add(lblPuntos);
             grpDatosPolicia.Controls.Add(lblCalificacion);
@@ -66,6 +70,38 @@
             grpDatosPolicia.TabIndex = 5;
             grpDatosPolicia.TabStop = false;
             grpDatosPolicia.Text = "Eliminar Infraccion";
+            // 
+            // lblUIT
+            // 
+            lblUIT.BorderStyle = BorderStyle.FixedSingle;
+            lblUIT.Location = new Point(59, 186);
+            lblUIT.Name = "lblUIT";
+            lblUIT.Size = new Size(52, 23);
+            lblUIT.TabIndex = 16;
+            // 
+            // lblPuntos
+            // 
+            lblPuntos.BorderStyle = BorderStyle.FixedSingle;
+            lblPuntos.Location = new Point(81, 138);
+            lblPuntos.Name = "lblPuntos";
+            lblPuntos.Size = new Size(52, 23);
+            lblPuntos.TabIndex = 15;
+            // 
+            // lblCalificacion
+            // 
+            lblCalificacion.BorderStyle = BorderStyle.FixedSingle;
+            lblCalificacion.Location = new Point(115, 100);
+            lblCalificacion.Name = "lblCalificacion";
+            lblCalificacion.Size = new Size(216, 23);
+            lblCalificacion.TabIndex = 14;
+            // 
+            // txtCod
+            // 
+            txtCod.Location = new Point(81, 21);
+            txtCod.Margin = new Padding(2, 1, 2, 1);
+            txtCod.Name = "txtCod";
+            txtCod.Size = new Size(110, 23);
+            txtCod.TabIndex = 13;
             // 
             // lblDescripcion
             // 
@@ -142,37 +178,22 @@
             label1.TabIndex = 0;
             label1.Text = "Descripción de Sanción:";
             // 
-            // txtCod
+            // lblEstado
             // 
-            txtCod.Location = new Point(81, 21);
-            txtCod.Margin = new Padding(2, 1, 2, 1);
-            txtCod.Name = "txtCod";
-            txtCod.Size = new Size(110, 23);
-            txtCod.TabIndex = 13;
+            lblEstado.BorderStyle = BorderStyle.FixedSingle;
+            lblEstado.Location = new Point(413, 138);
+            lblEstado.Name = "lblEstado";
+            lblEstado.Size = new Size(90, 23);
+            lblEstado.TabIndex = 11;
             // 
-            // lblCalificacion
+            // label6
             // 
-            lblCalificacion.BorderStyle = BorderStyle.FixedSingle;
-            lblCalificacion.Location = new Point(115, 100);
-            lblCalificacion.Name = "lblCalificacion";
-            lblCalificacion.Size = new Size(216, 23);
-            lblCalificacion.TabIndex = 14;
-            // 
-            // lblPuntos
-            // 
-            lblPuntos.BorderStyle = BorderStyle.FixedSingle;
-            lblPuntos.Location = new Point(81, 138);
-            lblPuntos.Name = "lblPuntos";
-            lblPuntos.Size = new Size(52, 23);
-            lblPuntos.TabIndex = 15;
-            // 
-            // lblUIT
-            // 
-            lblUIT.BorderStyle = BorderStyle.FixedSingle;
-            lblUIT.Location = new Point(59, 186);
-            lblUIT.Name = "lblUIT";
-            lblUIT.Size = new Size(52, 23);
-            lblUIT.TabIndex = 16;
+            label6.AutoSize = true;
+            label6.Location = new Point(358, 140);
+            label6.Name = "label6";
+            label6.Size = new Size(45, 15);
+            label6.TabIndex = 10;
+            label6.Text = "Estado:";
             // 
             // InfraccionMan04
             // 
@@ -203,5 +224,7 @@
         private Label lblPuntos;
         private Label lblCalificacion;
         private TextBox txtCod;
+        private Label lblEstado;
+        private Label label6;
     }
 }

@@ -70,6 +70,7 @@ namespace ProyPapeleta_GUI
                 objInfraccionBE.CALIFICACION = cboCalificacion.Text;
                 objInfraccionBE.PUNTOS = (int)nudPuntos.Value;
                 objInfraccionBE.UIT = nudUIT.Value;
+                objInfraccionBE.ESTADO = "A";
                 objInfraccionBE.USU_REGISTRO = "ADMIN";
 
                 InfraccionADO objInfraccionADO = new InfraccionADO();

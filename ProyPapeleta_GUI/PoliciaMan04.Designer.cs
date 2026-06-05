@@ -99,6 +99,7 @@
             grpDatosPolicia.TabIndex = 3;
             grpDatosPolicia.TabStop = false;
             grpDatosPolicia.Text = "Eliminar Policia";
+            grpDatosPolicia.Enter += grpDatosPolicia_Enter;
             // 
             // btnEliminar
             // 
