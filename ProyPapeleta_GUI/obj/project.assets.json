@@ -1,7 +1,7 @@
 {
-  "version": 4,
+  "version": 3,
   "targets": {
-    "net10.0-windows": {
+    "net10.0-windows7.0": {
       "Microsoft.Bcl.Cryptography/9.0.13": {
         "type": "package",
         "compile": {
@@ -1568,7 +1568,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net10.0-windows": [
+    "net10.0-windows7.0": [
       "ProyPapeletaBE >= 1.0.0",
       "ProyPapeletaBL >= 1.0.0",
       "System.Configuration.ConfigurationManager >= 10.0.8",
@@ -1576,23 +1576,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PC\\.nuget\\packages\\": {},
+    "C:\\Users\\vibe coder\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PC\\Desktop\\ISIL\\5444\\Papeleta_3Capas\\ProyPapeleta_GUI\\ProyPapeleta_GUI.csproj",
+      "projectUniqueName": "C:\\Users\\vibe coder\\Downloads\\3ER CICLO\\DESARROLLO DE APPS\\pa3\\kevin0606\\VKEVIN\\ProyPapeleta_GUI\\ProyPapeleta_GUI.csproj",
       "projectName": "ProyPapeleta_GUI",
-      "projectPath": "C:\\Users\\PC\\Desktop\\ISIL\\5444\\Papeleta_3Capas\\ProyPapeleta_GUI\\ProyPapeleta_GUI.csproj",
-      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PC\\Desktop\\ISIL\\5444\\Papeleta_3Capas\\ProyPapeleta_GUI\\obj\\",
+      "projectPath": "C:\\Users\\vibe coder\\Downloads\\3ER CICLO\\DESARROLLO DE APPS\\pa3\\kevin0606\\VKEVIN\\ProyPapeleta_GUI\\ProyPapeleta_GUI.csproj",
+      "packagesPath": "C:\\Users\\vibe coder\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\vibe coder\\Downloads\\3ER CICLO\\DESARROLLO DE APPS\\pa3\\kevin0606\\VKEVIN\\ProyPapeleta_GUI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vibe coder\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1601,18 +1601,18 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net10.0-windows": {
-          "framework": "net10.0-windows7.0",
+        "net10.0-windows7.0": {
           "targetAlias": "net10.0-windows",
           "projectReferences": {
-            "C:\\Users\\PC\\Desktop\\ISIL\\5444\\Papeleta_3Capas\\ProyPapeletaBE\\ProyPapeletaBE.csproj": {
-              "projectPath": "C:\\Users\\PC\\Desktop\\ISIL\\5444\\Papeleta_3Capas\\ProyPapeletaBE\\ProyPapeletaBE.csproj"
+            "C:\\Users\\vibe coder\\Downloads\\3ER CICLO\\DESARROLLO DE APPS\\pa3\\kevin0606\\VKEVIN\\ProyPapeletaBE\\ProyPapeletaBE.csproj": {
+              "projectPath": "C:\\Users\\vibe coder\\Downloads\\3ER CICLO\\DESARROLLO DE APPS\\pa3\\kevin0606\\VKEVIN\\ProyPapeletaBE\\ProyPapeletaBE.csproj"
             },
-            "C:\\Users\\PC\\Desktop\\ISIL\\5444\\Papeleta_3Capas\\ProyPapeletaBL\\ProyPapeletaBL.csproj": {
-              "projectPath": "C:\\Users\\PC\\Desktop\\ISIL\\5444\\Papeleta_3Capas\\ProyPapeletaBL\\ProyPapeletaBL.csproj"
+            "C:\\Users\\vibe coder\\Downloads\\3ER CICLO\\DESARROLLO DE APPS\\pa3\\kevin0606\\VKEVIN\\ProyPapeletaBL\\ProyPapeletaBL.csproj": {
+              "projectPath": "C:\\Users\\vibe coder\\Downloads\\3ER CICLO\\DESARROLLO DE APPS\\pa3\\kevin0606\\VKEVIN\\ProyPapeletaBL\\ProyPapeletaBL.csproj"
             }
           }
         }
@@ -1627,11 +1627,10 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.300"
+      "SdkAnalysisLevel": "10.0.200"
     },
     "frameworks": {
-      "net10.0-windows": {
-        "framework": "net10.0-windows7.0",
+      "net10.0-windows7.0": {
         "targetAlias": "net10.0-windows",
         "dependencies": {
           "System.Configuration.ConfigurationManager": {
@@ -1662,7 +1661,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -1961,7 +1960,7 @@
       "code": "NU1510",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "PackageReference System.Configuration.ConfigurationManager no se eliminará. Considere la posibilidad de quitar este paquete de las dependencias, ya que es probable que no sea necesario.",
+      "message": "PackageReference System.Configuration.ConfigurationManager will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.",
       "libraryId": "System.Configuration.ConfigurationManager",
       "targetGraphs": [
         "net10.0-windows7.0"

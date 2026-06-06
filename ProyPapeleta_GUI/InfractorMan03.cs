@@ -145,7 +145,7 @@ namespace ProyPapeleta_GUI
         {
             if (dtv != null)
             {
-                dtv.RowFilter = $"COD_INFRACTOR LIKE '%{txtFiltroo.Text.Trim()}%'";
+                dtv.RowFilter = $"APE_PATERNO LIKE '%{txtFiltroo.Text.Trim()}%'";
                 MostrarCantidadRegistros();
             }
         }

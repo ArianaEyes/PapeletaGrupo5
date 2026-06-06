@@ -75,7 +75,9 @@
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(116, 23);
-            txtPassword.TabIndex = 5;
+            txtPassword.TabIndex = 2;
+            txtPassword.TextChanged += txtPassword_TextChanged;
+            txtPassword.KeyDown += txtPassword_KeyDown;
             // 
             // label2
             // 

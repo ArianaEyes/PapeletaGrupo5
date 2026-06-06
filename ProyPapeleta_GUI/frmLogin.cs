@@ -122,6 +122,8 @@ namespace ProyPapeleta_GUI
             // Para al pulsar Enter acceder al MDI...
             if (e.KeyCode == Keys.Enter)
             {
+                e.SuppressKeyPress = true;
+
                 btnAceptar.PerformClick();
 
             }
@@ -131,5 +133,21 @@ namespace ProyPapeleta_GUI
         {
 
         }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+
+                e.SuppressKeyPress = true;
+
+                btnAceptar.PerformClick();
+        }
+    }
     }
 }

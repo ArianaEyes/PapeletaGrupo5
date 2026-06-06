@@ -96,7 +96,6 @@ namespace ProyPapeleta_GUI
                 dtgPolicia.Columns["MATERNO"].HeaderText = "Apellido Materno";
                 dtgPolicia.Columns["NOMBRE"].HeaderText = "Nombres";
                 dtgPolicia.Columns["DNI"].HeaderText = "DNI";
-                dtgPolicia.Columns["GRADO"].HeaderText = "Grado";
                 dtgPolicia.Columns["SEXO"].HeaderText = "Sexo";
                 dtgPolicia.Columns["COD_UBIGEO"].HeaderText = "Cód. Ubigeo";
                 dtgPolicia.Columns["DEPARTAMENTO"].HeaderText = "Departamento";
@@ -177,7 +176,7 @@ namespace ProyPapeleta_GUI
         {
             if (dtv != null)
             {
-                dtv.RowFilter = $"COD_POLICIA LIKE '%{txtFiltrooo.Text.Trim()}%'";
+                dtv.RowFilter = $"PATERNO LIKE '%{txtFiltrooo.Text.Trim()}%'";
                 MostrarCantidadRegistros();
             }
         }

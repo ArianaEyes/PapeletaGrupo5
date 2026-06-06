@@ -143,6 +143,7 @@
             Controls.Add(label1);
             Controls.Add(dtgInfraccion);
             Name = "InfraccionMan05";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Actualizar Infracción";
             Load += InfraccionMan05_Load;
             ((System.ComponentModel.ISupportInitialize)dtgInfraccion).EndInit();

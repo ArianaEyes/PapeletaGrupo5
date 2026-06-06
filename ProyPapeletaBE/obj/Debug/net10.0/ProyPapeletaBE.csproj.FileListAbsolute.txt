@@ -166,3 +166,29 @@ C:\Users\vibe coder\Downloads\V8 APPS\Papeleta_3Capas\ProyPapeletaBE\obj\Debug\n
 C:\Users\vibe coder\Downloads\V8 APPS\Papeleta_3Capas\ProyPapeletaBE\obj\Debug\net10.0\refint\ProyPapeletaBE.dll
 C:\Users\vibe coder\Downloads\V8 APPS\Papeleta_3Capas\ProyPapeletaBE\obj\Debug\net10.0\ProyPapeletaBE.pdb
 C:\Users\vibe coder\Downloads\V8 APPS\Papeleta_3Capas\ProyPapeletaBE\obj\Debug\net10.0\ref\ProyPapeletaBE.dll
+C:\Users\vibe coder\Downloads\3ER CICLO\DESARROLLO DE APPS\pa3\VKEVIN\ProyPapeletaBE\bin\Debug\net10.0\ProyPapeletaBE.deps.json
+C:\Users\vibe coder\Downloads\3ER CICLO\DESARROLLO DE APPS\pa3\VKEVIN\ProyPapeletaBE\bin\Debug\net10.0\ProyPapeletaBE.dll
+C:\Users\vibe coder\Downloads\3ER CICLO\DESARROLLO DE APPS\pa3\VKEVIN\ProyPapeletaBE\bin\Debug\net10.0\ProyPapeletaBE.pdb
+C:\Users\vibe coder\Downloads\3ER CICLO\DESARROLLO DE APPS\pa3\VKEVIN\ProyPapeletaBE\obj\Debug\net10.0\ProyPapeletaBE.csproj.AssemblyReference.cache
+C:\Users\vibe coder\Downloads\3ER CICLO\DESARROLLO DE APPS\pa3\VKEVIN\ProyPapeletaBE\obj\Debug\net10.0\ProyPapeletaBE.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vibe coder\Downloads\3ER CICLO\DESARROLLO DE APPS\pa3\VKEVIN\ProyPapeletaBE\obj\Debug\net10.0\ProyPapeletaBE.AssemblyInfoInputs.cache
+C:\Users\vibe coder\Downloads\3ER CICLO\DESARROLLO DE APPS\pa3\VKEVIN\ProyPapeletaBE\obj\Debug\net10.0\ProyPapeletaBE.AssemblyInfo.cs
+C:\Users\vibe coder\Downloads\3ER CICLO\DESARROLLO DE APPS\pa3\VKEVIN\ProyPapeletaBE\obj\Debug\net10.0\ProyPapeletaBE.csproj.CoreCompileInputs.cache
+C:\Users\vibe coder\Downloads\3ER CICLO\DESARROLLO DE APPS\pa3\VKEVIN\ProyPapeletaBE\obj\Debug\net10.0\ProyPapeletaBE.sourcelink.json
+C:\Users\vibe coder\Downloads\3ER CICLO\DESARROLLO DE APPS\pa3\VKEVIN\ProyPapeletaBE\obj\Debug\net10.0\ProyPapeletaBE.dll
+C:\Users\vibe coder\Downloads\3ER CICLO\DESARROLLO DE APPS\pa3\VKEVIN\ProyPapeletaBE\obj\Debug\net10.0\refint\ProyPapeletaBE.dll
+C:\Users\vibe coder\Downloads\3ER CICLO\DESARROLLO DE APPS\pa3\VKEVIN\ProyPapeletaBE\obj\Debug\net10.0\ProyPapeletaBE.pdb
+C:\Users\vibe coder\Downloads\3ER CICLO\DESARROLLO DE APPS\pa3\VKEVIN\ProyPapeletaBE\obj\Debug\net10.0\ref\ProyPapeletaBE.dll
+C:\Users\vibe coder\Downloads\3ER CICLO\DESARROLLO DE APPS\pa3\kevin0606\VKEVIN\ProyPapeletaBE\bin\Debug\net10.0\ProyPapeletaBE.deps.json
+C:\Users\vibe coder\Downloads\3ER CICLO\DESARROLLO DE APPS\pa3\kevin0606\VKEVIN\ProyPapeletaBE\bin\Debug\net10.0\ProyPapeletaBE.dll
+C:\Users\vibe coder\Downloads\3ER CICLO\DESARROLLO DE APPS\pa3\kevin0606\VKEVIN\ProyPapeletaBE\bin\Debug\net10.0\ProyPapeletaBE.pdb
+C:\Users\vibe coder\Downloads\3ER CICLO\DESARROLLO DE APPS\pa3\kevin0606\VKEVIN\ProyPapeletaBE\obj\Debug\net10.0\ProyPapeletaBE.csproj.AssemblyReference.cache
+C:\Users\vibe coder\Downloads\3ER CICLO\DESARROLLO DE APPS\pa3\kevin0606\VKEVIN\ProyPapeletaBE\obj\Debug\net10.0\ProyPapeletaBE.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vibe coder\Downloads\3ER CICLO\DESARROLLO DE APPS\pa3\kevin0606\VKEVIN\ProyPapeletaBE\obj\Debug\net10.0\ProyPapeletaBE.AssemblyInfoInputs.cache
+C:\Users\vibe coder\Downloads\3ER CICLO\DESARROLLO DE APPS\pa3\kevin0606\VKEVIN\ProyPapeletaBE\obj\Debug\net10.0\ProyPapeletaBE.AssemblyInfo.cs
+C:\Users\vibe coder\Downloads\3ER CICLO\DESARROLLO DE APPS\pa3\kevin0606\VKEVIN\ProyPapeletaBE\obj\Debug\net10.0\ProyPapeletaBE.csproj.CoreCompileInputs.cache
+C:\Users\vibe coder\Downloads\3ER CICLO\DESARROLLO DE APPS\pa3\kevin0606\VKEVIN\ProyPapeletaBE\obj\Debug\net10.0\ProyPapeletaBE.sourcelink.json
+C:\Users\vibe coder\Downloads\3ER CICLO\DESARROLLO DE APPS\pa3\kevin0606\VKEVIN\ProyPapeletaBE\obj\Debug\net10.0\ProyPapeletaBE.dll
+C:\Users\vibe coder\Downloads\3ER CICLO\DESARROLLO DE APPS\pa3\kevin0606\VKEVIN\ProyPapeletaBE\obj\Debug\net10.0\refint\ProyPapeletaBE.dll
+C:\Users\vibe coder\Downloads\3ER CICLO\DESARROLLO DE APPS\pa3\kevin0606\VKEVIN\ProyPapeletaBE\obj\Debug\net10.0\ProyPapeletaBE.pdb
+C:\Users\vibe coder\Downloads\3ER CICLO\DESARROLLO DE APPS\pa3\kevin0606\VKEVIN\ProyPapeletaBE\obj\Debug\net10.0\ref\ProyPapeletaBE.dll

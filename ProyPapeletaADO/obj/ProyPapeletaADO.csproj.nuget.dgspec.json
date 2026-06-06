@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PC\\Desktop\\ISIL\\5444\\Papeleta_3Capas\\ProyPapeletaADO\\ProyPapeletaADO.csproj": {}
+    "C:\\Users\\vibe coder\\Downloads\\3ER CICLO\\DESARROLLO DE APPS\\pa3\\kevin0606\\VKEVIN\\ProyPapeletaADO\\ProyPapeletaADO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PC\\Desktop\\ISIL\\5444\\Papeleta_3Capas\\ProyPapeletaADO\\ProyPapeletaADO.csproj": {
+    "C:\\Users\\vibe coder\\Downloads\\3ER CICLO\\DESARROLLO DE APPS\\pa3\\kevin0606\\VKEVIN\\ProyPapeletaADO\\ProyPapeletaADO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\ISIL\\5444\\Papeleta_3Capas\\ProyPapeletaADO\\ProyPapeletaADO.csproj",
+        "projectUniqueName": "C:\\Users\\vibe coder\\Downloads\\3ER CICLO\\DESARROLLO DE APPS\\pa3\\kevin0606\\VKEVIN\\ProyPapeletaADO\\ProyPapeletaADO.csproj",
         "projectName": "ProyPapeletaADO",
-        "projectPath": "C:\\Users\\PC\\Desktop\\ISIL\\5444\\Papeleta_3Capas\\ProyPapeletaADO\\ProyPapeletaADO.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\ISIL\\5444\\Papeleta_3Capas\\ProyPapeletaADO\\obj\\",
+        "projectPath": "C:\\Users\\vibe coder\\Downloads\\3ER CICLO\\DESARROLLO DE APPS\\pa3\\kevin0606\\VKEVIN\\ProyPapeletaADO\\ProyPapeletaADO.csproj",
+        "packagesPath": "C:\\Users\\vibe coder\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vibe coder\\Downloads\\3ER CICLO\\DESARROLLO DE APPS\\pa3\\kevin0606\\VKEVIN\\ProyPapeletaADO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vibe coder\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,15 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net10.0": {
-            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\PC\\Desktop\\ISIL\\5444\\Papeleta_3Capas\\ProyPapeletaBE\\ProyPapeletaBE.csproj": {
-                "projectPath": "C:\\Users\\PC\\Desktop\\ISIL\\5444\\Papeleta_3Capas\\ProyPapeletaBE\\ProyPapeletaBE.csproj"
+              "C:\\Users\\vibe coder\\Downloads\\3ER CICLO\\DESARROLLO DE APPS\\pa3\\kevin0606\\VKEVIN\\ProyPapeletaBE\\ProyPapeletaBE.csproj": {
+                "projectPath": "C:\\Users\\vibe coder\\Downloads\\3ER CICLO\\DESARROLLO DE APPS\\pa3\\kevin0606\\VKEVIN\\ProyPapeletaBE\\ProyPapeletaBE.csproj"
               }
             }
           }
@@ -49,11 +49,10 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.300"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
-          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "Microsoft.Data.SqlClient": {
@@ -97,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -375,20 +374,20 @@
         }
       }
     },
-    "C:\\Users\\PC\\Desktop\\ISIL\\5444\\Papeleta_3Capas\\ProyPapeletaBE\\ProyPapeletaBE.csproj": {
+    "C:\\Users\\vibe coder\\Downloads\\3ER CICLO\\DESARROLLO DE APPS\\pa3\\kevin0606\\VKEVIN\\ProyPapeletaBE\\ProyPapeletaBE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\ISIL\\5444\\Papeleta_3Capas\\ProyPapeletaBE\\ProyPapeletaBE.csproj",
+        "projectUniqueName": "C:\\Users\\vibe coder\\Downloads\\3ER CICLO\\DESARROLLO DE APPS\\pa3\\kevin0606\\VKEVIN\\ProyPapeletaBE\\ProyPapeletaBE.csproj",
         "projectName": "ProyPapeletaBE",
-        "projectPath": "C:\\Users\\PC\\Desktop\\ISIL\\5444\\Papeleta_3Capas\\ProyPapeletaBE\\ProyPapeletaBE.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\ISIL\\5444\\Papeleta_3Capas\\ProyPapeletaBE\\obj\\",
+        "projectPath": "C:\\Users\\vibe coder\\Downloads\\3ER CICLO\\DESARROLLO DE APPS\\pa3\\kevin0606\\VKEVIN\\ProyPapeletaBE\\ProyPapeletaBE.csproj",
+        "packagesPath": "C:\\Users\\vibe coder\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vibe coder\\Downloads\\3ER CICLO\\DESARROLLO DE APPS\\pa3\\kevin0606\\VKEVIN\\ProyPapeletaBE\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vibe coder\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -397,11 +396,11 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net10.0": {
-            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {}
           }
@@ -416,11 +415,10 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.300"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
-          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "Microsoft.Extensions.Configuration.FileExtensions": {
@@ -448,7 +446,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

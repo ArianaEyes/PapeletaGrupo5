@@ -32,7 +32,7 @@ namespace ProyPapeleta_GUI
                 }
 
                 // Filtramos por el campo real de tu SP -> CODIGO
-                dtv.RowFilter = $"COD_INFRACCION LIKE '%{strFiltro}%'";
+                dtv.RowFilter = $"DESCRIPCION_SANCION LIKE '%{strFiltro}%'";
                 // Enlazamos el dataGridView al dtv
                 dtgInfraccion.DataSource = dtv;
 

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProyPapeletaADO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+042dc0d49f66bdc85301e6207715dd87348e9e9e")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProyPapeletaADO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProyPapeletaADO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

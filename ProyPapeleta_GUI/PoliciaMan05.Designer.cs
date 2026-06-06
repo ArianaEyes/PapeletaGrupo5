@@ -56,10 +56,10 @@
             // 
             // txtFiltrooo
             // 
-            txtFiltrooo.Location = new Point(323, 20);
+            txtFiltrooo.Location = new Point(271, 20);
             txtFiltrooo.Margin = new Padding(3, 2, 3, 2);
             txtFiltrooo.Name = "txtFiltrooo";
-            txtFiltrooo.Size = new Size(415, 23);
+            txtFiltrooo.Size = new Size(467, 23);
             txtFiltrooo.TabIndex = 5;
             txtFiltrooo.TextChanged += txtFiltrooo_TextChanged;
             // 
@@ -68,9 +68,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(64, 22);
             label1.Name = "label1";
-            label1.Size = new Size(173, 15);
+            label1.Size = new Size(201, 15);
             label1.TabIndex = 4;
-            label1.Text = "Ingrese iniciales de descripción:";
+            label1.Text = "Ingrese iniciales del apellido Paterno:";
             label1.Click += label1_Click;
             // 
             // lblRegistros
@@ -78,7 +78,7 @@
             lblRegistros.BorderStyle = BorderStyle.FixedSingle;
             lblRegistros.Location = new Point(778, 430);
             lblRegistros.Name = "lblRegistros";
-            lblRegistros.Size = new Size(137, 48);
+            lblRegistros.Size = new Size(137, 34);
             lblRegistros.TabIndex = 17;
             // 
             // label3
@@ -92,7 +92,7 @@
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(783, 496);
+            btnSalir.Location = new Point(783, 479);
             btnSalir.Margin = new Padding(3, 2, 3, 2);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(131, 35);
@@ -103,7 +103,7 @@
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(502, 479);
+            btnEliminar.Location = new Point(474, 479);
             btnEliminar.Margin = new Padding(3, 2, 3, 2);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(131, 35);
