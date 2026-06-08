@@ -63,6 +63,8 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
+            checkBox1 = new CheckBox();
+            label13 = new Label();
             groupBox1.SuspendLayout();
             grpFoto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pcbFoto).BeginInit();
@@ -72,6 +74,8 @@
             // groupBox1
             // 
             groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            groupBox1.Controls.Add(label13);
+            groupBox1.Controls.Add(checkBox1);
             groupBox1.Controls.Add(btnSubirFoto);
             groupBox1.Controls.Add(grpFoto);
             groupBox1.Controls.Add(txtNroBrevete);
@@ -447,6 +451,25 @@
             label1.TabIndex = 0;
             label1.Text = "Código:";
             // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(247, 807);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(112, 36);
+            checkBox1.TabIndex = 1;
+            checkBox1.Text = "Activo";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(45, 807);
+            label13.Name = "label13";
+            label13.Size = new Size(89, 32);
+            label13.TabIndex = 33;
+            label13.Text = "Estado:";
+            // 
             // InfractorMan02
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
@@ -503,5 +526,7 @@
         private GroupBox grpFoto;
         private Button btnSubirFoto;
         private PictureBox pcbFoto;
+        private Label label13;
+        private CheckBox checkBox1;
     }
 }

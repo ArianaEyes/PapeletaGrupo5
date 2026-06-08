@@ -63,6 +63,8 @@
             label2 = new Label();
             label1 = new Label();
             contextMenuStrip1 = new ContextMenuStrip(components);
+            label13 = new Label();
+            checkBox1 = new CheckBox();
             grpInfractor.SuspendLayout();
             grpFoto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pcbFoto).BeginInit();
@@ -72,6 +74,8 @@
             // grpInfractor
             // 
             grpInfractor.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            grpInfractor.Controls.Add(checkBox1);
+            grpInfractor.Controls.Add(label13);
             grpInfractor.Controls.Add(btnFoto);
             grpInfractor.Controls.Add(button2);
             grpInfractor.Controls.Add(btnAgregar);
@@ -431,6 +435,25 @@
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
             // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(71, 827);
+            label13.Name = "label13";
+            label13.Size = new Size(89, 32);
+            label13.TabIndex = 28;
+            label13.Text = "Estado:";
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(288, 827);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(112, 36);
+            checkBox1.TabIndex = 29;
+            checkBox1.Text = "Activo";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
             // InfractorMan01
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
@@ -486,5 +509,7 @@
         private Label label9;
         private RadioButton optMasculino;
         private RadioButton optFemenino;
+        private CheckBox checkBox1;
+        private Label label13;
     }
 }

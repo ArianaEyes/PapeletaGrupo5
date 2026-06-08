@@ -43,36 +43,39 @@
             // dtgInfraccion
             // 
             dtgInfraccion.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgInfraccion.Location = new Point(65, 78);
+            dtgInfraccion.Location = new Point(121, 166);
+            dtgInfraccion.Margin = new Padding(6, 6, 6, 6);
             dtgInfraccion.Name = "dtgInfraccion";
-            dtgInfraccion.Size = new Size(656, 252);
+            dtgInfraccion.RowHeadersWidth = 82;
+            dtgInfraccion.Size = new Size(1218, 538);
             dtgInfraccion.TabIndex = 0;
             dtgInfraccion.CellContentClick += dtgInfraccion_CellContentClick;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(65, 32);
+            label1.Location = new Point(121, 68);
+            label1.Margin = new Padding(6, 0, 6, 0);
             label1.Name = "label1";
-            label1.Size = new Size(157, 15);
+            label1.Size = new Size(317, 32);
             label1.TabIndex = 7;
             label1.Text = "Ingrese codigo de infraccion";
             // 
             // txtFiltro
             // 
-            txtFiltro.Location = new Point(240, 29);
-            txtFiltro.Margin = new Padding(3, 2, 3, 2);
+            txtFiltro.Location = new Point(446, 62);
+            txtFiltro.Margin = new Padding(6, 4, 6, 4);
             txtFiltro.Name = "txtFiltro";
-            txtFiltro.Size = new Size(415, 23);
+            txtFiltro.Size = new Size(767, 39);
             txtFiltro.TabIndex = 8;
             txtFiltro.TextChanged += txtFiltro_TextChanged;
             // 
             // btnRefrescar
             // 
-            btnRefrescar.Location = new Point(65, 353);
-            btnRefrescar.Margin = new Padding(3, 2, 3, 2);
+            btnRefrescar.Location = new Point(121, 753);
+            btnRefrescar.Margin = new Padding(6, 4, 6, 4);
             btnRefrescar.Name = "btnRefrescar";
-            btnRefrescar.Size = new Size(104, 34);
+            btnRefrescar.Size = new Size(193, 73);
             btnRefrescar.TabIndex = 31;
             btnRefrescar.Text = "Refrescar";
             btnRefrescar.UseVisualStyleBackColor = true;
@@ -80,10 +83,10 @@
             // 
             // btnInsertar
             // 
-            btnInsertar.Location = new Point(240, 440);
-            btnInsertar.Margin = new Padding(3, 2, 3, 2);
+            btnInsertar.Location = new Point(446, 939);
+            btnInsertar.Margin = new Padding(6, 4, 6, 4);
             btnInsertar.Name = "btnInsertar";
-            btnInsertar.Size = new Size(123, 34);
+            btnInsertar.Size = new Size(228, 73);
             btnInsertar.TabIndex = 32;
             btnInsertar.Text = "Insertar";
             btnInsertar.UseVisualStyleBackColor = true;
@@ -91,10 +94,10 @@
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(369, 440);
-            btnEliminar.Margin = new Padding(3, 2, 3, 2);
+            btnEliminar.Location = new Point(685, 939);
+            btnEliminar.Margin = new Padding(6, 4, 6, 4);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(131, 34);
+            btnEliminar.Size = new Size(243, 73);
             btnEliminar.TabIndex = 34;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
@@ -103,26 +106,28 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(550, 353);
+            label3.Location = new Point(1021, 753);
+            label3.Margin = new Padding(6, 0, 6, 0);
             label3.Name = "label3";
-            label3.Size = new Size(58, 15);
+            label3.Size = new Size(115, 32);
             label3.TabIndex = 35;
             label3.Text = "Registros:";
             // 
             // lblRegistros
             // 
             lblRegistros.BorderStyle = BorderStyle.FixedSingle;
-            lblRegistros.Location = new Point(614, 343);
+            lblRegistros.Location = new Point(1140, 732);
+            lblRegistros.Margin = new Padding(6, 0, 6, 0);
             lblRegistros.Name = "lblRegistros";
-            lblRegistros.Size = new Size(107, 35);
+            lblRegistros.Size = new Size(197, 72);
             lblRegistros.TabIndex = 36;
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(639, 440);
-            btnSalir.Margin = new Padding(3, 2, 3, 2);
+            btnSalir.Location = new Point(1187, 939);
+            btnSalir.Margin = new Padding(6, 4, 6, 4);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(82, 34);
+            btnSalir.Size = new Size(152, 73);
             btnSalir.TabIndex = 37;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
@@ -130,9 +135,9 @@
             // 
             // InfraccionMan05
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(779, 540);
+            ClientSize = new Size(1447, 1152);
             Controls.Add(btnSalir);
             Controls.Add(lblRegistros);
             Controls.Add(label3);
@@ -142,7 +147,9 @@
             Controls.Add(txtFiltro);
             Controls.Add(label1);
             Controls.Add(dtgInfraccion);
+            Margin = new Padding(6, 6, 6, 6);
             Name = "InfraccionMan05";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Infraccion";
             Load += InfraccionMan05_Load;
             ((System.ComponentModel.ISupportInitialize)dtgInfraccion).EndInit();

@@ -40,18 +40,18 @@
             // 
             // txtLogin
             // 
-            txtLogin.Location = new Point(90, 49);
-            txtLogin.Margin = new Padding(4, 3, 4, 3);
+            txtLogin.Location = new Point(167, 105);
+            txtLogin.Margin = new Padding(7, 6, 7, 6);
             txtLogin.Name = "txtLogin";
-            txtLogin.Size = new Size(116, 23);
+            txtLogin.Size = new Size(212, 39);
             txtLogin.TabIndex = 1;
             // 
             // btnAceptar
             // 
-            btnAceptar.Location = new Point(227, 48);
-            btnAceptar.Margin = new Padding(4, 3, 4, 3);
+            btnAceptar.Location = new Point(422, 102);
+            btnAceptar.Margin = new Padding(7, 6, 7, 6);
             btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(89, 24);
+            btnAceptar.Size = new Size(165, 51);
             btnAceptar.TabIndex = 3;
             btnAceptar.Text = "Aceptar";
             btnAceptar.UseVisualStyleBackColor = true;
@@ -59,10 +59,10 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(227, 95);
-            btnCancelar.Margin = new Padding(4, 3, 4, 3);
+            btnCancelar.Location = new Point(422, 203);
+            btnCancelar.Margin = new Padding(7, 6, 7, 6);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(89, 23);
+            btnCancelar.Size = new Size(165, 49);
             btnCancelar.TabIndex = 4;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
@@ -70,30 +70,30 @@
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(90, 92);
-            txtPassword.Margin = new Padding(4, 3, 4, 3);
+            txtPassword.Location = new Point(167, 196);
+            txtPassword.Margin = new Padding(7, 6, 7, 6);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
-            txtPassword.Size = new Size(116, 23);
-            txtPassword.TabIndex = 5;
+            txtPassword.Size = new Size(212, 39);
+            txtPassword.TabIndex = 2;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(22, 95);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(41, 203);
+            label2.Margin = new Padding(7, 0, 7, 0);
             label2.Name = "label2";
-            label2.Size = new Size(60, 15);
+            label2.Size = new Size(116, 32);
             label2.TabIndex = 6;
             label2.Text = "Password:";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(42, 48);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(78, 102);
+            label1.Margin = new Padding(7, 0, 7, 0);
             label1.Name = "label1";
-            label1.Size = new Size(40, 15);
+            label1.Size = new Size(78, 32);
             label1.TabIndex = 7;
             label1.Text = "Login:";
             // 
@@ -105,15 +105,16 @@
             // 
             // frmLogin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(358, 159);
+            ClientSize = new Size(665, 339);
             Controls.Add(label1);
             Controls.Add(label2);
             Controls.Add(txtPassword);
             Controls.Add(btnCancelar);
             Controls.Add(btnAceptar);
             Controls.Add(txtLogin);
+            Margin = new Padding(6, 6, 6, 6);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "frmLogin";
