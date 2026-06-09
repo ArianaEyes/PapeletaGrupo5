@@ -41,6 +41,7 @@ namespace ProyPapeleta_GUI
                 lblPuntos.Text = objBE.PUNTOS.ToString();
                 lblUIT.Text = objBE.UIT.ToString();
                 lblEstado.Text = objBE.ESTADO;
+                lblMedida.Text = objBE.MEDIDA_PREVENTIVA;
 
 
             }

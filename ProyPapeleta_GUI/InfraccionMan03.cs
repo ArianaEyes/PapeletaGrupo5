@@ -19,11 +19,12 @@ namespace ProyPapeleta_GUI
         public InfraccionMan03()
         {
             InitializeComponent();
+            Load += InfraccionMan03_Load;
         }
 
         private void InfraccionMan03_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -50,7 +51,9 @@ namespace ProyPapeleta_GUI
                 lblCalificacion.Text = objInfraccionBE.CALIFICACION;
                 lblPuntos.Text = objInfraccionBE.PUNTOS.ToString();
                 lblUIT.Text = objInfraccionBE.UIT.ToString();
-                lblEstado.Text = objInfraccionBE.ESTADO; 
+                lblEstado.Text = objInfraccionBE.ESTADO;
+                lblMedida.Text = objInfraccionBE.MEDIDA_PREVENTIVA;
+
 
             }
             catch (Exception ex)

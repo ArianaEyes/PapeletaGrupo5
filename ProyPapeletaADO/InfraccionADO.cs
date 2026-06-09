@@ -29,6 +29,7 @@ namespace ProyPapeletaADO
                         cmd.Parameters.Add("@UIT", SqlDbType.Decimal).Value = objInfraccionBE.UIT;
                         cmd.Parameters.Add("@ESTADO", SqlDbType.Char).Value = objInfraccionBE.ESTADO;
                         cmd.Parameters.Add("@USU_REGISTRO", SqlDbType.VarChar).Value = objInfraccionBE.USU_REGISTRO;
+                        cmd.Parameters.Add("@MEDIDA", SqlDbType.VarChar).Value = objInfraccionBE.MEDIDA_PREVENTIVA;
 
                         cnx.Open();
                         cmd.ExecuteNonQuery();
@@ -59,6 +60,7 @@ namespace ProyPapeletaADO
                         cmd.Parameters.Add("@PUNTOS", SqlDbType.VarChar).Value = objInfraccionBE.PUNTOS;
                         cmd.Parameters.Add("@UIT", SqlDbType.Decimal).Value = objInfraccionBE.UIT;
                         cmd.Parameters.Add("@ESTADO", SqlDbType.Char).Value = objInfraccionBE.ESTADO;
+                        cmd.Parameters.Add("@MEDIDA", SqlDbType.VarChar).Value = objInfraccionBE.MEDIDA_PREVENTIVA;
 
                         cnx.Open();
                         cmd.ExecuteNonQuery();
@@ -126,6 +128,7 @@ namespace ProyPapeletaADO
                                 objInfraccionBE.PUNTOS = int.Parse(dtr["PUNTOS"].ToString());
                                 objInfraccionBE.UIT = Convert.ToDecimal(dtr["UIT"]);
                                 objInfraccionBE.ESTADO = dtr["ESTADO"].ToString();
+                                objInfraccionBE.MEDIDA_PREVENTIVA = dtr["MEDIDA_PREVENTIVA"].ToString();
 
 
 

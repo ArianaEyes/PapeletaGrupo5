@@ -16,10 +16,16 @@ namespace ProyPapeleta_GUI
         public string Codigo = "";
 
         string[] calificacion = {
-                "--Seleccionar--",
+                
                 "LEVE",
                 "GRAVE",
                 "MUY GRAVE"     };
+
+        string[] medida_preventiva = {
+                
+                "Multa",
+                "Retención",
+                "Internamiento"     };
 
         public InfraccionMan05 Formulario;
         public InfraccionMan02()
@@ -35,6 +41,10 @@ namespace ProyPapeleta_GUI
 
         private void InfraccionMan02_Load(object sender, EventArgs e)
         {
+
+            cboCalificacion.DataSource = calificacion;
+            cboMedida.DataSource = medida_preventiva;
+
             try
             {
                 InfraccionADO objADO = new InfraccionADO();
@@ -54,6 +64,7 @@ namespace ProyPapeleta_GUI
                 chkActivo.Checked = (objBE.ESTADO == "A");
                 nudPuntos.Value = objBE.PUNTOS;
                 nudUIT.Value = objBE.UIT;
+                cboMedida.Text = objBE.MEDIDA_PREVENTIVA;
             }
             catch (Exception ex)
             {
@@ -85,6 +96,7 @@ namespace ProyPapeleta_GUI
                 objBE.PUNTOS = (int)nudPuntos.Value;
                 objBE.UIT = nudUIT.Value;
                 objBE.ESTADO = chkActivo.Checked ? "A" : "I";
+                objBE.MEDIDA_PREVENTIVA = cboMedida.Text;
 
                 InfraccionBL bl = new InfraccionBL();
 

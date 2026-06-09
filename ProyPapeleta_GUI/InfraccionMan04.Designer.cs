@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             grpDatosPolicia = new GroupBox();
+            lblEstado = new Label();
+            label6 = new Label();
             lblUIT = new Label();
             lblPuntos = new Label();
             lblCalificacion = new Label();
@@ -41,14 +43,16 @@
             btnCancelar = new Button();
             label10 = new Label();
             label1 = new Label();
-            lblEstado = new Label();
-            label6 = new Label();
+            label7 = new Label();
+            lblMedida = new Label();
             grpDatosPolicia.SuspendLayout();
             SuspendLayout();
             // 
             // grpDatosPolicia
             // 
+            grpDatosPolicia.Controls.Add(label7);
             grpDatosPolicia.Controls.Add(lblEstado);
+            grpDatosPolicia.Controls.Add(lblMedida);
             grpDatosPolicia.Controls.Add(label6);
             grpDatosPolicia.Controls.Add(lblUIT);
             grpDatosPolicia.Controls.Add(lblPuntos);
@@ -66,10 +70,27 @@
             grpDatosPolicia.Margin = new Padding(3, 2, 3, 2);
             grpDatosPolicia.Name = "grpDatosPolicia";
             grpDatosPolicia.Padding = new Padding(3, 2, 3, 2);
-            grpDatosPolicia.Size = new Size(535, 250);
+            grpDatosPolicia.Size = new Size(621, 290);
             grpDatosPolicia.TabIndex = 5;
             grpDatosPolicia.TabStop = false;
             grpDatosPolicia.Text = "Eliminar Infraccion";
+            // 
+            // lblEstado
+            // 
+            lblEstado.BorderStyle = BorderStyle.FixedSingle;
+            lblEstado.Location = new Point(436, 152);
+            lblEstado.Name = "lblEstado";
+            lblEstado.Size = new Size(90, 23);
+            lblEstado.TabIndex = 11;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(381, 154);
+            label6.Name = "label6";
+            label6.Size = new Size(45, 15);
+            label6.TabIndex = 10;
+            label6.Text = "Estado:";
             // 
             // lblUIT
             // 
@@ -92,7 +113,7 @@
             lblCalificacion.BorderStyle = BorderStyle.FixedSingle;
             lblCalificacion.Location = new Point(115, 100);
             lblCalificacion.Name = "lblCalificacion";
-            lblCalificacion.Size = new Size(216, 23);
+            lblCalificacion.Size = new Size(174, 23);
             lblCalificacion.TabIndex = 14;
             // 
             // txtCod
@@ -141,7 +162,7 @@
             // 
             // btnEliminarInfraccion
             // 
-            btnEliminarInfraccion.Location = new Point(196, 192);
+            btnEliminarInfraccion.Location = new Point(260, 225);
             btnEliminarInfraccion.Margin = new Padding(3, 2, 3, 2);
             btnEliminarInfraccion.Name = "btnEliminarInfraccion";
             btnEliminarInfraccion.Size = new Size(93, 24);
@@ -152,7 +173,7 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(322, 193);
+            btnCancelar.Location = new Point(386, 226);
             btnCancelar.Margin = new Padding(3, 2, 3, 2);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(95, 23);
@@ -178,28 +199,28 @@
             label1.TabIndex = 0;
             label1.Text = "Descripción de Sanción:";
             // 
-            // lblEstado
+            // label7
             // 
-            lblEstado.BorderStyle = BorderStyle.FixedSingle;
-            lblEstado.Location = new Point(413, 138);
-            lblEstado.Name = "lblEstado";
-            lblEstado.Size = new Size(90, 23);
-            lblEstado.TabIndex = 11;
+            label7.AutoSize = true;
+            label7.Location = new Point(322, 102);
+            label7.Name = "label7";
+            label7.Size = new Size(108, 15);
+            label7.TabIndex = 23;
+            label7.Text = "Medida Preventiva:";
             // 
-            // label6
+            // lblMedida
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(358, 140);
-            label6.Name = "label6";
-            label6.Size = new Size(45, 15);
-            label6.TabIndex = 10;
-            label6.Text = "Estado:";
+            lblMedida.BorderStyle = BorderStyle.FixedSingle;
+            lblMedida.Location = new Point(436, 101);
+            lblMedida.Name = "lblMedida";
+            lblMedida.Size = new Size(168, 23);
+            lblMedida.TabIndex = 22;
             // 
             // InfraccionMan04
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(560, 276);
+            ClientSize = new Size(645, 314);
             Controls.Add(grpDatosPolicia);
             Name = "InfraccionMan04";
             Text = "Eliminar Infraccion";
@@ -226,5 +247,7 @@
         private TextBox txtCod;
         private Label lblEstado;
         private Label label6;
+        private Label label7;
+        private Label lblMedida;
     }
 }

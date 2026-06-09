@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             grpDatosPolicia = new GroupBox();
+            lblEstado = new Label();
             label6 = new Label();
             lblUIT = new Label();
             lblPuntos = new Label();
@@ -42,12 +43,15 @@
             btnCancelar = new Button();
             label10 = new Label();
             label1 = new Label();
-            lblEstado = new Label();
+            lblMedida = new Label();
+            label7 = new Label();
             grpDatosPolicia.SuspendLayout();
             SuspendLayout();
             // 
             // grpDatosPolicia
             // 
+            grpDatosPolicia.Controls.Add(label7);
+            grpDatosPolicia.Controls.Add(lblMedida);
             grpDatosPolicia.Controls.Add(lblEstado);
             grpDatosPolicia.Controls.Add(label6);
             grpDatosPolicia.Controls.Add(lblUIT);
@@ -66,16 +70,24 @@
             grpDatosPolicia.Margin = new Padding(3, 2, 3, 2);
             grpDatosPolicia.Name = "grpDatosPolicia";
             grpDatosPolicia.Padding = new Padding(3, 2, 3, 2);
-            grpDatosPolicia.Size = new Size(535, 250);
+            grpDatosPolicia.Size = new Size(652, 304);
             grpDatosPolicia.TabIndex = 3;
             grpDatosPolicia.TabStop = false;
             grpDatosPolicia.Text = "Consultar Infracción";
             grpDatosPolicia.Enter += grpDatosPolicia_Enter;
             // 
+            // lblEstado
+            // 
+            lblEstado.BorderStyle = BorderStyle.FixedSingle;
+            lblEstado.Location = new Point(369, 181);
+            lblEstado.Name = "lblEstado";
+            lblEstado.Size = new Size(90, 23);
+            lblEstado.TabIndex = 9;
+            // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(316, 104);
+            label6.Location = new Point(318, 183);
             label6.Name = "label6";
             label6.Size = new Size(45, 15);
             label6.TabIndex = 16;
@@ -150,7 +162,7 @@
             // 
             // btnConsultarInfraccion
             // 
-            btnConsultarInfraccion.Location = new Point(196, 192);
+            btnConsultarInfraccion.Location = new Point(322, 249);
             btnConsultarInfraccion.Margin = new Padding(3, 2, 3, 2);
             btnConsultarInfraccion.Name = "btnConsultarInfraccion";
             btnConsultarInfraccion.Size = new Size(93, 24);
@@ -161,7 +173,7 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(322, 193);
+            btnCancelar.Location = new Point(448, 250);
             btnCancelar.Margin = new Padding(3, 2, 3, 2);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(95, 23);
@@ -188,19 +200,28 @@
             label1.TabIndex = 0;
             label1.Text = "Descripción de Sanción:";
             // 
-            // lblEstado
+            // lblMedida
             // 
-            lblEstado.BorderStyle = BorderStyle.FixedSingle;
-            lblEstado.Location = new Point(367, 102);
-            lblEstado.Name = "lblEstado";
-            lblEstado.Size = new Size(90, 23);
-            lblEstado.TabIndex = 9;
+            lblMedida.BorderStyle = BorderStyle.FixedSingle;
+            lblMedida.Location = new Point(448, 102);
+            lblMedida.Name = "lblMedida";
+            lblMedida.Size = new Size(168, 23);
+            lblMedida.TabIndex = 18;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(334, 103);
+            label7.Name = "label7";
+            label7.Size = new Size(108, 15);
+            label7.TabIndex = 21;
+            label7.Text = "Medida Preventiva:";
             // 
             // InfraccionMan03
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(557, 268);
+            ClientSize = new Size(676, 326);
             Controls.Add(grpDatosPolicia);
             Name = "InfraccionMan03";
             Text = "Consultar Datos Infracción";
@@ -227,5 +248,7 @@
         private Label lblPuntos;
         private Label label6;
         private Label lblEstado;
+        private Label lblMedida;
+        private Label label7;
     }
 }
