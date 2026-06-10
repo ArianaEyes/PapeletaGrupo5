@@ -60,11 +60,11 @@
             grpDatosPolicia.Controls.Add(cboCalificacion);
             grpDatosPolicia.Controls.Add(txtDescripcion);
             grpDatosPolicia.Controls.Add(label1);
-            grpDatosPolicia.Location = new Point(22, 23);
-            grpDatosPolicia.Margin = new Padding(6, 4, 6, 4);
+            grpDatosPolicia.Location = new Point(12, 11);
+            grpDatosPolicia.Margin = new Padding(3, 2, 3, 2);
             grpDatosPolicia.Name = "grpDatosPolicia";
-            grpDatosPolicia.Padding = new Padding(6, 4, 6, 4);
-            grpDatosPolicia.Size = new Size(994, 465);
+            grpDatosPolicia.Padding = new Padding(3, 2, 3, 2);
+            grpDatosPolicia.Size = new Size(535, 218);
             grpDatosPolicia.TabIndex = 1;
             grpDatosPolicia.TabStop = false;
             grpDatosPolicia.Text = "Insertar Infracción";
@@ -74,10 +74,10 @@
             chkActivo.AllowDrop = true;
             chkActivo.Checked = true;
             chkActivo.CheckState = CheckState.Checked;
-            chkActivo.Location = new Point(676, 154);
-            chkActivo.Margin = new Padding(6, 4, 6, 4);
+            chkActivo.Location = new Point(364, 72);
+            chkActivo.Margin = new Padding(3, 2, 3, 2);
             chkActivo.Name = "chkActivo";
-            chkActivo.Size = new Size(204, 47);
+            chkActivo.Size = new Size(110, 22);
             chkActivo.TabIndex = 16;
             chkActivo.Text = "Activo";
             chkActivo.UseVisualStyleBackColor = true;
@@ -85,59 +85,54 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(565, 158);
-            label6.Margin = new Padding(6, 0, 6, 0);
+            label6.Location = new Point(304, 74);
             label6.Name = "label6";
-            label6.Size = new Size(89, 32);
+            label6.Size = new Size(45, 15);
             label6.TabIndex = 15;
             label6.Text = "Estado:";
             // 
             // nudPuntos
             // 
-            nudPuntos.Location = new Point(152, 243);
-            nudPuntos.Margin = new Padding(6, 6, 6, 6);
+            nudPuntos.Location = new Point(82, 114);
             nudPuntos.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             nudPuntos.Name = "nudPuntos";
-            nudPuntos.Size = new Size(82, 39);
+            nudPuntos.Size = new Size(44, 23);
             nudPuntos.TabIndex = 9;
             nudPuntos.Value = new decimal(new int[] { 3, 0, 0, 0 });
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(54, 247);
-            label3.Margin = new Padding(6, 0, 6, 0);
+            label3.Location = new Point(29, 116);
             label3.Name = "label3";
-            label3.Size = new Size(92, 32);
+            label3.Size = new Size(47, 15);
             label3.TabIndex = 8;
             label3.Text = "Puntos:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(54, 329);
-            label2.Margin = new Padding(6, 0, 6, 0);
+            label2.Location = new Point(29, 154);
             label2.Name = "label2";
-            label2.Size = new Size(54, 32);
+            label2.Size = new Size(28, 15);
             label2.TabIndex = 7;
             label2.Text = "UIT:";
             // 
             // nudUIT
             // 
-            nudUIT.Location = new Point(117, 324);
-            nudUIT.Margin = new Padding(6, 6, 6, 6);
+            nudUIT.Location = new Point(63, 152);
             nudUIT.Minimum = new decimal(new int[] { 15, 0, 0, 65536 });
             nudUIT.Name = "nudUIT";
-            nudUIT.Size = new Size(102, 39);
+            nudUIT.Size = new Size(55, 23);
             nudUIT.TabIndex = 6;
             nudUIT.Value = new decimal(new int[] { 15, 0, 0, 65536 });
             // 
             // btnAgregarInfraccion
             // 
-            btnAgregarInfraccion.Location = new Point(366, 352);
-            btnAgregarInfraccion.Margin = new Padding(6, 4, 6, 4);
+            btnAgregarInfraccion.Location = new Point(197, 165);
+            btnAgregarInfraccion.Margin = new Padding(3, 2, 3, 2);
             btnAgregarInfraccion.Name = "btnAgregarInfraccion";
-            btnAgregarInfraccion.Size = new Size(173, 51);
+            btnAgregarInfraccion.Size = new Size(93, 24);
             btnAgregarInfraccion.TabIndex = 1;
             btnAgregarInfraccion.Text = "Agregar";
             btnAgregarInfraccion.UseVisualStyleBackColor = true;
@@ -145,10 +140,10 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(600, 354);
-            btnCancelar.Margin = new Padding(6, 4, 6, 4);
+            btnCancelar.Location = new Point(323, 166);
+            btnCancelar.Margin = new Padding(3, 2, 3, 2);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(176, 49);
+            btnCancelar.Size = new Size(95, 23);
             btnCancelar.TabIndex = 1;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
@@ -157,10 +152,9 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(43, 162);
-            label10.Margin = new Padding(6, 0, 6, 0);
+            label10.Location = new Point(23, 76);
             label10.Name = "label10";
-            label10.Size = new Size(140, 32);
+            label10.Size = new Size(72, 15);
             label10.TabIndex = 4;
             label10.Text = "Calificación:";
             // 
@@ -168,38 +162,38 @@
             // 
             cboCalificacion.FormattingEnabled = true;
             cboCalificacion.Items.AddRange(new object[] { "--Seleccione--", "General de Policía", "", "Teniente General", "", "General", "", "Coronel", "", "Comandante", "", "Mayor", "", "Capitán", "", "Teniente", "", "Alférez", "Suboficial Superior", "", "Suboficial Brigadier", "", "Suboficial Técnico de Primera", "", "Suboficial Técnico de Segunda", "", "Suboficial Técnico de Tercera", "", "Suboficial de Primera", "", "Suboficial de Segunda", "", "Suboficial de Tercera" });
-            cboCalificacion.Location = new Point(188, 154);
-            cboCalificacion.Margin = new Padding(6, 4, 6, 4);
+            cboCalificacion.Location = new Point(101, 72);
+            cboCalificacion.Margin = new Padding(3, 2, 3, 2);
             cboCalificacion.Name = "cboCalificacion";
-            cboCalificacion.Size = new Size(309, 40);
+            cboCalificacion.Size = new Size(168, 23);
             cboCalificacion.TabIndex = 2;
             cboCalificacion.SelectedIndexChanged += cboCalificacion_SelectedIndexChanged;
             // 
             // txtDescripcion
             // 
-            txtDescripcion.Location = new Point(301, 51);
-            txtDescripcion.Margin = new Padding(6, 4, 6, 4);
+            txtDescripcion.Location = new Point(162, 24);
+            txtDescripcion.Margin = new Padding(3, 2, 3, 2);
             txtDescripcion.Name = "txtDescripcion";
-            txtDescripcion.Size = new Size(522, 39);
+            txtDescripcion.Size = new Size(283, 23);
             txtDescripcion.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(43, 58);
-            label1.Margin = new Padding(6, 0, 6, 0);
+            label1.Location = new Point(23, 27);
             label1.Name = "label1";
-            label1.Size = new Size(268, 32);
+            label1.Size = new Size(133, 15);
             label1.TabIndex = 0;
             label1.Text = "Descripción de Sanción:";
             // 
             // InfraccionMan01
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1047, 514);
+            ClientSize = new Size(564, 241);
             Controls.Add(grpDatosPolicia);
-            Margin = new Padding(6, 6, 6, 6);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "InfraccionMan01";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Insertar Infracción";

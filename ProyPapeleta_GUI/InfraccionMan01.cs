@@ -15,7 +15,7 @@ namespace ProyPapeleta_GUI
 
     {
 
-        public InfraccionMan05 Formulario;
+        public InfraccionMan03 Formulario;
 
         string[] calificacion = {
                 "--Seleccionar--",

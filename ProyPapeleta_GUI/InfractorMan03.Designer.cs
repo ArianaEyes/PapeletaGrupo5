@@ -37,9 +37,9 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(58, 53);
+            label1.Location = new Point(105, 20);
             label1.Name = "label1";
-            label1.Size = new Size(350, 32);
+            label1.Size = new Size(173, 15);
             label1.TabIndex = 0;
             label1.Text = "Ingrese iniciales de descripción:";
             // 
@@ -51,9 +51,9 @@
             // 
             // txtFiltroo
             // 
-            txtFiltroo.Location = new Point(442, 53);
+            txtFiltroo.Location = new Point(289, 17);
             txtFiltroo.Name = "txtFiltroo";
-            txtFiltroo.Size = new Size(569, 39);
+            txtFiltroo.Size = new Size(495, 23);
             txtFiltroo.TabIndex = 2;
             txtFiltroo.TextChanged += txtFiltroo_TextChanged;
             // 
@@ -62,19 +62,19 @@
             dtgInfractor.AllowUserToAddRows = false;
             dtgInfractor.AllowUserToDeleteRows = false;
             dtgInfractor.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgInfractor.Location = new Point(40, 114);
+            dtgInfractor.Location = new Point(46, 50);
             dtgInfractor.Name = "dtgInfractor";
             dtgInfractor.ReadOnly = true;
             dtgInfractor.RowHeadersWidth = 82;
-            dtgInfractor.Size = new Size(1304, 546);
+            dtgInfractor.Size = new Size(835, 315);
             dtgInfractor.TabIndex = 3;
             dtgInfractor.CellContentDoubleClick += dtgInfractor_CellDoubleClick;
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(689, 728);
+            btnEliminar.Location = new Point(313, 387);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(150, 46);
+            btnEliminar.Size = new Size(113, 25);
             btnEliminar.TabIndex = 5;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
@@ -82,9 +82,9 @@
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(1194, 774);
+            btnSalir.Location = new Point(528, 388);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(150, 46);
+            btnSalir.Size = new Size(95, 24);
             btnSalir.TabIndex = 6;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
@@ -93,9 +93,9 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(1067, 706);
+            label3.Location = new Point(699, 387);
             label3.Name = "label3";
-            label3.Size = new Size(115, 32);
+            label3.Size = new Size(58, 15);
             label3.TabIndex = 9;
             label3.Text = "Registros:";
             label3.Click += label3_Click;
@@ -103,17 +103,17 @@
             // lblRegistros
             // 
             lblRegistros.BorderStyle = BorderStyle.FixedSingle;
-            lblRegistros.Location = new Point(1188, 689);
+            lblRegistros.Location = new Point(788, 378);
             lblRegistros.Name = "lblRegistros";
-            lblRegistros.Size = new Size(156, 64);
+            lblRegistros.Size = new Size(93, 34);
             lblRegistros.TabIndex = 10;
             lblRegistros.Click += lblRegistros_Click;
             // 
             // btnInsertar
             // 
-            btnInsertar.Location = new Point(459, 728);
+            btnInsertar.Location = new Point(91, 387);
             btnInsertar.Name = "btnInsertar";
-            btnInsertar.Size = new Size(150, 46);
+            btnInsertar.Size = new Size(125, 25);
             btnInsertar.TabIndex = 5;
             btnInsertar.Text = "Insertar";
             btnInsertar.UseVisualStyleBackColor = true;
@@ -122,7 +122,7 @@
             // InfractorMan03
             // 
             BackColor = SystemColors.ButtonFace;
-            ClientSize = new Size(1375, 848);
+            ClientSize = new Size(919, 427);
             Controls.Add(lblRegistros);
             Controls.Add(label3);
             Controls.Add(btnSalir);

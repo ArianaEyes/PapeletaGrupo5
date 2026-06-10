@@ -11,14 +11,6 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
 
         #region Windows Form Designer generated code
 
@@ -55,7 +47,6 @@
             lblEstado = new Label();
             label19 = new Label();
             ((System.ComponentModel.ISupportInitialize)dtgMultas).BeginInit();
-            SuspendLayout();
             // 
             // label1
             // 
@@ -115,7 +106,6 @@
             label6.Name = "label6";
             label6.Size = new Size(0, 32);
             label6.TabIndex = 5;
-            label6.Click += label6_Click;
             // 
             // label7
             // 
@@ -318,41 +308,6 @@
             // 
             // MultasInfractor
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1307, 960);
-            Controls.Add(lblEstado);
-            Controls.Add(label19);
-            Controls.Add(lblRegistros);
-            Controls.Add(label14);
-            Controls.Add(dtgMultas);
-            Controls.Add(lblCorreo);
-            Controls.Add(lblNumBrevete);
-            Controls.Add(lblApellido);
-            Controls.Add(lblDNI);
-            Controls.Add(lblTel);
-            Controls.Add(lblTipoBrevete);
-            Controls.Add(lblNombre);
-            Controls.Add(txtCod);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(dtpFecIni);
-            Controls.Add(label11);
-            Controls.Add(label10);
-            Controls.Add(label9);
-            Controls.Add(label8);
-            Controls.Add(label7);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Margin = new Padding(6, 6, 6, 6);
-            Name = "MultasInfractor";
-            Text = "MultasInfractor";
-            ((System.ComponentModel.ISupportInitialize)dtgMultas).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

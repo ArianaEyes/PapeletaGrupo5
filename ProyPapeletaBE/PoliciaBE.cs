@@ -15,7 +15,9 @@ namespace ProyPapeletaBE
         public String NOMBRE { get; set; }
         public String DNI { get; set; }
         public String COD_UBIGEO { get; set; }
-        public String GRADO { get; set; }
+        public Int32 COD_RANGO { get; set; }
+        public String NOM_RANGO { get; set; }
+        public String DESCRIPCION_RANGO { get; set; }
         public String SEXO { get; set; }
         public DateTime FECHANACIMIENTO { get; set; }
         public String ESTADO { get; set; }

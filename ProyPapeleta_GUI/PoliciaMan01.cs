@@ -1,16 +1,20 @@
+using ProyPapeleta_GUI;
 using ProyPapeletaADO;
 using ProyPapeletaBE;
+using ProyPapeletaBL;
 using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-using ProyPapeleta_GUI;
 
 namespace ProyPapeleta_GUI
 {
     public partial class PoliciaMan01 : Form
     {
-        public PoliciaMan05 Formulario;
+        PoliciaBL objPoliciaBL = new PoliciaBL();
+        public PoliciaMan03 Formulario;
+        ErrorProvider errorProvider1 = new ErrorProvider();
         public PoliciaMan01()
         {
             InitializeComponent();
@@ -19,6 +23,125 @@ namespace ProyPapeleta_GUI
 
             cboDepartamento.SelectedIndexChanged += cboDepartamento_SelectedIndexChanged;
             cboProvincia.SelectedIndexChanged += cboProvincia_SelectedIndexChanged;
+
+            txtNombre.Validating += txtNombre_Validating;
+            txtApellidoPaterno.Validating += txtApellidoPaterno_Validating;
+            txtApellidoMaterno.Validating += txtApellidoMaterno_Validating;
+            txtDNI.Validating += txtDNI_Validating;
+
+            txtDNI.KeyPress += txtDNI_KeyPress;
+
+            txtDNI.MaxLength = 8;
+        }
+
+        private void txtNombre_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtNombre.Text.Trim() == "")
+            {
+                errorProvider1.SetError(txtNombre,
+                    "Ingrese nombres");
+
+
+            }
+            else
+            {
+                errorProvider1.SetError(txtNombre, "");
+            }
+        }
+
+        private void txtApellidoPaterno_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtApellidoPaterno.Text.Trim() == "")
+            {
+                errorProvider1.SetError(txtApellidoPaterno,
+                    "Ingrese apellido paterno");
+
+            }
+            else
+            {
+                errorProvider1.SetError(txtApellidoPaterno, "");
+            }
+        }
+
+        private void txtApellidoMaterno_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtApellidoMaterno.Text.Trim() == "")
+            {
+                errorProvider1.SetError(txtApellidoMaterno,
+                    "Ingrese apellido materno");
+
+            }
+            else
+            {
+                errorProvider1.SetError(txtApellidoMaterno, "");
+            }
+        }
+
+        private void txtDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) &&
+                !char.IsControl(e.KeyChar))
+            {
+                MessageBox.Show(
+                    "Solo se permiten números");
+
+                e.Handled = true;
+            }
+        }
+
+        private void txtDNI_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtDNI.Text.Trim() == "")
+            {
+                errorProvider1.SetError(txtDNI,
+                    "Ingrese DNI");
+
+            }
+            else if (txtDNI.Text.Length != 8)
+            {
+                errorProvider1.SetError(txtDNI,
+                    "El DNI debe tener 8 dígitos");
+
+            }
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) &&
+                !char.IsWhiteSpace(e.KeyChar) &&
+                !char.IsControl(e.KeyChar))
+            {
+                MessageBox.Show(
+                    "Solo se permiten letras");
+
+                e.Handled = true;
+            }
+        }
+
+        private void txtApellidoPaterno_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) &&
+                !char.IsWhiteSpace(e.KeyChar) &&
+                !char.IsControl(e.KeyChar))
+            {
+                MessageBox.Show(
+                    "Solo se permiten letras");
+
+                e.Handled = true;
+            }
+        }
+
+        private void txtApellidoMaterno_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) &&
+                !char.IsWhiteSpace(e.KeyChar) &&
+                !char.IsControl(e.KeyChar))
+            {
+                MessageBox.Show(
+                    "Solo se permiten letras");
+
+                e.Handled = true;
+            }
         }
 
         private void PoliciaMan01_Load(object sender, EventArgs e)
@@ -31,6 +154,11 @@ namespace ProyPapeleta_GUI
                 cboRango.SelectedIndex = 0;
                 cboDepartamento.DataSource = objPoliciaADO.ListarDepartamentos();
                 cboDepartamento.DisplayMember = "DEPARTAMENTO";
+
+                cboRango.DataSource = objPoliciaBL.ListarRango();
+
+                cboRango.DisplayMember = "NOM_RANGO";
+                cboRango.ValueMember = "COD_RANGO";
             }
             catch (Exception ex)
             {
@@ -155,7 +283,7 @@ namespace ProyPapeleta_GUI
                 objPoliciaBE.MATERNO = txtApellidoMaterno.Text;
                 objPoliciaBE.DNI = txtDNI.Text;
                 objPoliciaBE.ESTADO = "A";
-                objPoliciaBE.GRADO = cboRango.Text;
+                objPoliciaBE.COD_RANGO = Convert.ToInt32(cboRango.SelectedValue);
                 objPoliciaBE.COD_UBIGEO = cboDistrito.SelectedValue.ToString();
 
                 if (optMasculino.Checked == true)

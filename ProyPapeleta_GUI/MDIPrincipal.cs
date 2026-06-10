@@ -41,14 +41,14 @@ namespace ProyPapeleta_GUI
         {
             foreach (Form f in this.MdiChildren)
             {
-                if (f is PoliciaMan05)
+                if (f is PoliciaMan03)
                 {
                     f.Activate();
                     return;
                 }
             }
             //Instancia el policíasMan01
-            PoliciaMan05 poli05 = new PoliciaMan05();
+            PoliciaMan03 poli05 = new PoliciaMan03();
             poli05.MdiParent = this;
             poli05.Show();
 
@@ -79,17 +79,6 @@ namespace ProyPapeleta_GUI
 
         private void consultarPorInfractorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            foreach (Form f in this.MdiChildren)
-            {
-                if (f is InfractorMan04)
-                {
-                    f.Activate();
-                    return;
-                }
-            }
-            InfractorMan04 infr05 = new InfractorMan04();
-            infr05.MdiParent = this;
-            infr05.Show();
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -101,13 +90,13 @@ namespace ProyPapeleta_GUI
         {
             foreach (Form f in this.MdiChildren)
             {
-                if (f is InfraccionMan05)
+                if (f is InfraccionMan03)
                 {
                     f.Activate();
                     return;
                 }
             }
-            InfraccionMan05 infracc05 = new InfraccionMan05();
+            InfraccionMan03 infracc05 = new InfraccionMan03();
             infracc05.MdiParent = this;
             infracc05.Show();
         }
@@ -116,7 +105,7 @@ namespace ProyPapeleta_GUI
         {
             foreach (Form f in this.MdiChildren)
             {
-                if (f is InfraccionMan05)
+                if (f is InfraccionMan03)
                 {
                     f.Activate();
                     return;

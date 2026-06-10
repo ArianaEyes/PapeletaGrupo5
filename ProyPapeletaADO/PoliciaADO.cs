@@ -10,16 +10,16 @@ namespace ProyPapeletaADO
 {
     public class PoliciaADO
     {
-        public Boolean InsertarPolicia(PoliciaBE objPoliciaBE) 
+        public Boolean InsertarPolicia(PoliciaBE objPoliciaBE)
         {
-            try 
+            try
             {
-                
+
                 using (SqlConnection cnx = new SqlConnection(Configuracion.PAPELETA))
                 {
                     using (SqlCommand cmd = new SqlCommand("SP_INSERTAR_POLICIA", cnx))
                     {
-                       
+
                         cmd.CommandType = CommandType.StoredProcedure;
 
                         cmd.Parameters.Add("@NOMBRE", SqlDbType.VarChar).Value = objPoliciaBE.NOMBRE;
@@ -27,7 +27,7 @@ namespace ProyPapeletaADO
                         cmd.Parameters.Add("@MATERNO", SqlDbType.VarChar).Value = objPoliciaBE.MATERNO;
                         cmd.Parameters.Add("@DNI", SqlDbType.Char).Value = objPoliciaBE.DNI;
                         cmd.Parameters.Add("@COD_UBIGEO", SqlDbType.Char).Value = objPoliciaBE.COD_UBIGEO;
-                        cmd.Parameters.Add("@GRADO", SqlDbType.VarChar).Value = objPoliciaBE.GRADO;
+                        cmd.Parameters.Add("@COD_RANGO", SqlDbType.VarChar).Value = objPoliciaBE.COD_RANGO;
                         cmd.Parameters.Add("@SEXO", SqlDbType.Char).Value = objPoliciaBE.SEXO;
                         cmd.Parameters.Add("@FECHANACIMIENTO", SqlDbType.Date).Value = objPoliciaBE.FECHANACIMIENTO;
                         cmd.Parameters.Add("@ESTADO", SqlDbType.Char).Value = objPoliciaBE.ESTADO;
@@ -63,7 +63,7 @@ namespace ProyPapeletaADO
                         cmd.Parameters.Add("@MATERNO", SqlDbType.VarChar).Value = objPoliciaBE.MATERNO;
                         cmd.Parameters.Add("@DNI", SqlDbType.Char).Value = objPoliciaBE.DNI;
                         cmd.Parameters.Add("@COD_UBIGEO", SqlDbType.Char).Value = objPoliciaBE.COD_UBIGEO;
-                        cmd.Parameters.Add("@GRADO", SqlDbType.VarChar).Value = objPoliciaBE.GRADO;
+                        cmd.Parameters.Add("@COD_RANGO", SqlDbType.VarChar).Value = objPoliciaBE.COD_RANGO;
                         cmd.Parameters.Add("@SEXO", SqlDbType.Char).Value = objPoliciaBE.SEXO;
                         cmd.Parameters.Add("@FECHANACIMIENTO", SqlDbType.SmallDateTime).Value = objPoliciaBE.FECHANACIMIENTO;
                         cmd.Parameters.Add("@ESTADO", SqlDbType.Char).Value = objPoliciaBE.ESTADO;
@@ -121,21 +121,21 @@ namespace ProyPapeletaADO
                     using (SqlCommand cmd = new SqlCommand("SP_CONSULTAR_POLICIA", cnx))
                     {
 
-             
+
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.Add("@COD_POLICIA", SqlDbType.Char).Value = strCodigo;
 
                         cnx.Open();
-                        using(SqlDataReader dtr = cmd.ExecuteReader())
-                {
+                        using (SqlDataReader dtr = cmd.ExecuteReader())
+                        {
                             if (dtr.Read())
                             {
-                                objPoliciaBE.COD_POLICIA = dtr["COD_POLICIA"].ToString(); 
+                                objPoliciaBE.COD_POLICIA = dtr["COD_POLICIA"].ToString();
                                 objPoliciaBE.NOMBRE = dtr["NOMBRE"].ToString();
                                 objPoliciaBE.PATERNO = dtr["PATERNO"].ToString();
                                 objPoliciaBE.MATERNO = dtr["MATERNO"].ToString();
                                 objPoliciaBE.DNI = dtr["DNI"].ToString();
-                                objPoliciaBE.GRADO = dtr["GRADO"].ToString();
+                                objPoliciaBE.COD_RANGO = Convert.ToInt32(dtr["COD_RANGO"]);
                                 objPoliciaBE.SEXO = dtr["SEXO"].ToString();
                                 objPoliciaBE.ESTADO = dtr["ESTADO"].ToString();
                                 objPoliciaBE.FECHANACIMIENTO = Convert.ToDateTime(dtr["FECHANACIMIENTO"]);
@@ -148,7 +148,7 @@ namespace ProyPapeletaADO
                                 }
 
                             }
-                           return objPoliciaBE;
+                            return objPoliciaBE;
                         }
                     }
                 }
@@ -269,5 +269,28 @@ namespace ProyPapeletaADO
 
             return dt.Rows.Count > 0 ? dt.Rows[0] : null;
         }
+
+        public DataTable ListarRango()
+        {
+            SqlConnection cn = new SqlConnection(Configuracion.PAPELETA);
+            SqlDataAdapter da = null;
+            DataTable dt = new DataTable();
+
+            try
+            {
+                da = new SqlDataAdapter(
+                    "SELECT COD_RANGO,NOM_RANGO FROM TB_RANGO ORDER BY NOM_RANGO",
+                    cn);
+
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return dt;
+        }
+
     }
 }

@@ -12,7 +12,7 @@ namespace ProyPapeleta_GUI
     public partial class PoliciaMan02 : Form
     {
         public string Codigo = "";
-        public PoliciaMan05 Formulario;
+        public PoliciaMan03 Formulario;
 
         public PoliciaMan02()
         {
@@ -45,39 +45,39 @@ namespace ProyPapeleta_GUI
             {
                 PoliciaADO objPoliciaADO = new PoliciaADO();
 
-                PoliciaBE objPolciaBE = objPoliciaADO.ConsultarPolicia(Codigo);
+                PoliciaBE objPoliciaBE = objPoliciaADO.ConsultarPolicia(Codigo);
 
-                if (objPolciaBE == null)
+                if (objPoliciaBE == null)
                 {
                     MessageBox.Show("No existe el policia");
                     this.Close();
                     return;
                 }
 
-                lblCodigo.Text = objPolciaBE.COD_POLICIA;
-                txtNombre.Text = objPolciaBE.NOMBRE;
-                txtApellidoPaterno.Text = objPolciaBE.PATERNO;
-                txtApellidoMaterno.Text = objPolciaBE.MATERNO;
-                txtDNI.Text = objPolciaBE.DNI;
-                cboRango.Text = objPolciaBE.GRADO;
-                chkActivo.Checked = (objPolciaBE.ESTADO == "A");
+                lblCodigo.Text = objPoliciaBE.COD_POLICIA;
+                txtNombre.Text = objPoliciaBE.NOMBRE;
+                txtApellidoPaterno.Text = objPoliciaBE.PATERNO;
+                txtApellidoMaterno.Text = objPoliciaBE.MATERNO;
+                txtDNI.Text = objPoliciaBE.DNI;
+                objPoliciaBE.COD_RANGO = Convert.ToInt32(cboRango.SelectedValue);
+                chkActivo.Checked = (objPoliciaBE.ESTADO == "A");
 
                 dtpFechaNacimiento.Value =
-                    (objPolciaBE.FECHANACIMIENTO > dtpFechaNacimiento.MinDate)
-                    ? objPolciaBE.FECHANACIMIENTO
+                    (objPoliciaBE.FECHANACIMIENTO > dtpFechaNacimiento.MinDate)
+                    ? objPoliciaBE.FECHANACIMIENTO
                     : DateTime.Today;
 
-                optMasculino.Checked = (objPolciaBE.SEXO == "M" || objPolciaBE.SEXO == "MASCULINO");
-                optFemenino.Checked = (objPolciaBE.SEXO == "F" || objPolciaBE.SEXO == "FEMENINO");
+                optMasculino.Checked = (objPoliciaBE.SEXO == "M" || objPoliciaBE.SEXO == "MASCULINO");
+                optFemenino.Checked = (objPoliciaBE.SEXO == "F" || objPoliciaBE.SEXO == "FEMENINO");
 
-                if (objPolciaBE.FOTO != null)
+                if (objPoliciaBE.FOTO != null)
                 {
-                    MemoryStream ms = new MemoryStream(objPolciaBE.FOTO);
+                    MemoryStream ms = new MemoryStream(objPoliciaBE.FOTO);
                     pcbFoto.Image = Image.FromStream(ms);
                 }
 
                 // Cargar ubigeo en orden
-                DataRow ubigeo = objPoliciaADO.ObtenerUbigeo(objPolciaBE.COD_UBIGEO);
+                DataRow ubigeo = objPoliciaADO.ObtenerUbigeo(objPoliciaBE.COD_UBIGEO);
 
                 if (ubigeo != null)
                 {
@@ -92,7 +92,7 @@ namespace ProyPapeleta_GUI
                     cboDistrito.DataSource = objPoliciaADO.ListarDistritos(ubigeo["PROVINCIA"].ToString());
                     cboDistrito.DisplayMember = "DISTRITO";
                     cboDistrito.ValueMember = "COD_UBIGEO";
-                    cboDistrito.SelectedValue = objPolciaBE.COD_UBIGEO;
+                    cboDistrito.SelectedValue = objPoliciaBE.COD_UBIGEO;
                 }
             }
             catch (Exception ex)
@@ -162,7 +162,7 @@ namespace ProyPapeleta_GUI
                 objPoliciaBE.FECHANACIMIENTO = dtpFechaNacimiento.Value;
                 objPoliciaBE.ESTADO =
                     chkActivo.Checked ? "A" : "I";
-                objPoliciaBE.GRADO = cboRango.Text;
+                objPoliciaBE.COD_RANGO = Convert.ToInt32(cboRango.SelectedValue);
                 objPoliciaBE.SEXO = optMasculino.Checked ? "M" : "F";
                 objPoliciaBE.USU_ULT_MODIFICACION = "ADMIN";
 

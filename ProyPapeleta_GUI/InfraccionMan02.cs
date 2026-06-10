@@ -21,7 +21,7 @@ namespace ProyPapeleta_GUI
                 "GRAVE",
                 "MUY GRAVE"     };
 
-        public InfraccionMan05 Formulario;
+        public InfraccionMan03 Formulario;
         public InfraccionMan02()
         {
             InitializeComponent();

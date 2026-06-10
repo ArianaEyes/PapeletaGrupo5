@@ -40,5 +40,9 @@ namespace ProyPapeletaBL
         {
             return objPoliciaADO.ObtenerUbigeoPorPolicia(codInfractor);
         }
+        public DataTable ListarRango()
+        {
+            return objPoliciaADO.ListarRango();
+        }
     }
 }
