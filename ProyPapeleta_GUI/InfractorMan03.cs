@@ -110,6 +110,45 @@ namespace ProyPapeleta_GUI
 
         private void btnEliminar_Click_1(object sender, EventArgs e)
         {
+            try
+            {
+                if (dtgInfractor.CurrentRow == null)
+                {
+                    MessageBox.Show(
+                        "Seleccione un infractor.");
+                    return;
+                }
+
+                string codigo =
+                    dtgInfractor.CurrentRow
+                    .Cells["COD_INFRACTOR"]
+                    .Value.ToString();
+
+                DialogResult r =
+                    MessageBox.Show(
+                        "¿Desea desactivar este infractor?",
+                        "Confirmación",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question);
+
+                if (r == DialogResult.Yes)
+                {
+                    InfractorADO objADO =
+                        new InfractorADO();
+
+                    if (objADO.EliminarInfractor(codigo))
+                    {
+                        MessageBox.Show(
+                            "Infractor desactivado correctamente.");
+
+                        CargarInfractores();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void MostrarCantidadRegistros()

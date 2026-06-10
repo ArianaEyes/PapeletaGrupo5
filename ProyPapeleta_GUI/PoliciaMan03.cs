@@ -96,7 +96,6 @@ namespace ProyPapeleta_GUI
                 dtgPolicia.Columns["MATERNO"].HeaderText = "Apellido Materno";
                 dtgPolicia.Columns["NOMBRE"].HeaderText = "Nombres";
                 dtgPolicia.Columns["DNI"].HeaderText = "DNI";
-                dtgPolicia.Columns["RANGO"].HeaderText = "Rango";
                 dtgPolicia.Columns["SEXO"].HeaderText = "Sexo";
                 dtgPolicia.Columns["COD_UBIGEO"].HeaderText = "Cód. Ubigeo";
                 dtgPolicia.Columns["DEPARTAMENTO"].HeaderText = "Departamento";
@@ -125,13 +124,60 @@ namespace ProyPapeleta_GUI
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f is PoliciaMan01)
+                {
+                    f.BringToFront();
+                    return;
+                }
+            }
             PoliciaMan01 frm = new PoliciaMan01();
             frm.Formulario = this;
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (dtgPolicia.CurrentRow == null)
+                {
+                    MessageBox.Show(
+                        "Seleccione un policia.");
+                    return;
+                }
+
+                string codigo =
+                    dtgPolicia.CurrentRow
+                    .Cells["COD_POLICIA"]
+                    .Value.ToString();
+
+                DialogResult r =
+                    MessageBox.Show(
+                        "¿Desea desactivar este policia?",
+                        "Confirmación",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question);
+
+                if (r == DialogResult.Yes)
+                {
+                    InfractorADO objADO =
+                        new InfractorADO();
+
+                    if (new PoliciaADO().EliminarPolicia(codigo))
+                    {
+                        MessageBox.Show(
+                            "Policía desactivado correctamente.");
+
+                        CargarPolicias();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnRefrescar_Click(object sender, EventArgs e)

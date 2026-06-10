@@ -83,29 +83,35 @@ namespace ProyPapeletaADO
         }
 
         //ELIMINAR POLICIA 
-        public Boolean EliminarPolicia(String strCodigo)
+        public bool EliminarPolicia(string codigo)
         {
             try
             {
-
-                using (SqlConnection cnx = new SqlConnection(Configuracion.PAPELETA))
+                using (SqlConnection cnx =
+                    new SqlConnection(Configuracion.PAPELETA))
                 {
-                    using (SqlCommand cmd = new SqlCommand("SP_ELIMINAR_POLICIA", cnx))
-                    {
+                    SqlCommand cmd = new SqlCommand(
+                        "SP_ELIMINAR_POLICIA", cnx);
 
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.Add("@COD_POLICIA", SqlDbType.Char).Value = strCodigo;
+                    cmd.CommandType =
+                        CommandType.StoredProcedure;
 
-                        cnx.Open();
-                        cmd.ExecuteNonQuery();
-                        return true;
-                    }
+                    cmd.Parameters.AddWithValue(
+                        "@COD_POLICIA", codigo);
+
+                    cmd.Parameters.AddWithValue("@USU_ULT_MODIFICACION", "ADMIN");
+
+                    cnx.Open();
+
+                    cmd.ExecuteNonQuery();
+
+                    return true;
                 }
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
-                throw new Exception($"Error al eliminar: {ex.Message}");
-
+                throw new Exception(
+                    "Error al eliminar infractor: " + ex.Message);
             }
         }
 

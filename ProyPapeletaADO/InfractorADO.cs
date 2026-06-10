@@ -140,21 +140,31 @@ namespace ProyPapeletaADO
         {
             try
             {
-                using SqlConnection cnx = new SqlConnection(Configuracion.PAPELETA);
-                SqlCommand cmd = new SqlCommand("SP_ELIMINAR_INFRACTOR", cnx);
-                cmd.CommandType = CommandType.StoredProcedure;
+                using (SqlConnection cnx =
+                    new SqlConnection(Configuracion.PAPELETA))
+                {
+                    SqlCommand cmd = new SqlCommand(
+                        "SP_ELIMINAR_INFRACTOR", cnx);
 
-                cmd.Parameters.AddWithValue("@COD_INFRACTOR", codigo);
+                    cmd.CommandType =
+                        CommandType.StoredProcedure;
 
-                cnx.Open();
+                    cmd.Parameters.AddWithValue(
+                        "@COD_INFRACTOR", codigo);
 
-                cmd.ExecuteNonQuery();
+                    cmd.Parameters.AddWithValue("@USU_ULT_MODIFICACION", "ADMIN");
 
-                return true;
+                    cnx.Open();
+
+                    cmd.ExecuteNonQuery();
+
+                    return true;
+                }
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al eliminar: " + ex.Message);
+                throw new Exception(
+                    "Error al eliminar infractor: " + ex.Message);
             }
         }
 

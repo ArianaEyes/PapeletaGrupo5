@@ -74,28 +74,36 @@ namespace ProyPapeletaADO
         }
 
         //ELIMINAR INFRACCION 
-        public Boolean EliminarInfraccion(String strCodigo)
+        public bool EliminarInfraccion(string codigo)
         {
             try
             {
-
-                using (SqlConnection cnx = new SqlConnection(Configuracion.PAPELETA))
+                using (SqlConnection cnx =
+                    new SqlConnection(Configuracion.PAPELETA))
                 {
-                    using (SqlCommand cmd = new SqlCommand("SP_ELIMINAR_INFRACCION", cnx))
-                    {
+                    SqlCommand cmd = new SqlCommand(
+                        "SP_ELIMINAR_INFRACCION", cnx);
 
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.Add("@COD_INFRACCION", SqlDbType.Char).Value = strCodigo;
-                        cnx.Open();
-                        cmd.ExecuteNonQuery();
-                        return true;
-                    }
+                    cmd.CommandType =
+                        CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue(
+                        "@COD_INFRACCION", codigo);
+
+                    cmd.Parameters.AddWithValue(
+                        "@USU_ULT_MODIFICACION", "ADMIN");
+
+                    cnx.Open();
+
+                    cmd.ExecuteNonQuery();
+
+                    return true;
                 }
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
-                throw new Exception($"Error al eliminar: {ex.Message}");
-
+                throw new Exception(
+                    "Error al eliminar infracción: " + ex.Message);
             }
         }
 

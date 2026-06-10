@@ -35,7 +35,7 @@ namespace ProyPapeleta_GUI
                 }
 
                 // Filtramos por el campo real de tu SP -> CODIGO
-                dtv.RowFilter = $"COD_INFRACCION LIKE '%{strFiltro}%'";
+                dtv.RowFilter = $"DESCRIPCION_SANCION LIKE '%{strFiltro}%'";
                 // Enlazamos el dataGridView al dtv
                 dtgInfraccion.DataSource = dtv;
 
@@ -117,6 +117,14 @@ namespace ProyPapeleta_GUI
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f is InfraccionMan01)
+                {
+                    f.BringToFront();
+                    return;
+                }
+            }
             InfraccionMan01 frm = new InfraccionMan01();
             frm.Formulario = this;
             frm.Show();
@@ -124,6 +132,45 @@ namespace ProyPapeleta_GUI
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (dtgInfraccion.CurrentRow == null)
+                {
+                    MessageBox.Show(
+                        "Seleccione una infracción.");
+                    return;
+                }
+
+                string codigo =
+                    dtgInfraccion.CurrentRow
+                    .Cells["COD_INFRACCION"]
+                    .Value.ToString();
+
+                DialogResult r =
+                    MessageBox.Show(
+                        "¿Desea desactivar esta infracción?",
+                        "Confirmación",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question);
+
+                if (r == DialogResult.Yes)
+                {
+                    InfraccionADO objADO =
+                        new InfraccionADO();
+
+                    if (objADO.EliminarInfraccion(codigo))
+                    {
+                        MessageBox.Show(
+                            "Infracción desactivada correctamente.");
+
+                        CargarInfraccion();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void dtgInfraccion_CellContentClick(object sender, DataGridViewCellEventArgs e)
