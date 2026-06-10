@@ -96,7 +96,6 @@ namespace ProyPapeleta_GUI
                 dtgPolicia.Columns["MATERNO"].HeaderText = "Apellido Materno";
                 dtgPolicia.Columns["NOMBRE"].HeaderText = "Nombres";
                 dtgPolicia.Columns["DNI"].HeaderText = "DNI";
-                dtgPolicia.Columns["COD_RANGO"].HeaderText = "Rango";
                 dtgPolicia.Columns["SEXO"].HeaderText = "Sexo";
                 dtgPolicia.Columns["COD_UBIGEO"].HeaderText = "Cód. Ubigeo";
                 dtgPolicia.Columns["DEPARTAMENTO"].HeaderText = "Departamento";

@@ -55,10 +55,10 @@
             // 
             // txtFiltrooo
             // 
-            txtFiltrooo.Location = new Point(600, 43);
-            txtFiltrooo.Margin = new Padding(6, 4, 6, 4);
+            txtFiltrooo.Location = new Point(271, 20);
+            txtFiltrooo.Margin = new Padding(3, 2, 3, 2);
             txtFiltrooo.Name = "txtFiltrooo";
-            txtFiltrooo.Size = new Size(767, 39);
+            txtFiltrooo.Size = new Size(467, 23);
             txtFiltrooo.TabIndex = 5;
             txtFiltrooo.TextChanged += txtFiltrooo_TextChanged;
             // 
@@ -68,9 +68,9 @@
             label1.Location = new Point(119, 47);
             label1.Margin = new Padding(6, 0, 6, 0);
             label1.Name = "label1";
-            label1.Size = new Size(350, 32);
+            label1.Size = new Size(201, 15);
             label1.TabIndex = 4;
-            label1.Text = "Ingrese iniciales de descripción:";
+            label1.Text = "Ingrese iniciales del apellido Paterno:";
             label1.Click += label1_Click;
             // 
             // lblRegistros
@@ -79,7 +79,7 @@
             lblRegistros.Location = new Point(1445, 917);
             lblRegistros.Margin = new Padding(6, 0, 6, 0);
             lblRegistros.Name = "lblRegistros";
-            lblRegistros.Size = new Size(253, 100);
+            lblRegistros.Size = new Size(137, 34);
             lblRegistros.TabIndex = 17;
             // 
             // label3
@@ -94,8 +94,8 @@
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(1454, 1058);
-            btnSalir.Margin = new Padding(6, 4, 6, 4);
+            btnSalir.Location = new Point(783, 479);
+            btnSalir.Margin = new Padding(3, 2, 3, 2);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(243, 75);
             btnSalir.TabIndex = 14;
@@ -105,8 +105,8 @@
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(371, 937);
-            btnEliminar.Margin = new Padding(6, 4, 6, 4);
+            btnEliminar.Location = new Point(474, 479);
+            btnEliminar.Margin = new Padding(3, 2, 3, 2);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(243, 75);
             btnEliminar.TabIndex = 13;

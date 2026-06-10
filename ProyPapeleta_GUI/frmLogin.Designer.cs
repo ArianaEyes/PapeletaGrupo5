@@ -74,8 +74,10 @@
             txtPassword.Margin = new Padding(7, 6, 7, 6);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
-            txtPassword.Size = new Size(212, 39);
+            txtPassword.Size = new Size(116, 23);
             txtPassword.TabIndex = 2;
+            txtPassword.TextChanged += txtPassword_TextChanged;
+            txtPassword.KeyDown += txtPassword_KeyDown;
             // 
             // label2
             // 

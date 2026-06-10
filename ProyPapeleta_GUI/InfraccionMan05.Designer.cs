@@ -150,7 +150,7 @@
             Margin = new Padding(6, 6, 6, 6);
             Name = "InfraccionMan05";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Infraccion";
+            Text = "Actualizar Infracción";
             Load += InfraccionMan05_Load;
             ((System.ComponentModel.ISupportInitialize)dtgInfraccion).EndInit();
             ResumeLayout(false);
