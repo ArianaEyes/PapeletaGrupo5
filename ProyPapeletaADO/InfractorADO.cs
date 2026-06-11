@@ -35,6 +35,7 @@ namespace ProyPapeletaADO
                         cmd.Parameters.Add("@FOTO", SqlDbType.Image).Value = objInfractorBE.FOTO;
                         cmd.Parameters.Add("@NRO_BREVETE", SqlDbType.Char).Value = objInfractorBE.NRO_BREVETE;
                         cmd.Parameters.Add("@TIPO_BREVETE", SqlDbType.VarChar).Value = objInfractorBE.TIPO_BREVETE;
+                        cmd.Parameters.Add("@ESTADO", SqlDbType.Char).Value = objInfractorBE.ESTADO;
                         cmd.Parameters.Add("@USU_REGISTRO", SqlDbType.VarChar).Value = objInfractorBE.USU_REGISTRO;
 
                         cnx.Open();
@@ -102,6 +103,9 @@ namespace ProyPapeletaADO
 
             cmd.Parameters.AddWithValue("@SEXO",
                                          objBE.SEXO);
+
+            cmd.Parameters.AddWithValue("@ESTADO",
+                                         objBE.ESTADO);
 
             cmd.Parameters.AddWithValue("@USU_ULT_MODIFICACION", "ADMIN");
 
@@ -199,6 +203,7 @@ namespace ProyPapeletaADO
                                 objInfractorBE.FEC_NACIMIENTO = Convert.ToDateTime(dtr["FEC_NACIMIENTO"]);
                                 objInfractorBE.NRO_BREVETE = dtr["NRO_BREVETE"].ToString();
                                 objInfractorBE.TIPO_BREVETE = dtr["TIPO_BREVETE"].ToString();
+                                objInfractorBE.ESTADO = dtr["ESTADO"].ToString();
                                 objInfractorBE.COD_UBIGEO = dtr["COD_UBIGEO"].ToString();
                                 if (dtr["FOTO"] != DBNull.Value)
                                 {

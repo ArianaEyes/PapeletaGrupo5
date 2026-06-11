@@ -11,6 +11,14 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
         #region Windows Form Designer generated code
 
@@ -47,205 +55,196 @@
             lblEstado = new Label();
             label19 = new Label();
             ((System.ComponentModel.ISupportInitialize)dtgMultas).BeginInit();
+            SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(22, 38);
-            label1.Margin = new Padding(6, 0, 6, 0);
+            label1.Location = new Point(12, 18);
             label1.Name = "label1";
-            label1.Size = new Size(192, 32);
+            label1.Size = new Size(97, 15);
             label1.TabIndex = 0;
             label1.Text = "Código Infractor:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(22, 107);
-            label2.Margin = new Padding(6, 0, 6, 0);
+            label2.Location = new Point(12, 50);
             label2.Name = "label2";
-            label2.Size = new Size(107, 32);
+            label2.Size = new Size(54, 15);
             label2.TabIndex = 1;
             label2.Text = "Nombre:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(22, 186);
-            label3.Margin = new Padding(6, 0, 6, 0);
+            label3.Location = new Point(12, 87);
             label3.Name = "label3";
-            label3.Size = new Size(188, 32);
+            label3.Size = new Size(92, 15);
             label3.TabIndex = 2;
             label3.Text = "Tipo de brevete:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(22, 254);
-            label4.Margin = new Padding(6, 0, 6, 0);
+            label4.Location = new Point(12, 119);
             label4.Name = "label4";
-            label4.Size = new Size(112, 32);
+            label4.Size = new Size(56, 15);
             label4.TabIndex = 3;
             label4.Text = "Teléfono:";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(22, 354);
-            label5.Margin = new Padding(6, 0, 6, 0);
+            label5.Location = new Point(12, 166);
             label5.Name = "label5";
-            label5.Size = new Size(145, 32);
+            label5.Size = new Size(73, 15);
             label5.TabIndex = 4;
             label5.Text = "Fecha Inicio:";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(812, 107);
-            label6.Margin = new Padding(6, 0, 6, 0);
+            label6.Location = new Point(437, 50);
             label6.Name = "label6";
-            label6.Size = new Size(0, 32);
+            label6.Size = new Size(0, 15);
             label6.TabIndex = 5;
+            label6.Click += label6_Click;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(583, 38);
-            label7.Margin = new Padding(6, 0, 6, 0);
+            label7.Location = new Point(314, 18);
             label7.Name = "label7";
-            label7.Size = new Size(60, 32);
+            label7.Size = new Size(30, 15);
             label7.TabIndex = 6;
             label7.Text = "DNI:";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(583, 107);
-            label8.Margin = new Padding(6, 0, 6, 0);
+            label8.Location = new Point(314, 50);
             label8.Name = "label8";
-            label8.Size = new Size(107, 32);
+            label8.Size = new Size(54, 15);
             label8.TabIndex = 7;
             label8.Text = "Apellido:";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(583, 186);
-            label9.Margin = new Padding(6, 0, 6, 0);
+            label9.Location = new Point(314, 87);
             label9.Name = "label9";
-            label9.Size = new Size(229, 32);
+            label9.Size = new Size(112, 15);
             label9.TabIndex = 8;
             label9.Text = "Número de Brevete:";
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(583, 254);
-            label10.Margin = new Padding(6, 0, 6, 0);
+            label10.Location = new Point(314, 119);
             label10.Name = "label10";
-            label10.Size = new Size(91, 32);
+            label10.Size = new Size(46, 15);
             label10.TabIndex = 9;
             label10.Text = "Correo:";
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(583, 354);
-            label11.Margin = new Padding(6, 0, 6, 0);
+            label11.Location = new Point(314, 166);
             label11.Name = "label11";
-            label11.Size = new Size(120, 32);
+            label11.Size = new Size(60, 15);
             label11.TabIndex = 10;
             label11.Text = "Fecha Fin:";
             // 
             // dtpFecIni
             // 
             dtpFecIni.Format = DateTimePickerFormat.Short;
-            dtpFecIni.Location = new Point(184, 348);
-            dtpFecIni.Margin = new Padding(7, 6, 7, 6);
+            dtpFecIni.Location = new Point(99, 163);
+            dtpFecIni.Margin = new Padding(4, 3, 4, 3);
             dtpFecIni.Name = "dtpFecIni";
-            dtpFecIni.Size = new Size(271, 39);
-            dtpFecIni.TabIndex = 2;
+            dtpFecIni.Size = new Size(148, 23);
+            dtpFecIni.TabIndex = 11;
             // 
             // dateTimePicker1
             // 
             dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(717, 346);
-            dateTimePicker1.Margin = new Padding(7, 6, 7, 6);
+            dateTimePicker1.Location = new Point(386, 162);
+            dateTimePicker1.Margin = new Padding(4, 3, 4, 3);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(271, 39);
-            dateTimePicker1.TabIndex = 3;
+            dateTimePicker1.Size = new Size(148, 23);
+            dateTimePicker1.TabIndex = 12;
             // 
             // txtCod
             // 
             txtCod.CharacterCasing = CharacterCasing.Upper;
-            txtCod.Location = new Point(243, 32);
-            txtCod.Margin = new Padding(7, 6, 7, 6);
+            txtCod.Location = new Point(131, 15);
+            txtCod.Margin = new Padding(4, 3, 4, 3);
             txtCod.MaxLength = 4;
             txtCod.Name = "txtCod";
-            txtCod.Size = new Size(164, 39);
-            txtCod.TabIndex = 1;
+            txtCod.Size = new Size(90, 23);
+            txtCod.TabIndex = 13;
             // 
             // lblNombre
             // 
             lblNombre.BorderStyle = BorderStyle.FixedSingle;
-            lblNombre.Location = new Point(136, 100);
-            lblNombre.Margin = new Padding(7, 0, 7, 0);
+            lblNombre.Location = new Point(73, 47);
+            lblNombre.Margin = new Padding(4, 0, 4, 0);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(214, 53);
+            lblNombre.Size = new Size(116, 26);
             lblNombre.TabIndex = 14;
             // 
             // lblTipoBrevete
             // 
             lblTipoBrevete.BorderStyle = BorderStyle.FixedSingle;
-            lblTipoBrevete.Location = new Point(202, 179);
-            lblTipoBrevete.Margin = new Padding(7, 0, 7, 0);
+            lblTipoBrevete.Location = new Point(109, 84);
+            lblTipoBrevete.Margin = new Padding(4, 0, 4, 0);
             lblTipoBrevete.Name = "lblTipoBrevete";
-            lblTipoBrevete.Size = new Size(203, 53);
+            lblTipoBrevete.Size = new Size(110, 26);
             lblTipoBrevete.TabIndex = 15;
             // 
             // lblTel
             // 
             lblTel.BorderStyle = BorderStyle.FixedSingle;
-            lblTel.Location = new Point(158, 254);
-            lblTel.Margin = new Padding(7, 0, 7, 0);
+            lblTel.Location = new Point(85, 119);
+            lblTel.Margin = new Padding(4, 0, 4, 0);
             lblTel.Name = "lblTel";
-            lblTel.Size = new Size(214, 53);
+            lblTel.Size = new Size(116, 26);
             lblTel.TabIndex = 16;
             // 
             // lblDNI
             // 
             lblDNI.BorderStyle = BorderStyle.FixedSingle;
-            lblDNI.Location = new Point(652, 26);
-            lblDNI.Margin = new Padding(7, 0, 7, 0);
+            lblDNI.Location = new Point(351, 12);
+            lblDNI.Margin = new Padding(4, 0, 4, 0);
             lblDNI.Name = "lblDNI";
-            lblDNI.Size = new Size(262, 53);
+            lblDNI.Size = new Size(142, 26);
             lblDNI.TabIndex = 17;
             // 
             // lblApellido
             // 
             lblApellido.BorderStyle = BorderStyle.FixedSingle;
-            lblApellido.Location = new Point(696, 100);
-            lblApellido.Margin = new Padding(7, 0, 7, 0);
+            lblApellido.Location = new Point(375, 47);
+            lblApellido.Margin = new Padding(4, 0, 4, 0);
             lblApellido.Name = "lblApellido";
-            lblApellido.Size = new Size(578, 53);
+            lblApellido.Size = new Size(312, 26);
             lblApellido.TabIndex = 18;
             // 
             // lblNumBrevete
             // 
             lblNumBrevete.BorderStyle = BorderStyle.FixedSingle;
-            lblNumBrevete.Location = new Point(804, 179);
-            lblNumBrevete.Margin = new Padding(7, 0, 7, 0);
+            lblNumBrevete.Location = new Point(433, 84);
+            lblNumBrevete.Margin = new Padding(4, 0, 4, 0);
             lblNumBrevete.Name = "lblNumBrevete";
-            lblNumBrevete.Size = new Size(470, 53);
+            lblNumBrevete.Size = new Size(254, 26);
             lblNumBrevete.TabIndex = 19;
             // 
             // lblCorreo
             // 
             lblCorreo.BorderStyle = BorderStyle.FixedSingle;
-            lblCorreo.Location = new Point(682, 252);
-            lblCorreo.Margin = new Padding(7, 0, 7, 0);
+            lblCorreo.Location = new Point(367, 118);
+            lblCorreo.Margin = new Padding(4, 0, 4, 0);
             lblCorreo.Name = "lblCorreo";
-            lblCorreo.Size = new Size(593, 53);
+            lblCorreo.Size = new Size(320, 26);
             lblCorreo.TabIndex = 20;
             // 
             // dtgMultas
@@ -255,24 +254,23 @@
             dtgMultas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dtgMultas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtgMultas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgMultas.Location = new Point(22, 448);
-            dtgMultas.Margin = new Padding(7, 6, 7, 6);
+            dtgMultas.Location = new Point(12, 210);
+            dtgMultas.Margin = new Padding(4, 3, 4, 3);
             dtgMultas.Name = "dtgMultas";
             dtgMultas.ReadOnly = true;
             dtgMultas.RowHeadersVisible = false;
-            dtgMultas.RowHeadersWidth = 82;
             dtgMultas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dtgMultas.Size = new Size(1272, 395);
+            dtgMultas.Size = new Size(685, 185);
             dtgMultas.TabIndex = 21;
             // 
             // lblRegistros
             // 
             lblRegistros.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             lblRegistros.BorderStyle = BorderStyle.FixedSingle;
-            lblRegistros.Location = new Point(1159, 870);
-            lblRegistros.Margin = new Padding(7, 0, 7, 0);
+            lblRegistros.Location = new Point(624, 408);
+            lblRegistros.Margin = new Padding(4, 0, 4, 0);
             lblRegistros.Name = "lblRegistros";
-            lblRegistros.Size = new Size(104, 53);
+            lblRegistros.Size = new Size(57, 26);
             lblRegistros.TabIndex = 23;
             lblRegistros.TextAlign = ContentAlignment.MiddleRight;
             // 
@@ -280,34 +278,68 @@
             // 
             label14.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             label14.AutoSize = true;
-            label14.Location = new Point(1036, 883);
-            label14.Margin = new Padding(7, 0, 7, 0);
+            label14.Location = new Point(558, 414);
+            label14.Margin = new Padding(4, 0, 4, 0);
             label14.Name = "label14";
-            label14.Size = new Size(115, 32);
+            label14.Size = new Size(58, 15);
             label14.TabIndex = 22;
             label14.Text = "Registros:";
             // 
             // lblEstado
             // 
             lblEstado.BorderStyle = BorderStyle.FixedSingle;
-            lblEstado.Location = new Point(1079, 26);
-            lblEstado.Margin = new Padding(7, 0, 7, 0);
+            lblEstado.Location = new Point(581, 12);
+            lblEstado.Margin = new Padding(4, 0, 4, 0);
             lblEstado.Name = "lblEstado";
-            lblEstado.Size = new Size(195, 51);
+            lblEstado.Size = new Size(106, 25);
             lblEstado.TabIndex = 25;
             // 
             // label19
             // 
             label19.AutoSize = true;
-            label19.Location = new Point(981, 38);
-            label19.Margin = new Padding(7, 0, 7, 0);
+            label19.Location = new Point(528, 18);
+            label19.Margin = new Padding(4, 0, 4, 0);
             label19.Name = "label19";
-            label19.Size = new Size(89, 32);
+            label19.Size = new Size(45, 15);
             label19.TabIndex = 24;
             label19.Text = "Estado:";
             // 
             // MultasInfractor
             // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(704, 450);
+            Controls.Add(lblEstado);
+            Controls.Add(label19);
+            Controls.Add(lblRegistros);
+            Controls.Add(label14);
+            Controls.Add(dtgMultas);
+            Controls.Add(lblCorreo);
+            Controls.Add(lblNumBrevete);
+            Controls.Add(lblApellido);
+            Controls.Add(lblDNI);
+            Controls.Add(lblTel);
+            Controls.Add(lblTipoBrevete);
+            Controls.Add(lblNombre);
+            Controls.Add(txtCod);
+            Controls.Add(dateTimePicker1);
+            Controls.Add(dtpFecIni);
+            Controls.Add(label11);
+            Controls.Add(label10);
+            Controls.Add(label9);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Name = "MultasInfractor";
+            Text = "MultasInfractor";
+            ((System.ComponentModel.ISupportInitialize)dtgMultas).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
