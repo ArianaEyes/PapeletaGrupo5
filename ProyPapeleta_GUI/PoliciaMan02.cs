@@ -14,6 +14,7 @@ namespace ProyPapeleta_GUI
         public string Codigo = "";
         public PoliciaMan03 Formulario;
 
+        //Validaciones
         public PoliciaMan02()
         {
             InitializeComponent();
@@ -59,18 +60,24 @@ namespace ProyPapeleta_GUI
                 txtApellidoPaterno.Text = objPoliciaBE.PATERNO;
                 txtApellidoMaterno.Text = objPoliciaBE.MATERNO;
                 txtDNI.Text = objPoliciaBE.DNI;
-                objPoliciaBE.COD_RANGO = Convert.ToInt32(cboRango.SelectedValue);
+                txtRango.Text = objPoliciaBE.COD_RANGO.ToString(); 
                 chkActivo.Checked = (objPoliciaBE.ESTADO == "A");
 
-                dtpFechaNacimiento.Value =
-                    (objPoliciaBE.FECHANACIMIENTO > dtpFechaNacimiento.MinDate)
+                dtpFechaNacimiento.Value = (objPoliciaBE.FECHANACIMIENTO > dtpFechaNacimiento.MinDate)
                     ? objPoliciaBE.FECHANACIMIENTO
                     : DateTime.Today;
 
                 optMasculino.Checked = (objPoliciaBE.SEXO == "M" || objPoliciaBE.SEXO == "MASCULINO");
                 optFemenino.Checked = (objPoliciaBE.SEXO == "F" || objPoliciaBE.SEXO == "FEMENINO");
 
-                if (objPoliciaBE.FOTO != null)
+                /*if (rango != null)
+                {
+                    cboRango.DataSource = objPoliciaADO.ListarRango();
+                    cboRango.DisplayMember = "RANGO";
+                    cboRango.Text = rango["RANGO"].ToString();
+                }*/
+
+                    if (objPoliciaBE.FOTO != null)
                 {
                     MemoryStream ms = new MemoryStream(objPoliciaBE.FOTO);
                     pcbFoto.Image = Image.FromStream(ms);
@@ -160,8 +167,7 @@ namespace ProyPapeleta_GUI
                 objPoliciaBE.DNI = txtDNI.Text;
                 objPoliciaBE.COD_UBIGEO = cboDistrito.SelectedValue.ToString();
                 objPoliciaBE.FECHANACIMIENTO = dtpFechaNacimiento.Value;
-                objPoliciaBE.ESTADO =
-                    chkActivo.Checked ? "A" : "I";
+                objPoliciaBE.ESTADO =chkActivo.Checked ? "A" : "I";
                 objPoliciaBE.COD_RANGO = Convert.ToInt32(cboRango.SelectedValue);
                 objPoliciaBE.SEXO = optMasculino.Checked ? "M" : "F";
                 objPoliciaBE.USU_ULT_MODIFICACION = "ADMIN";
@@ -216,7 +222,6 @@ namespace ProyPapeleta_GUI
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
                     pcbFoto.Image = Image.FromFile(ofd.FileName);
-
                     pcbFoto.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
             }

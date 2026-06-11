@@ -15,6 +15,8 @@ namespace ProyPapeleta_GUI
         PoliciaBL objPoliciaBL = new PoliciaBL();
         public PoliciaMan03 Formulario;
         ErrorProvider errorProvider1 = new ErrorProvider();
+
+        //Validar componentes
         public PoliciaMan01()
         {
             InitializeComponent();
@@ -33,7 +35,7 @@ namespace ProyPapeleta_GUI
 
             txtDNI.MaxLength = 8;
         }
-
+        //Validar componentes
         private void txtNombre_Validating(object sender, CancelEventArgs e)
         {
             if (txtNombre.Text.Trim() == "")

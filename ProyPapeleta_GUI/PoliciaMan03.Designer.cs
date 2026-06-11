@@ -44,31 +44,30 @@
             dtgPolicia.AllowUserToAddRows = false;
             dtgPolicia.AllowUserToDeleteRows = false;
             dtgPolicia.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgPolicia.Location = new Point(50, 113);
-            dtgPolicia.Margin = new Padding(6, 4, 6, 4);
+            dtgPolicia.Location = new Point(27, 53);
+            dtgPolicia.Margin = new Padding(3, 2, 3, 2);
             dtgPolicia.Name = "dtgPolicia";
             dtgPolicia.ReadOnly = true;
             dtgPolicia.RowHeadersWidth = 82;
-            dtgPolicia.Size = new Size(1338, 586);
+            dtgPolicia.Size = new Size(720, 275);
             dtgPolicia.TabIndex = 6;
             dtgPolicia.CellDoubleClick += dtgPolicia_CellDoubleClick;
             // 
             // txtFiltrooo
             // 
-            txtFiltrooo.Location = new Point(681, 47);
-            txtFiltrooo.Margin = new Padding(3, 2, 3, 2);
+            txtFiltrooo.Location = new Point(367, 22);
+            txtFiltrooo.Margin = new Padding(2, 1, 2, 1);
             txtFiltrooo.Name = "txtFiltrooo";
-            txtFiltrooo.Size = new Size(467, 39);
+            txtFiltrooo.Size = new Size(253, 23);
             txtFiltrooo.TabIndex = 5;
             txtFiltrooo.TextChanged += txtFiltrooo_TextChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(119, 47);
-            label1.Margin = new Padding(6, 0, 6, 0);
+            label1.Location = new Point(64, 22);
             label1.Name = "label1";
-            label1.Size = new Size(408, 32);
+            label1.Size = new Size(201, 15);
             label1.TabIndex = 4;
             label1.Text = "Ingrese iniciales del apellido Paterno:";
             label1.Click += label1_Click;
@@ -76,28 +75,26 @@
             // lblRegistros
             // 
             lblRegistros.BorderStyle = BorderStyle.FixedSingle;
-            lblRegistros.Location = new Point(1133, 733);
-            lblRegistros.Margin = new Padding(6, 0, 6, 0);
+            lblRegistros.Location = new Point(610, 344);
             lblRegistros.Name = "lblRegistros";
-            lblRegistros.Size = new Size(161, 51);
+            lblRegistros.Size = new Size(88, 25);
             lblRegistros.TabIndex = 17;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(1006, 743);
-            label3.Margin = new Padding(6, 0, 6, 0);
+            label3.Location = new Point(542, 348);
             label3.Name = "label3";
-            label3.Size = new Size(115, 32);
+            label3.Size = new Size(58, 15);
             label3.TabIndex = 16;
             label3.Text = "Registros:";
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(703, 743);
-            btnSalir.Margin = new Padding(3, 2, 3, 2);
+            btnSalir.Location = new Point(379, 348);
+            btnSalir.Margin = new Padding(2, 1, 2, 1);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(179, 41);
+            btnSalir.Size = new Size(96, 30);
             btnSalir.TabIndex = 14;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
@@ -105,10 +102,10 @@
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(349, 743);
-            btnEliminar.Margin = new Padding(3, 2, 3, 2);
+            btnEliminar.Location = new Point(188, 348);
+            btnEliminar.Margin = new Padding(2, 1, 2, 1);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(214, 41);
+            btnEliminar.Size = new Size(115, 30);
             btnEliminar.TabIndex = 13;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
@@ -116,20 +113,20 @@
             // 
             // btnInsertar
             // 
-            btnInsertar.Location = new Point(100, 743);
-            btnInsertar.Margin = new Padding(6, 4, 6, 4);
+            btnInsertar.Location = new Point(54, 348);
+            btnInsertar.Margin = new Padding(3, 2, 3, 2);
             btnInsertar.Name = "btnInsertar";
-            btnInsertar.Size = new Size(168, 41);
+            btnInsertar.Size = new Size(90, 50);
             btnInsertar.TabIndex = 18;
             btnInsertar.Text = "Insertar";
             btnInsertar.UseVisualStyleBackColor = true;
             btnInsertar.Click += btnInsertar_Click;
             // 
-            // PoliciaMan05
+            // PoliciaMan03
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1444, 819);
+            ClientSize = new Size(778, 417);
             Controls.Add(btnInsertar);
             Controls.Add(lblRegistros);
             Controls.Add(label3);
@@ -138,8 +135,8 @@
             Controls.Add(dtgPolicia);
             Controls.Add(txtFiltrooo);
             Controls.Add(label1);
-            Margin = new Padding(6, 4, 6, 4);
-            Name = "PoliciaMan05";
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "PoliciaMan03";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "PoliciaMan05";
             Load += PoliciaMan05_Load;

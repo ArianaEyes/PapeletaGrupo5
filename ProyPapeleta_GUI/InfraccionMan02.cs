@@ -27,7 +27,7 @@ namespace ProyPapeleta_GUI
                 "Retención",
                 "Internamiento"     };
 
-        public InfraccionMan05 Formulario;
+        
         public InfraccionMan02()
         {
             InitializeComponent();

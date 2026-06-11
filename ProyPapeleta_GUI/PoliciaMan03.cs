@@ -22,26 +22,26 @@ namespace ProyPapeleta_GUI
         {
             InitializeComponent();
         }
-        private void CargarDatos(string strFiltro)
-        {
-            try
-            {
-                if (dtv == null)
-                {
-                    dtv = new DataView(objPoliciaBL.ListarPolicia());
-                }
+        //private void CargarDatos(string strFiltro)
+        //{
+        //    try
+        //    {
+        //        if (dtv == null)
+        //        {
+        //            dtv = new DataView(objPoliciaBL.ListarPolicia());
+        //        }
 
-                dtv.RowFilter = $"COD_POLICIA LIKE '%{strFiltro}%'";
+        //        dtv.RowFilter = $"COD_POLICIA LIKE '%{strFiltro}%'";
 
-                dtgPolicia.DataSource = dtv;
+        //        dtgPolicia.DataSource = dtv;
 
-                lblRegistros.Text = dtv.Count.ToString();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al filtrar los datos: " + ex.Message);
-            }
-        }
+        //        lblRegistros.Text = dtv.Count.ToString();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Error al filtrar los datos: " + ex.Message);
+        //    }
+        //}
         private void PoliciaMan05_Load(object sender, EventArgs e)
         {
             try
@@ -101,11 +101,13 @@ namespace ProyPapeleta_GUI
                 dtgPolicia.Columns["DEPARTAMENTO"].HeaderText = "Departamento";
                 dtgPolicia.Columns["PROVINCIA"].HeaderText = "Provincia";
                 dtgPolicia.Columns["DISTRITO"].HeaderText = "Distrito";
+                dtgPolicia.Columns["ESTADO"].HeaderText = "Estado";
+
 
                 // ocultar lo que no se necesita
                 if (dtgPolicia.Columns.Contains("FECHANACIMIENTO")) dtgPolicia.Columns["FECHANACIMIENTO"].Visible = false;
-                if (dtgPolicia.Columns.Contains("ESTADO")) dtgPolicia.Columns["ESTADO"].Visible = false;
-                if (dtgPolicia.Columns.Contains("FOTO")) dtgPolicia.Columns["FOTO"].Visible = false;
+                if (dtgPolicia.Columns.Contains("ESTADO")) dtgPolicia.Columns["ESTADO"].Visible = true;
+                if (dtgPolicia.Columns.Contains("FOTO")) dtgPolicia.Columns["FOTO"].Visible = true;
 
                 dtgPolicia.AlternatingRowsDefaultCellStyle.BackColor = Color.AliceBlue;
             }

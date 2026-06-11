@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MDIPrincipal));
             menuStrip1 = new MenuStrip();
             mantenimientosToolStripMenuItem = new ToolStripMenuItem();
             policíasToolStripMenuItem = new ToolStripMenuItem();
@@ -52,43 +53,53 @@
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(6, 1, 0, 1);
-            menuStrip1.Size = new Size(800, 24);
+            menuStrip1.Size = new Size(800, 30);
             menuStrip1.TabIndex = 3;
             menuStrip1.Text = "menuStrip1";
             // 
             // mantenimientosToolStripMenuItem
             // 
             mantenimientosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { policíasToolStripMenuItem, infractoresToolStripMenuItem, infraccionesToolStripMenuItem });
+           // mantenimientosToolStripMenuItem.Image = ProyPapeleta_GUI.Properties.Resources.form_blue;
+            mantenimientosToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             mantenimientosToolStripMenuItem.Name = "mantenimientosToolStripMenuItem";
-            mantenimientosToolStripMenuItem.Size = new Size(101, 22);
+            mantenimientosToolStripMenuItem.Size = new Size(125, 28);
             mantenimientosToolStripMenuItem.Text = "Mantenimiento";
             // 
             // policíasToolStripMenuItem
             // 
+            //policíasToolStripMenuItem.Image = ProyPapeleta_GUI.Properties.Resources.Usuario;
+            policíasToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             policíasToolStripMenuItem.Name = "policíasToolStripMenuItem";
-            policíasToolStripMenuItem.Size = new Size(138, 22);
+            policíasToolStripMenuItem.Size = new Size(188, 30);
             policíasToolStripMenuItem.Text = "Policías";
             policíasToolStripMenuItem.Click += policíasToolStripMenuItem_Click;
             // 
             // infractoresToolStripMenuItem
             // 
+            //infractoresToolStripMenuItem.Image = ProyPapeleta_GUI.Properties.Resources.users3;
+            infractoresToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             infractoresToolStripMenuItem.Name = "infractoresToolStripMenuItem";
-            infractoresToolStripMenuItem.Size = new Size(138, 22);
+            infractoresToolStripMenuItem.Size = new Size(188, 30);
             infractoresToolStripMenuItem.Text = "Infractores";
             infractoresToolStripMenuItem.Click += infractoresToolStripMenuItem_Click;
             // 
             // infraccionesToolStripMenuItem
             // 
+            //infraccionesToolStripMenuItem.Image = ProyPapeleta_GUI.Properties.Resources.book_blue;
+            infraccionesToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             infraccionesToolStripMenuItem.Name = "infraccionesToolStripMenuItem";
-            infraccionesToolStripMenuItem.Size = new Size(138, 22);
+            infraccionesToolStripMenuItem.Size = new Size(188, 30);
             infraccionesToolStripMenuItem.Text = "Infracciones";
             infraccionesToolStripMenuItem.Click += infraccionesToolStripMenuItem_Click;
             // 
             // consultasToolStripMenuItem
             // 
             consultasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { consultarDatosToolStripMenuItem, consultarPorInfractorToolStripMenuItem, consultarPorInfracciónToolStripMenuItem });
+           // consultasToolStripMenuItem.Image = ProyPapeleta_GUI.Properties.Resources.Buscar1;
+            consultasToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            consultasToolStripMenuItem.Size = new Size(71, 22);
+            consultasToolStripMenuItem.Size = new Size(87, 28);
             consultasToolStripMenuItem.Text = "Consultas";
             // 
             // consultarDatosToolStripMenuItem
@@ -115,8 +126,10 @@
             // salirDelSistemaToolStripMenuItem
             // 
             salirDelSistemaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { salirToolStripMenuItem });
+            salirDelSistemaToolStripMenuItem.Image = (Image)resources.GetObject("salirDelSistemaToolStripMenuItem.Image");
+            salirDelSistemaToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             salirDelSistemaToolStripMenuItem.Name = "salirDelSistemaToolStripMenuItem";
-            salirDelSistemaToolStripMenuItem.Size = new Size(103, 22);
+            salirDelSistemaToolStripMenuItem.Size = new Size(119, 28);
             salirDelSistemaToolStripMenuItem.Text = "Salir del sistema";
             // 
             // salirToolStripMenuItem

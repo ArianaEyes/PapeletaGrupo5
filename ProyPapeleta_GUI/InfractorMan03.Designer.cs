@@ -39,9 +39,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(208, 20);
             label1.Name = "label1";
-            label1.Size = new Size(201, 15);
+            label1.Size = new Size(173, 15);
             label1.TabIndex = 0;
-            label1.Text = "Ingrese iniciales del apellido paterno:";
+            label1.Text = "Ingrese iniciales de descripción:";
             // 
             // contextMenuStrip1
             // 
@@ -51,7 +51,7 @@
             // 
             // txtFiltroo
             // 
-            txtFiltroo.Location = new Point(685, 20);
+            txtFiltroo.Location = new Point(574, 20);
             txtFiltroo.Name = "txtFiltroo";
             txtFiltroo.Size = new Size(495, 23);
             txtFiltroo.TabIndex = 2;
@@ -133,7 +133,7 @@
             Controls.Add(label1);
             Name = "InfractorMan03";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "J";
+            Text = "InfractorMan03";
             Load += InfractorMan03_Load_1;
             ((System.ComponentModel.ISupportInitialize)dtgInfractor).EndInit();
             ((System.ComponentModel.ISupportInitialize)infractorBLBindingSource).EndInit();

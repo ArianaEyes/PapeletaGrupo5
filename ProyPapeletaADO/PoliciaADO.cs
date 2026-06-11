@@ -27,11 +27,11 @@ namespace ProyPapeletaADO
                         cmd.Parameters.Add("@MATERNO", SqlDbType.VarChar).Value = objPoliciaBE.MATERNO;
                         cmd.Parameters.Add("@DNI", SqlDbType.Char).Value = objPoliciaBE.DNI;
                         cmd.Parameters.Add("@COD_UBIGEO", SqlDbType.Char).Value = objPoliciaBE.COD_UBIGEO;
-                        cmd.Parameters.Add("@COD_RANGO", SqlDbType.VarChar).Value = objPoliciaBE.COD_RANGO;
+                        cmd.Parameters.Add("@COD_RANGO", SqlDbType.Int).Value = objPoliciaBE.COD_RANGO;
                         cmd.Parameters.Add("@SEXO", SqlDbType.Char).Value = objPoliciaBE.SEXO;
                         cmd.Parameters.Add("@FECHANACIMIENTO", SqlDbType.Date).Value = objPoliciaBE.FECHANACIMIENTO;
                         cmd.Parameters.Add("@ESTADO", SqlDbType.Char).Value = objPoliciaBE.ESTADO;
-                        cmd.Parameters.Add("@FOTO", SqlDbType.Image).Value = objPoliciaBE.FOTO;//cualquier error es aqui bb
+                        cmd.Parameters.Add("@FOTO", SqlDbType.Image).Value = objPoliciaBE.FOTO;
                         cmd.Parameters.Add("@USU_REGISTRO", SqlDbType.VarChar).Value = objPoliciaBE.USU_REGISTRO;
 
                         cnx.Open();
@@ -57,13 +57,13 @@ namespace ProyPapeletaADO
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
-                        cmd.Parameters.Add("@COD_POLICIA", SqlDbType.Char).Value = objPoliciaBE.COD_POLICIA; // ← faltaba
+                        cmd.Parameters.Add("@COD_POLICIA", SqlDbType.Char).Value = objPoliciaBE.COD_POLICIA;
                         cmd.Parameters.Add("@NOMBRE", SqlDbType.VarChar).Value = objPoliciaBE.NOMBRE;
                         cmd.Parameters.Add("@PATERNO", SqlDbType.VarChar).Value = objPoliciaBE.PATERNO;
                         cmd.Parameters.Add("@MATERNO", SqlDbType.VarChar).Value = objPoliciaBE.MATERNO;
                         cmd.Parameters.Add("@DNI", SqlDbType.Char).Value = objPoliciaBE.DNI;
                         cmd.Parameters.Add("@COD_UBIGEO", SqlDbType.Char).Value = objPoliciaBE.COD_UBIGEO;
-                        cmd.Parameters.Add("@COD_RANGO", SqlDbType.VarChar).Value = objPoliciaBE.COD_RANGO;
+                        cmd.Parameters.Add("@COD_RANGO", SqlDbType.Int).Value = objPoliciaBE.COD_RANGO;
                         cmd.Parameters.Add("@SEXO", SqlDbType.Char).Value = objPoliciaBE.SEXO;
                         cmd.Parameters.Add("@FECHANACIMIENTO", SqlDbType.SmallDateTime).Value = objPoliciaBE.FECHANACIMIENTO;
                         cmd.Parameters.Add("@ESTADO", SqlDbType.Char).Value = objPoliciaBE.ESTADO;
@@ -278,21 +278,34 @@ namespace ProyPapeletaADO
 
         public DataTable ListarRango()
         {
-            SqlConnection cn = new SqlConnection(Configuracion.PAPELETA);
-            SqlDataAdapter da = null;
             DataTable dt = new DataTable();
 
-            try
+            using (SqlConnection cnx =
+                new SqlConnection(Configuracion.PAPELETA))
             {
-                da = new SqlDataAdapter(
-                    "SELECT COD_RANGO,NOM_RANGO FROM TB_RANGO ORDER BY NOM_RANGO",
-                    cn);
+                SqlDataAdapter da = new SqlDataAdapter(
+                    "SELECT DISTINCT NOM_RANGO FROM TB_RANGO",
+                    cnx);
 
                 da.Fill(dt);
             }
-            catch (Exception ex)
+
+            return dt;
+        }
+
+          public DataTable ObtenerRangoPorPolicia(string codPolciia)
+        {
+            DataTable dt = new DataTable();
+
+            using (SqlConnection cnx = new SqlConnection(Configuracion.PAPELETA))
             {
-                throw ex;
+                SqlCommand cmd = new SqlCommand("SP_CONSULTAR_POLICIA", cnx);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add("@COD_POLICIA", SqlDbType.Char, 6).Value = codPolciia;
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
             }
 
             return dt;

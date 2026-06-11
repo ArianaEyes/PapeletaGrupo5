@@ -37,7 +37,7 @@
             btnAgregar = new Button();
             chkActivo = new CheckBox();
             dtpFechaNacimiento = new DateTimePicker();
-            label10 = new Label();
+            txtRango = new Label();
             label6 = new Label();
             cboDistrito = new ComboBox();
             cboProvincia = new ComboBox();
@@ -73,7 +73,7 @@
             grpDatosPolicia.Controls.Add(btnAgregar);
             grpDatosPolicia.Controls.Add(chkActivo);
             grpDatosPolicia.Controls.Add(dtpFechaNacimiento);
-            grpDatosPolicia.Controls.Add(label10);
+            grpDatosPolicia.Controls.Add(txtRango);
             grpDatosPolicia.Controls.Add(label6);
             grpDatosPolicia.Controls.Add(cboDistrito);
             grpDatosPolicia.Controls.Add(cboProvincia);
@@ -188,14 +188,14 @@
             dtpFechaNacimiento.Size = new Size(265, 23);
             dtpFechaNacimiento.TabIndex = 5;
             // 
-            // label10
+            // txtRango
             // 
-            label10.AutoSize = true;
-            label10.Location = new Point(23, 245);
-            label10.Name = "label10";
-            label10.Size = new Size(44, 15);
-            label10.TabIndex = 4;
-            label10.Text = "Rango:";
+            txtRango.AutoSize = true;
+            txtRango.Location = new Point(23, 245);
+            txtRango.Name = "txtRango";
+            txtRango.Size = new Size(44, 15);
+            txtRango.TabIndex = 4;
+            txtRango.Text = "Rango:";
             // 
             // label6
             // 
@@ -426,7 +426,7 @@
         private PictureBox pcbFoto;
         private CheckBox chkActivo;
         private DateTimePicker dtpFechaNacimiento;
-        private Label label10;
+        private Label txtRango;
         private Label label6;
         private ComboBox cboDistrito;
         private ComboBox cboProvincia;
