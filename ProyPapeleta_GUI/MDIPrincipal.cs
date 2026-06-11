@@ -79,6 +79,17 @@ namespace ProyPapeleta_GUI
 
         private void consultarPorInfractorToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f is InfractorMan03)
+                {
+                    f.Activate();
+                    return;
+                }
+            }
+            InfractorMan03 infr03 = new InfractorMan03();
+            infr03.MdiParent = this;
+            infr03.Show();
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
