@@ -23,6 +23,12 @@ namespace ProyPapeleta_GUI
                 "GRAVE",
                 "MUY GRAVE"     };
 
+        string[] medida_preventiva = {
+                "--Seleccionar--",
+                "Multa",
+                "Retención",
+                "Internamiento"     };
+
 
         public InfraccionMan01()
         {
@@ -36,6 +42,7 @@ namespace ProyPapeleta_GUI
         private void InfraccionMan01_Load(object sender, EventArgs e)
         {
             cboCalificacion.DataSource = calificacion;
+            cboMedida.DataSource = medida_preventiva;
         }
 
         private bool ValidarDatos()
@@ -71,6 +78,7 @@ namespace ProyPapeleta_GUI
                 objInfraccionBE.PUNTOS = (int)nudPuntos.Value;
                 objInfraccionBE.UIT = nudUIT.Value;
                 objInfraccionBE.ESTADO = "A";
+                objInfraccionBE.MEDIDA_PREVENTIVA = cboMedida.Text;
                 objInfraccionBE.USU_REGISTRO = "ADMIN";
 
                 InfraccionADO objInfraccionADO = new InfraccionADO();
@@ -106,6 +114,11 @@ namespace ProyPapeleta_GUI
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void grpDatosPolicia_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

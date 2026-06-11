@@ -20,5 +20,6 @@ namespace ProyPapeletaBE
         public String USU_ULT_MODIFICACION { get; set; }
 
         public String ESTADO { get; set; }
+        public String MEDIDA_PREVENTIVA { get; set; }
     }
 }

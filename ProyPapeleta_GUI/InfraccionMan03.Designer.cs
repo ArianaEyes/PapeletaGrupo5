@@ -28,38 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dtgInfraccion = new DataGridView();
-            label1 = new Label();
-            txtFiltro = new TextBox();
-            btnRefrescar = new Button();
-            btnInsertar = new Button();
-            btnEliminar = new Button();
+            grpDatosPolicia = new GroupBox();
+            lblEstado = new Label();
+            label6 = new Label();
+            lblUIT = new Label();
+            lblPuntos = new Label();
+            lblCalificacion = new Label();
+            lblDescripcion = new Label();
+            txtCod = new TextBox();
+            label4 = new Label();
             label3 = new Label();
-            lblRegistros = new Label();
-            btnSalir = new Button();
-            ((System.ComponentModel.ISupportInitialize)dtgInfraccion).BeginInit();
+            label2 = new Label();
+            btnConsultarInfraccion = new Button();
+            btnCancelar = new Button();
+            label10 = new Label();
+            label1 = new Label();
+            lblMedida = new Label();
+            label7 = new Label();
+            grpDatosPolicia.SuspendLayout();
             SuspendLayout();
             // 
             // dtgInfraccion
             // 
-            dtgInfraccion.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgInfraccion.Location = new Point(121, 166);
-            dtgInfraccion.Margin = new Padding(6);
-            dtgInfraccion.Name = "dtgInfraccion";
-            dtgInfraccion.RowHeadersWidth = 82;
-            dtgInfraccion.Size = new Size(1218, 538);
-            dtgInfraccion.TabIndex = 0;
-            dtgInfraccion.CellContentClick += dtgInfraccion_CellContentClick;
+            grpDatosPolicia.Controls.Add(label7);
+            grpDatosPolicia.Controls.Add(lblMedida);
+            grpDatosPolicia.Controls.Add(lblEstado);
+            grpDatosPolicia.Controls.Add(label6);
+            grpDatosPolicia.Controls.Add(lblUIT);
+            grpDatosPolicia.Controls.Add(lblPuntos);
+            grpDatosPolicia.Controls.Add(lblCalificacion);
+            grpDatosPolicia.Controls.Add(lblDescripcion);
+            grpDatosPolicia.Controls.Add(txtCod);
+            grpDatosPolicia.Controls.Add(label4);
+            grpDatosPolicia.Controls.Add(label3);
+            grpDatosPolicia.Controls.Add(label2);
+            grpDatosPolicia.Controls.Add(btnConsultarInfraccion);
+            grpDatosPolicia.Controls.Add(btnCancelar);
+            grpDatosPolicia.Controls.Add(label10);
+            grpDatosPolicia.Controls.Add(label1);
+            grpDatosPolicia.Location = new Point(12, 11);
+            grpDatosPolicia.Margin = new Padding(3, 2, 3, 2);
+            grpDatosPolicia.Name = "grpDatosPolicia";
+            grpDatosPolicia.Padding = new Padding(3, 2, 3, 2);
+            grpDatosPolicia.Size = new Size(652, 304);
+            grpDatosPolicia.TabIndex = 3;
+            grpDatosPolicia.TabStop = false;
+            grpDatosPolicia.Text = "Consultar Infracción";
+            grpDatosPolicia.Enter += grpDatosPolicia_Enter;
             // 
-            // label1
+            // lblEstado
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(121, 68);
-            label1.Margin = new Padding(6, 0, 6, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(317, 32);
-            label1.TabIndex = 7;
-            label1.Text = "Ingrese codigo de infraccion";
+            lblEstado.BorderStyle = BorderStyle.FixedSingle;
+            lblEstado.Location = new Point(369, 181);
+            lblEstado.Name = "lblEstado";
+            lblEstado.Size = new Size(90, 23);
+            lblEstado.TabIndex = 9;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(318, 183);
+            label6.Name = "label6";
+            label6.Size = new Size(45, 15);
+            label6.TabIndex = 16;
+            label6.Text = "Estado:";
+            // 
+            // lblUIT
             // 
             // txtFiltro
             // 
@@ -124,30 +158,67 @@
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(1162, 821);
-            btnSalir.Margin = new Padding(6, 4, 6, 4);
-            btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(152, 73);
-            btnSalir.TabIndex = 37;
-            btnSalir.Text = "Salir";
-            btnSalir.UseVisualStyleBackColor = true;
-            btnSalir.Click += btnSalir_Click;
+            btnConsultarInfraccion.Location = new Point(322, 249);
+            btnConsultarInfraccion.Margin = new Padding(3, 2, 3, 2);
+            btnConsultarInfraccion.Name = "btnConsultarInfraccion";
+            btnConsultarInfraccion.Size = new Size(93, 24);
+            btnConsultarInfraccion.TabIndex = 1;
+            btnConsultarInfraccion.Text = "Consultar";
+            btnConsultarInfraccion.UseVisualStyleBackColor = true;
+            btnConsultarInfraccion.Click += btnAgregarInfraccion_Click;
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.Location = new Point(448, 250);
+            btnCancelar.Margin = new Padding(3, 2, 3, 2);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(95, 23);
+            btnCancelar.TabIndex = 1;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(27, 103);
+            label10.Name = "label10";
+            label10.Size = new Size(72, 15);
+            label10.TabIndex = 4;
+            label10.Text = "Calificación:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(28, 62);
+            label1.Name = "label1";
+            label1.Size = new Size(133, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Descripción de Sanción:";
+            // 
+            // lblMedida
+            // 
+            lblMedida.BorderStyle = BorderStyle.FixedSingle;
+            lblMedida.Location = new Point(448, 102);
+            lblMedida.Name = "lblMedida";
+            lblMedida.Size = new Size(168, 23);
+            lblMedida.TabIndex = 18;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(334, 103);
+            label7.Name = "label7";
+            label7.Size = new Size(108, 15);
+            label7.TabIndex = 21;
+            label7.Text = "Medida Preventiva:";
             // 
             // InfraccionMan03
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1447, 907);
-            Controls.Add(btnSalir);
-            Controls.Add(lblRegistros);
-            Controls.Add(label3);
-            Controls.Add(btnEliminar);
-            Controls.Add(btnInsertar);
-            Controls.Add(btnRefrescar);
-            Controls.Add(txtFiltro);
-            Controls.Add(label1);
-            Controls.Add(dtgInfraccion);
-            Margin = new Padding(6);
+            ClientSize = new Size(676, 326);
+            Controls.Add(grpDatosPolicia);
             Name = "InfraccionMan03";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Actualizar Infracción";
@@ -166,7 +237,19 @@
         private Button btnInsertar;
         private Button btnEliminar;
         private Label label3;
-        private Label lblRegistros;
-        private Button btnSalir;
+        private Label label2;
+        private Button btnConsultarInfraccion;
+        private Button btnCancelar;
+        private Label label10;
+        private Label label1;
+        private Label lblCalificacion;
+        private Label lblDescripcion;
+        private TextBox txtCod;
+        private Label lblUIT;
+        private Label lblPuntos;
+        private Label label6;
+        private Label lblEstado;
+        private Label lblMedida;
+        private Label label7;
     }
 }

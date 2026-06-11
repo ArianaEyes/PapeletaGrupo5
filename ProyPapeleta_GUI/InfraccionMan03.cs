@@ -19,6 +19,7 @@ namespace ProyPapeleta_GUI
         public InfraccionMan03()
         {
             InitializeComponent();
+            Load += InfraccionMan03_Load;
         }
         private void CargarDatos(string strFiltro)
         {

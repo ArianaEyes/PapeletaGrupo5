@@ -41,6 +41,8 @@
             cboCalificacion = new ComboBox();
             txtDescripcion = new TextBox();
             label1 = new Label();
+            label4 = new Label();
+            cboMedida = new ComboBox();
             grpDatosPolicia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nudPuntos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudUIT).BeginInit();
@@ -48,6 +50,8 @@
             // 
             // grpDatosPolicia
             // 
+            grpDatosPolicia.Controls.Add(label4);
+            grpDatosPolicia.Controls.Add(cboMedida);
             grpDatosPolicia.Controls.Add(chkActivo);
             grpDatosPolicia.Controls.Add(label6);
             grpDatosPolicia.Controls.Add(nudPuntos);
@@ -64,17 +68,18 @@
             grpDatosPolicia.Margin = new Padding(3, 2, 3, 2);
             grpDatosPolicia.Name = "grpDatosPolicia";
             grpDatosPolicia.Padding = new Padding(3, 2, 3, 2);
-            grpDatosPolicia.Size = new Size(535, 218);
+            grpDatosPolicia.Size = new Size(572, 238);
             grpDatosPolicia.TabIndex = 1;
             grpDatosPolicia.TabStop = false;
             grpDatosPolicia.Text = "Insertar Infracción";
+            grpDatosPolicia.Enter += grpDatosPolicia_Enter;
             // 
             // chkActivo
             // 
             chkActivo.AllowDrop = true;
             chkActivo.Checked = true;
             chkActivo.CheckState = CheckState.Checked;
-            chkActivo.Location = new Point(364, 72);
+            chkActivo.Location = new Point(310, 131);
             chkActivo.Margin = new Padding(3, 2, 3, 2);
             chkActivo.Name = "chkActivo";
             chkActivo.Size = new Size(110, 22);
@@ -85,7 +90,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(304, 74);
+            label6.Location = new Point(250, 133);
             label6.Name = "label6";
             label6.Size = new Size(45, 15);
             label6.TabIndex = 15;
@@ -93,7 +98,7 @@
             // 
             // nudPuntos
             // 
-            nudPuntos.Location = new Point(82, 114);
+            nudPuntos.Location = new Point(112, 130);
             nudPuntos.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             nudPuntos.Name = "nudPuntos";
             nudPuntos.Size = new Size(44, 23);
@@ -103,7 +108,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(29, 116);
+            label3.Location = new Point(59, 132);
             label3.Name = "label3";
             label3.Size = new Size(47, 15);
             label3.TabIndex = 8;
@@ -112,7 +117,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(29, 154);
+            label2.Location = new Point(59, 170);
             label2.Name = "label2";
             label2.Size = new Size(28, 15);
             label2.TabIndex = 7;
@@ -120,7 +125,7 @@
             // 
             // nudUIT
             // 
-            nudUIT.Location = new Point(63, 152);
+            nudUIT.Location = new Point(93, 168);
             nudUIT.Minimum = new decimal(new int[] { 15, 0, 0, 65536 });
             nudUIT.Name = "nudUIT";
             nudUIT.Size = new Size(55, 23);
@@ -129,7 +134,7 @@
             // 
             // btnAgregarInfraccion
             // 
-            btnAgregarInfraccion.Location = new Point(197, 165);
+            btnAgregarInfraccion.Location = new Point(272, 191);
             btnAgregarInfraccion.Margin = new Padding(3, 2, 3, 2);
             btnAgregarInfraccion.Name = "btnAgregarInfraccion";
             btnAgregarInfraccion.Size = new Size(93, 24);
@@ -140,7 +145,7 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(323, 166);
+            btnCancelar.Location = new Point(398, 192);
             btnCancelar.Margin = new Padding(3, 2, 3, 2);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(95, 23);
@@ -152,7 +157,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(23, 76);
+            label10.Location = new Point(15, 82);
             label10.Name = "label10";
             label10.Size = new Size(72, 15);
             label10.TabIndex = 4;
@@ -162,7 +167,7 @@
             // 
             cboCalificacion.FormattingEnabled = true;
             cboCalificacion.Items.AddRange(new object[] { "--Seleccione--", "General de Policía", "", "Teniente General", "", "General", "", "Coronel", "", "Comandante", "", "Mayor", "", "Capitán", "", "Teniente", "", "Alférez", "Suboficial Superior", "", "Suboficial Brigadier", "", "Suboficial Técnico de Primera", "", "Suboficial Técnico de Segunda", "", "Suboficial Técnico de Tercera", "", "Suboficial de Primera", "", "Suboficial de Segunda", "", "Suboficial de Tercera" });
-            cboCalificacion.Location = new Point(101, 72);
+            cboCalificacion.Location = new Point(93, 79);
             cboCalificacion.Margin = new Padding(3, 2, 3, 2);
             cboCalificacion.Name = "cboCalificacion";
             cboCalificacion.Size = new Size(168, 23);
@@ -186,11 +191,30 @@
             label1.TabIndex = 0;
             label1.Text = "Descripción de Sanción:";
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(284, 82);
+            label4.Name = "label4";
+            label4.Size = new Size(108, 15);
+            label4.TabIndex = 18;
+            label4.Text = "Medida Preventiva:";
+            // 
+            // cboMedida
+            // 
+            cboMedida.FormattingEnabled = true;
+            cboMedida.Items.AddRange(new object[] { "--Seleccione--", "General de Policía", "", "Teniente General", "", "General", "", "Coronel", "", "Comandante", "", "Mayor", "", "Capitán", "", "Teniente", "", "Alférez", "Suboficial Superior", "", "Suboficial Brigadier", "", "Suboficial Técnico de Primera", "", "Suboficial Técnico de Segunda", "", "Suboficial Técnico de Tercera", "", "Suboficial de Primera", "", "Suboficial de Segunda", "", "Suboficial de Tercera" });
+            cboMedida.Location = new Point(398, 79);
+            cboMedida.Margin = new Padding(3, 2, 3, 2);
+            cboMedida.Name = "cboMedida";
+            cboMedida.Size = new Size(168, 23);
+            cboMedida.TabIndex = 17;
+            // 
             // InfraccionMan01
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(564, 241);
+            ClientSize = new Size(596, 260);
             Controls.Add(grpDatosPolicia);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
@@ -220,5 +244,7 @@
         private Label label3;
         private CheckBox chkActivo;
         private Label label6;
+        private Label label4;
+        private ComboBox cboMedida;
     }
 }
