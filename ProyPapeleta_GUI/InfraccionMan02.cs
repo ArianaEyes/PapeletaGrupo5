@@ -61,7 +61,7 @@ namespace ProyPapeleta_GUI
                 lblCodigo.Text = objBE.COD_INFRACCION;
                 txtDescripcion.Text = objBE.DESCRIPCION_SANCION;
                 cboCalificacion.Text = objBE.CALIFICACION;
-                objBE.ESTADO = chkActivo.Checked ? "A" : "I";
+                chkActivo.Checked = (objBE.ESTADO == "A");
                 nudPuntos.Value = objBE.PUNTOS;
                 nudUIT.Value = objBE.UIT;
                 cboMedida.Text = objBE.MEDIDA_PREVENTIVA;

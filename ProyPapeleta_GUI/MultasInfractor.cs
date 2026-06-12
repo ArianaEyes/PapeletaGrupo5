@@ -21,28 +21,20 @@ namespace ProyPapeleta_GUI
             InitializeComponent();
             Load += MultasInfractor_Load;
 
-            txtCod.KeyPress += txtCod_KeyPress;
+            txtCod.KeyPress += txtCod_KeyPress_1;
+
+            dtpFecIni.ValueChanged += (s, e) => { if (!string.IsNullOrEmpty(CodigoInfractor)) CargarMultas(); };
+            dtpFecFin.ValueChanged += (s, e) => { if (!string.IsNullOrEmpty(CodigoInfractor)) CargarMultas(); };
         }
         private void MultasInfractor_Load(object sender, EventArgs e)
         {
 
+
             ConsultarDatosInfractor();
-            dtpFecIni.Value = new DateTime(DateTime.Today.Year, 1, 1);
+            dtpFecIni.Value = new DateTime(2025, 1, 1);
             dtpFecFin.Value = DateTime.Today;
         }
-        private void txtCod_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-
-                e.Handled = true;
-
-                CodigoInfractor = txtCod.Text.Trim();
-                ConsultarDatosInfractor();
-                CargarMultas();
-            }
-        }
+       
         private void ConsultarDatosInfractor()
         {
             try
@@ -90,10 +82,10 @@ namespace ProyPapeleta_GUI
         }
         private void CargarMultas()
         {
+            if (string.IsNullOrEmpty(CodigoInfractor)) return;
             try
             {
                 InfractorADO objADO = new InfractorADO();
-
                 dtgMultas.DataSource = null;
 
                 dt = objADO.ListarMultasPorInfractor(CodigoInfractor, dtpFecIni.Value, dtpFecFin.Value);
@@ -164,11 +156,6 @@ namespace ProyPapeleta_GUI
                 ConsultarDatosInfractor();
                 CargarMultas();
             }
-        }
-
-        private void MultasInfractor_Load_1(object sender, EventArgs e)
-        {
-
-        }
     }
+}
 }

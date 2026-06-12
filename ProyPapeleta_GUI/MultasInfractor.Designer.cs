@@ -78,7 +78,7 @@
             label3.AutoSize = true;
             label3.Location = new Point(12, 95);
             label3.Name = "label3";
-            label3.Size = new Size(92, 15);
+            label3.Size = new Size(91, 15);
             label3.TabIndex = 2;
             label3.Text = "Tipo de brevete:";
             // 
@@ -153,7 +153,6 @@
             dtpFecIni.Name = "dtpFecIni";
             dtpFecIni.Size = new Size(148, 23);
             dtpFecIni.TabIndex = 11;
-            dtpFecIni.Visible = false;
             // 
             // dtpFecFin
             // 
@@ -163,7 +162,6 @@
             dtpFecFin.Name = "dtpFecFin";
             dtpFecFin.Size = new Size(148, 23);
             dtpFecFin.TabIndex = 12;
-            dtpFecFin.Visible = false;
             // 
             // txtCod
             // 
@@ -318,7 +316,6 @@
             Controls.Add(label1);
             Name = "MultasInfractor";
             Text = "MultasInfractor";
-            Load += MultasInfractor_Load_1;
             ((System.ComponentModel.ISupportInitialize)dtgMultas).EndInit();
             ResumeLayout(false);
             PerformLayout();
