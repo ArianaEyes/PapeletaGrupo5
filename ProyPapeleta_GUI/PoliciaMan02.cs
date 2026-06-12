@@ -2,6 +2,7 @@
 using ProyPapeletaBE;
 using ProyPapeletaBL;
 using System;
+using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
@@ -13,6 +14,7 @@ namespace ProyPapeleta_GUI
     {
         public string Codigo = "";
         public PoliciaMan03 Formulario;
+        ErrorProvider errorProvider1 = new ErrorProvider();
 
         //Validaciones
         public PoliciaMan02()
@@ -23,6 +25,126 @@ namespace ProyPapeleta_GUI
 
             cboDepartamento.SelectedIndexChanged += cboDepartamento_SelectedIndexChanged;
             cboProvincia.SelectedIndexChanged += cboProvincia_SelectedIndexChanged;
+
+            txtNombre.Validating += txtNombre_Validating;
+            txtApellidoPaterno.Validating += txtApellidoPaterno_Validating;
+            txtApellidoMaterno.Validating += txtApellidoMaterno_Validating;
+            txtDNI.Validating += txtDNI_Validating;
+
+            txtDNI.KeyPress += txtDNI_KeyPress;
+
+            txtDNI.MaxLength = 8;
+        }
+
+        //Validar componentes
+        private void txtNombre_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtNombre.Text.Trim() == "")
+            {
+                errorProvider1.SetError(txtNombre,
+                    "Ingrese nombres");
+
+
+            }
+            else
+            {
+                errorProvider1.SetError(txtNombre, "");
+            }
+        }
+
+        private void txtApellidoPaterno_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtApellidoPaterno.Text.Trim() == "")
+            {
+                errorProvider1.SetError(txtApellidoPaterno,
+                    "Ingrese apellido paterno");
+
+            }
+            else
+            {
+                errorProvider1.SetError(txtApellidoPaterno, "");
+            }
+        }
+
+        private void txtApellidoMaterno_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtApellidoMaterno.Text.Trim() == "")
+            {
+                errorProvider1.SetError(txtApellidoMaterno,
+                    "Ingrese apellido materno");
+
+            }
+            else
+            {
+                errorProvider1.SetError(txtApellidoMaterno, "");
+            }
+        }
+
+        private void txtDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) &&
+                !char.IsControl(e.KeyChar))
+            {
+                MessageBox.Show(
+                    "Solo se permiten números");
+
+                e.Handled = true;
+            }
+        }
+
+        private void txtDNI_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtDNI.Text.Trim() == "")
+            {
+                errorProvider1.SetError(txtDNI,
+                    "Ingrese DNI");
+
+            }
+            else if (txtDNI.Text.Length != 8)
+            {
+                errorProvider1.SetError(txtDNI,
+                    "El DNI debe tener 8 dígitos");
+
+            }
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) &&
+                !char.IsWhiteSpace(e.KeyChar) &&
+                !char.IsControl(e.KeyChar))
+            {
+                MessageBox.Show(
+                    "Solo se permiten letras");
+
+                e.Handled = true;
+            }
+        }
+
+        private void txtApellidoPaterno_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) &&
+                !char.IsWhiteSpace(e.KeyChar) &&
+                !char.IsControl(e.KeyChar))
+            {
+                MessageBox.Show(
+                    "Solo se permiten letras");
+
+                e.Handled = true;
+            }
+        }
+
+        private void txtApellidoMaterno_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) &&
+                !char.IsWhiteSpace(e.KeyChar) &&
+                !char.IsControl(e.KeyChar))
+            {
+                MessageBox.Show(
+                    "Solo se permiten letras");
+
+                e.Handled = true;
+            }
         }
 
         private void grpDatosPolicia_Enter(object sender, EventArgs e)
@@ -60,7 +182,6 @@ namespace ProyPapeleta_GUI
                 txtApellidoPaterno.Text = objPoliciaBE.PATERNO;
                 txtApellidoMaterno.Text = objPoliciaBE.MATERNO;
                 txtDNI.Text = objPoliciaBE.DNI;
-                txtRango.Text = objPoliciaBE.COD_RANGO.ToString(); 
                 chkActivo.Checked = (objPoliciaBE.ESTADO == "A");
 
                 dtpFechaNacimiento.Value = (objPoliciaBE.FECHANACIMIENTO > dtpFechaNacimiento.MinDate)
@@ -70,14 +191,11 @@ namespace ProyPapeleta_GUI
                 optMasculino.Checked = (objPoliciaBE.SEXO == "M" || objPoliciaBE.SEXO == "MASCULINO");
                 optFemenino.Checked = (objPoliciaBE.SEXO == "F" || objPoliciaBE.SEXO == "FEMENINO");
 
-                /*if (rango != null)
-                {
-                    cboRango.DataSource = objPoliciaADO.ListarRango();
-                    cboRango.DisplayMember = "RANGO";
-                    cboRango.Text = rango["RANGO"].ToString();
-                }*/
+                cboRango.DataSource = objPoliciaADO.ListarRango();
+                cboRango.DisplayMember = "NOM_RANGO";
+                cboRango.ValueMember = "COD_RANGO";
 
-                    if (objPoliciaBE.FOTO != null)
+                if (objPoliciaBE.FOTO != null)
                 {
                     MemoryStream ms = new MemoryStream(objPoliciaBE.FOTO);
                     pcbFoto.Image = Image.FromStream(ms);
@@ -167,7 +285,7 @@ namespace ProyPapeleta_GUI
                 objPoliciaBE.DNI = txtDNI.Text;
                 objPoliciaBE.COD_UBIGEO = cboDistrito.SelectedValue.ToString();
                 objPoliciaBE.FECHANACIMIENTO = dtpFechaNacimiento.Value;
-                objPoliciaBE.ESTADO =chkActivo.Checked ? "A" : "I";
+                objPoliciaBE.ESTADO = chkActivo.Checked ? "A" : "I";
                 objPoliciaBE.COD_RANGO = Convert.ToInt32(cboRango.SelectedValue);
                 objPoliciaBE.SEXO = optMasculino.Checked ? "M" : "F";
                 objPoliciaBE.USU_ULT_MODIFICACION = "ADMIN";
