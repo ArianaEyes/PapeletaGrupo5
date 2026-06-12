@@ -126,6 +126,13 @@ namespace ProyPapeleta_GUI
             infr03.MdiParent = this;
             infr03.Show();
         }
+
+        private void listadoExcelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListadosPapeleta frmPapeleta = new frmListadosPapeleta();
+            frmPapeleta.MdiParent = this;
+            frmPapeleta.Show();
+        }
     }
 }
 

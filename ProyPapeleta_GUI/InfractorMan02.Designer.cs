@@ -111,7 +111,7 @@
             groupBox1.Margin = new Padding(3, 0, 3, 0);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(2, 1, 2, 1);
-            groupBox1.Size = new Size(731, 490);
+            groupBox1.Size = new Size(731, 477);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Actualizar Datos Infractor";
@@ -133,7 +133,7 @@
             checkBox1.Margin = new Padding(2, 1, 2, 1);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(60, 19);
-            checkBox1.TabIndex = 1;
+            checkBox1.TabIndex = 14;
             checkBox1.Text = "Activo";
             checkBox1.UseVisualStyleBackColor = true;
             // 
@@ -143,7 +143,7 @@
             btnSubirFoto.Margin = new Padding(2, 1, 2, 1);
             btnSubirFoto.Name = "btnSubirFoto";
             btnSubirFoto.Size = new Size(81, 35);
-            btnSubirFoto.TabIndex = 32;
+            btnSubirFoto.TabIndex = 15;
             btnSubirFoto.Text = "Subir Foto";
             btnSubirFoto.UseVisualStyleBackColor = true;
             btnSubirFoto.Click += button1_Click;
@@ -176,7 +176,7 @@
             txtNroBrevete.Margin = new Padding(2, 1, 2, 1);
             txtNroBrevete.Name = "txtNroBrevete";
             txtNroBrevete.Size = new Size(132, 23);
-            txtNroBrevete.TabIndex = 30;
+            txtNroBrevete.TabIndex = 8;
             // 
             // label12
             // 
@@ -205,7 +205,7 @@
             cboTipoBrevete.Margin = new Padding(2, 1, 2, 1);
             cboTipoBrevete.Name = "cboTipoBrevete";
             cboTipoBrevete.Size = new Size(132, 23);
-            cboTipoBrevete.TabIndex = 27;
+            cboTipoBrevete.TabIndex = 9;
             // 
             // cboDistrito
             // 
@@ -214,7 +214,7 @@
             cboDistrito.Margin = new Padding(2, 1, 2, 1);
             cboDistrito.Name = "cboDistrito";
             cboDistrito.Size = new Size(191, 23);
-            cboDistrito.TabIndex = 26;
+            cboDistrito.TabIndex = 13;
             // 
             // cboDepartamento
             // 
@@ -223,7 +223,7 @@
             cboDepartamento.Margin = new Padding(2, 1, 2, 1);
             cboDepartamento.Name = "cboDepartamento";
             cboDepartamento.Size = new Size(191, 23);
-            cboDepartamento.TabIndex = 25;
+            cboDepartamento.TabIndex = 11;
             // 
             // cboProvincia
             // 
@@ -232,26 +232,26 @@
             cboProvincia.Margin = new Padding(2, 1, 2, 1);
             cboProvincia.Name = "cboProvincia";
             cboProvincia.Size = new Size(191, 23);
-            cboProvincia.TabIndex = 24;
+            cboProvincia.TabIndex = 12;
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(394, 415);
+            btnCancelar.Location = new Point(380, 425);
             btnCancelar.Margin = new Padding(2, 1, 2, 1);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(81, 22);
-            btnCancelar.TabIndex = 23;
+            btnCancelar.Size = new Size(81, 38);
+            btnCancelar.TabIndex = 17;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
             // 
             // btnActualizar
             // 
-            btnActualizar.Location = new Point(262, 415);
+            btnActualizar.Location = new Point(259, 425);
             btnActualizar.Margin = new Padding(2, 1, 2, 1);
             btnActualizar.Name = "btnActualizar";
-            btnActualizar.Size = new Size(81, 22);
-            btnActualizar.TabIndex = 22;
+            btnActualizar.Size = new Size(81, 38);
+            btnActualizar.TabIndex = 16;
             btnActualizar.Text = "Actualizar";
             btnActualizar.UseVisualStyleBackColor = true;
             btnActualizar.Click += btnAgregar_Click;
@@ -262,7 +262,7 @@
             dtpFecNacimiento.Margin = new Padding(2, 1, 2, 1);
             dtpFecNacimiento.Name = "dtpFecNacimiento";
             dtpFecNacimiento.Size = new Size(250, 23);
-            dtpFecNacimiento.TabIndex = 21;
+            dtpFecNacimiento.TabIndex = 5;
             // 
             // label10
             // 
@@ -283,7 +283,7 @@
             grpSexo.Name = "grpSexo";
             grpSexo.Padding = new Padding(2, 1, 2, 1);
             grpSexo.Size = new Size(252, 48);
-            grpSexo.TabIndex = 18;
+            grpSexo.TabIndex = 6;
             grpSexo.TabStop = false;
             grpSexo.Text = "Sexo:";
             // 
@@ -317,7 +317,7 @@
             txtCorreo.Margin = new Padding(2, 1, 2, 1);
             txtCorreo.Name = "txtCorreo";
             txtCorreo.Size = new Size(224, 23);
-            txtCorreo.TabIndex = 17;
+            txtCorreo.TabIndex = 7;
             // 
             // txtDireccion
             // 
@@ -325,7 +325,7 @@
             txtDireccion.Margin = new Padding(2, 1, 2, 1);
             txtDireccion.Name = "txtDireccion";
             txtDireccion.Size = new Size(224, 23);
-            txtDireccion.TabIndex = 16;
+            txtDireccion.TabIndex = 10;
             // 
             // label11
             // 
@@ -393,7 +393,7 @@
             txtApePaterno.Margin = new Padding(2, 1, 2, 1);
             txtApePaterno.Name = "txtApePaterno";
             txtApePaterno.Size = new Size(174, 16);
-            txtApePaterno.TabIndex = 8;
+            txtApePaterno.TabIndex = 2;
             // 
             // txtNombres
             // 
@@ -402,7 +402,7 @@
             txtNombres.Margin = new Padding(2, 1, 2, 1);
             txtNombres.Name = "txtNombres";
             txtNombres.Size = new Size(218, 23);
-            txtNombres.TabIndex = 7;
+            txtNombres.TabIndex = 1;
             // 
             // txtApeMaterno
             // 
@@ -411,7 +411,7 @@
             txtApeMaterno.Margin = new Padding(2, 1, 2, 1);
             txtApeMaterno.Name = "txtApeMaterno";
             txtApeMaterno.Size = new Size(180, 23);
-            txtApeMaterno.TabIndex = 6;
+            txtApeMaterno.TabIndex = 3;
             // 
             // txtDNI
             // 
@@ -419,7 +419,7 @@
             txtDNI.Margin = new Padding(2, 1, 2, 1);
             txtDNI.Name = "txtDNI";
             txtDNI.Size = new Size(169, 23);
-            txtDNI.TabIndex = 5;
+            txtDNI.TabIndex = 4;
             // 
             // label5
             // 
@@ -475,7 +475,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(758, 456);
+            ClientSize = new Size(758, 507);
             Controls.Add(groupBox1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(2, 1, 2, 1);

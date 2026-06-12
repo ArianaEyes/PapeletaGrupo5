@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             grpDatosPolicia = new GroupBox();
+            label5 = new Label();
+            cboMedida = new ComboBox();
             chkActivo = new CheckBox();
             label6 = new Label();
             button1 = new Button();
@@ -43,8 +45,6 @@
             cboCalificacion = new ComboBox();
             txtDescripcion = new TextBox();
             label1 = new Label();
-            label5 = new Label();
-            cboMedida = new ComboBox();
             grpDatosPolicia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nudPuntos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudUIT).BeginInit();
@@ -78,6 +78,25 @@
             grpDatosPolicia.Text = "Actualizar Datos Infraccion";
             grpDatosPolicia.Enter += grpDatosPolicia_Enter;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(281, 104);
+            label5.Name = "label5";
+            label5.Size = new Size(108, 15);
+            label5.TabIndex = 20;
+            label5.Text = "Medida Preventiva:";
+            // 
+            // cboMedida
+            // 
+            cboMedida.FormattingEnabled = true;
+            cboMedida.Items.AddRange(new object[] { "--Seleccione--", "General de Policía", "", "Teniente General", "", "General", "", "Coronel", "", "Comandante", "", "Mayor", "", "Capitán", "", "Teniente", "", "Alférez", "Suboficial Superior", "", "Suboficial Brigadier", "", "Suboficial Técnico de Primera", "", "Suboficial Técnico de Segunda", "", "Suboficial Técnico de Tercera", "", "Suboficial de Primera", "", "Suboficial de Segunda", "", "Suboficial de Tercera" });
+            cboMedida.Location = new Point(395, 101);
+            cboMedida.Margin = new Padding(3, 2, 3, 2);
+            cboMedida.Name = "cboMedida";
+            cboMedida.Size = new Size(168, 23);
+            cboMedida.TabIndex = 3;
+            // 
             // chkActivo
             // 
             chkActivo.AllowDrop = true;
@@ -87,7 +106,7 @@
             chkActivo.Margin = new Padding(3, 2, 3, 2);
             chkActivo.Name = "chkActivo";
             chkActivo.Size = new Size(110, 22);
-            chkActivo.TabIndex = 14;
+            chkActivo.TabIndex = 6;
             chkActivo.Text = "Activo";
             chkActivo.UseVisualStyleBackColor = true;
             // 
@@ -105,7 +124,7 @@
             button1.Location = new Point(305, 232);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
-            button1.TabIndex = 12;
+            button1.TabIndex = 7;
             button1.Text = "Actualizar";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
@@ -133,7 +152,7 @@
             nudPuntos.Location = new Point(105, 156);
             nudPuntos.Name = "nudPuntos";
             nudPuntos.Size = new Size(44, 23);
-            nudPuntos.TabIndex = 9;
+            nudPuntos.TabIndex = 4;
             // 
             // label3
             // 
@@ -158,7 +177,7 @@
             nudUIT.Location = new Point(84, 204);
             nudUIT.Name = "nudUIT";
             nudUIT.Size = new Size(55, 23);
-            nudUIT.TabIndex = 6;
+            nudUIT.TabIndex = 5;
             // 
             // btnCancelar
             // 
@@ -166,7 +185,7 @@
             btnCancelar.Margin = new Padding(3, 2, 3, 2);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(95, 23);
-            btnCancelar.TabIndex = 1;
+            btnCancelar.TabIndex = 8;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
@@ -206,25 +225,6 @@
             label1.Size = new Size(133, 15);
             label1.TabIndex = 0;
             label1.Text = "Descripción de Sanción:";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(281, 104);
-            label5.Name = "label5";
-            label5.Size = new Size(108, 15);
-            label5.TabIndex = 20;
-            label5.Text = "Medida Preventiva:";
-            // 
-            // cboMedida
-            // 
-            cboMedida.FormattingEnabled = true;
-            cboMedida.Items.AddRange(new object[] { "--Seleccione--", "General de Policía", "", "Teniente General", "", "General", "", "Coronel", "", "Comandante", "", "Mayor", "", "Capitán", "", "Teniente", "", "Alférez", "Suboficial Superior", "", "Suboficial Brigadier", "", "Suboficial Técnico de Primera", "", "Suboficial Técnico de Segunda", "", "Suboficial Técnico de Tercera", "", "Suboficial de Primera", "", "Suboficial de Segunda", "", "Suboficial de Tercera" });
-            cboMedida.Location = new Point(395, 101);
-            cboMedida.Margin = new Padding(3, 2, 3, 2);
-            cboMedida.Name = "cboMedida";
-            cboMedida.Size = new Size(168, 23);
-            cboMedida.TabIndex = 19;
             // 
             // InfraccionMan02
             // 

@@ -57,8 +57,8 @@
             txtFiltrooo.Location = new Point(419, 29);
             txtFiltrooo.Margin = new Padding(2, 1, 2, 1);
             txtFiltrooo.Name = "txtFiltrooo";
-            txtFiltrooo.Size = new Size(289, 27);
-            txtFiltrooo.TabIndex = 5;
+            txtFiltrooo.Size = new Size(253, 23);
+            txtFiltrooo.TabIndex = 1;
             txtFiltrooo.TextChanged += txtFiltrooo_TextChanged;
             // 
             // label1
@@ -90,22 +90,22 @@
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(433, 464);
+            btnSalir.Location = new Point(384, 348);
             btnSalir.Margin = new Padding(2, 1, 2, 1);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(110, 40);
-            btnSalir.TabIndex = 14;
+            btnSalir.Size = new Size(96, 30);
+            btnSalir.TabIndex = 4;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
             btnSalir.Click += btnSalir_Click;
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(215, 464);
+            btnEliminar.Location = new Point(206, 348);
             btnEliminar.Margin = new Padding(2, 1, 2, 1);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(131, 40);
-            btnEliminar.TabIndex = 13;
+            btnEliminar.Size = new Size(115, 30);
+            btnEliminar.TabIndex = 3;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
             btnEliminar.Click += btnEliminar_Click;
@@ -114,8 +114,8 @@
             // 
             btnInsertar.Location = new Point(62, 464);
             btnInsertar.Name = "btnInsertar";
-            btnInsertar.Size = new Size(103, 40);
-            btnInsertar.TabIndex = 18;
+            btnInsertar.Size = new Size(90, 30);
+            btnInsertar.TabIndex = 2;
             btnInsertar.Text = "Insertar";
             btnInsertar.UseVisualStyleBackColor = true;
             btnInsertar.Click += btnInsertar_Click;

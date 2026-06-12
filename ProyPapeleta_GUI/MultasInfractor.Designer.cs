@@ -182,7 +182,7 @@
             txtCod.MaxLength = 4;
             txtCod.Name = "txtCod";
             txtCod.Size = new Size(90, 23);
-            txtCod.TabIndex = 13;
+            txtCod.TabIndex = 1;
             // 
             // lblNombre
             // 
