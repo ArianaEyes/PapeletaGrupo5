@@ -31,7 +31,6 @@
             dtgInfraccion = new DataGridView();
             label1 = new Label();
             txtFiltro = new TextBox();
-            btnRefrescar = new Button();
             btnInsertar = new Button();
             btnEliminar = new Button();
             label3 = new Label();
@@ -68,20 +67,9 @@
             txtFiltro.TabIndex = 1;
             txtFiltro.TextChanged += txtFiltro_TextChanged;
             // 
-            // btnRefrescar
-            // 
-            btnRefrescar.Location = new Point(65, 353);
-            btnRefrescar.Margin = new Padding(3, 2, 3, 2);
-            btnRefrescar.Name = "btnRefrescar";
-            btnRefrescar.Size = new Size(104, 34);
-            btnRefrescar.TabIndex = 2;
-            btnRefrescar.Text = "Refrescar";
-            btnRefrescar.UseVisualStyleBackColor = true;
-            btnRefrescar.Click += btnRefrescar_Click;
-            // 
             // btnInsertar
             // 
-            btnInsertar.Location = new Point(215, 353);
+            btnInsertar.Location = new Point(163, 353);
             btnInsertar.Margin = new Padding(3, 2, 3, 2);
             btnInsertar.Name = "btnInsertar";
             btnInsertar.Size = new Size(123, 34);
@@ -92,7 +80,7 @@
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(388, 353);
+            btnEliminar.Location = new Point(366, 353);
             btnEliminar.Margin = new Padding(3, 2, 3, 2);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(131, 34);
@@ -139,7 +127,6 @@
             Controls.Add(label3);
             Controls.Add(btnEliminar);
             Controls.Add(btnInsertar);
-            Controls.Add(btnRefrescar);
             Controls.Add(txtFiltro);
             Controls.Add(label1);
             Controls.Add(dtgInfraccion);
@@ -157,7 +144,6 @@
         private DataGridView dtgInfraccion;
         private Label label1;
         private TextBox txtFiltro;
-        private Button btnRefrescar;
         private Button btnInsertar;
         private Button btnEliminar;
         private Label label3;

@@ -98,6 +98,7 @@
             chkActivo.AllowDrop = true;
             chkActivo.Checked = true;
             chkActivo.CheckState = CheckState.Checked;
+            chkActivo.Enabled = false;
             chkActivo.Location = new Point(310, 131);
             chkActivo.Margin = new Padding(3, 2, 3, 2);
             chkActivo.Name = "chkActivo";

@@ -189,7 +189,9 @@ namespace ProyPapeleta_GUI
                 frm.Codigo = codigo;
 
                 frm.ShowDialog();
-                CargarInfraccion();
+
+                dtv = null;
+                CargarDatos(txtFiltro.Text.Trim());
             }
             catch (Exception ex)
             {
@@ -197,11 +199,15 @@ namespace ProyPapeleta_GUI
             }
         }
 
+        public void RefrescarGrid()
+        {
+            CargarPolicias();
+        }
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
             txtFiltro.Text = ""; // Limpia el cuadro de texto
             dtv = null;          // Fuerza a traer los datos limpios de la BD
-            CargarDatos("");     // Vuelve a cargar todo
+            CargarDatos("");     
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

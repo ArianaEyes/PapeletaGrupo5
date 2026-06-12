@@ -181,7 +181,10 @@ namespace ProyPapeleta_GUI
                 MessageBox.Show(ex.Message);
             }
         }
-
+        public void RefrescarGrid()
+        {
+            CargarPolicias();
+        }
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
             txtFiltrooo.Text = "";
