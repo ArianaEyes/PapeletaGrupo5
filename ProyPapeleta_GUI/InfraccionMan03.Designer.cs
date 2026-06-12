@@ -65,7 +65,7 @@
             txtFiltro.Margin = new Padding(3, 2, 3, 2);
             txtFiltro.Name = "txtFiltro";
             txtFiltro.Size = new Size(415, 23);
-            txtFiltro.TabIndex = 8;
+            txtFiltro.TabIndex = 1;
             txtFiltro.TextChanged += txtFiltro_TextChanged;
             // 
             // btnRefrescar
@@ -74,7 +74,7 @@
             btnRefrescar.Margin = new Padding(3, 2, 3, 2);
             btnRefrescar.Name = "btnRefrescar";
             btnRefrescar.Size = new Size(104, 34);
-            btnRefrescar.TabIndex = 31;
+            btnRefrescar.TabIndex = 2;
             btnRefrescar.Text = "Refrescar";
             btnRefrescar.UseVisualStyleBackColor = true;
             btnRefrescar.Click += btnRefrescar_Click;
@@ -85,7 +85,7 @@
             btnInsertar.Margin = new Padding(3, 2, 3, 2);
             btnInsertar.Name = "btnInsertar";
             btnInsertar.Size = new Size(123, 34);
-            btnInsertar.TabIndex = 32;
+            btnInsertar.TabIndex = 3;
             btnInsertar.Text = "Insertar";
             btnInsertar.UseVisualStyleBackColor = true;
             btnInsertar.Click += btnInsertar_Click;
@@ -96,7 +96,7 @@
             btnEliminar.Margin = new Padding(3, 2, 3, 2);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(131, 34);
-            btnEliminar.TabIndex = 34;
+            btnEliminar.TabIndex = 4;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
             btnEliminar.Click += btnEliminar_Click;
@@ -124,7 +124,7 @@
             btnSalir.Margin = new Padding(3, 2, 3, 2);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(82, 34);
-            btnSalir.TabIndex = 37;
+            btnSalir.TabIndex = 5;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
             btnSalir.Click += btnSalir_Click;

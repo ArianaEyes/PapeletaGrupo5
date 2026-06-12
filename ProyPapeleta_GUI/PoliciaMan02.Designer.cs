@@ -132,7 +132,7 @@
             btnCargarFoto.Margin = new Padding(3, 2, 3, 2);
             btnCargarFoto.Name = "btnCargarFoto";
             btnCargarFoto.Size = new Size(82, 37);
-            btnCargarFoto.TabIndex = 1;
+            btnCargarFoto.TabIndex = 12;
             btnCargarFoto.Text = "Cargar Foto";
             btnCargarFoto.UseVisualStyleBackColor = true;
             btnCargarFoto.Click += btnCargarFoto_Click_1;
@@ -153,7 +153,7 @@
             btnCancelar.Margin = new Padding(3, 2, 3, 2);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(82, 22);
-            btnCancelar.TabIndex = 1;
+            btnCancelar.TabIndex = 14;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnAgregar_Click_2;
@@ -164,7 +164,7 @@
             btnAgregar.Margin = new Padding(3, 2, 3, 2);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(82, 22);
-            btnAgregar.TabIndex = 1;
+            btnAgregar.TabIndex = 13;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
             btnAgregar.Click += btnAgregar_Click_2;
@@ -213,7 +213,7 @@
             cboDistrito.Margin = new Padding(3, 2, 3, 2);
             cboDistrito.Name = "cboDistrito";
             cboDistrito.Size = new Size(169, 23);
-            cboDistrito.TabIndex = 2;
+            cboDistrito.TabIndex = 11;
             // 
             // cboProvincia
             // 
@@ -222,7 +222,7 @@
             cboProvincia.Margin = new Padding(3, 2, 3, 2);
             cboProvincia.Name = "cboProvincia";
             cboProvincia.Size = new Size(169, 23);
-            cboProvincia.TabIndex = 2;
+            cboProvincia.TabIndex = 10;
             // 
             // cboDepartamento
             // 
@@ -231,7 +231,7 @@
             cboDepartamento.Margin = new Padding(3, 2, 3, 2);
             cboDepartamento.Name = "cboDepartamento";
             cboDepartamento.Size = new Size(169, 23);
-            cboDepartamento.TabIndex = 2;
+            cboDepartamento.TabIndex = 9;
             // 
             // cboRango
             // 
@@ -241,7 +241,7 @@
             cboRango.Margin = new Padding(3, 2, 3, 2);
             cboRango.Name = "cboRango";
             cboRango.Size = new Size(169, 23);
-            cboRango.TabIndex = 2;
+            cboRango.TabIndex = 8;
             // 
             // grpSexo
             // 
@@ -252,7 +252,7 @@
             grpSexo.Name = "grpSexo";
             grpSexo.Padding = new Padding(3, 2, 3, 2);
             grpSexo.Size = new Size(281, 55);
-            grpSexo.TabIndex = 3;
+            grpSexo.TabIndex = 7;
             grpSexo.TabStop = false;
             grpSexo.Text = "Sexo";
             // 
@@ -286,7 +286,7 @@
             txtApellidoMaterno.Margin = new Padding(3, 2, 3, 2);
             txtApellidoMaterno.Name = "txtApellidoMaterno";
             txtApellidoMaterno.Size = new Size(136, 23);
-            txtApellidoMaterno.TabIndex = 1;
+            txtApellidoMaterno.TabIndex = 3;
             // 
             // txtDNI
             // 
@@ -295,7 +295,7 @@
             txtDNI.MaxLength = 12345678;
             txtDNI.Name = "txtDNI";
             txtDNI.Size = new Size(169, 23);
-            txtDNI.TabIndex = 1;
+            txtDNI.TabIndex = 4;
             // 
             // txtApellidoPaterno
             // 
@@ -303,7 +303,7 @@
             txtApellidoPaterno.Margin = new Padding(3, 2, 3, 2);
             txtApellidoPaterno.Name = "txtApellidoPaterno";
             txtApellidoPaterno.Size = new Size(169, 23);
-            txtApellidoPaterno.TabIndex = 1;
+            txtApellidoPaterno.TabIndex = 2;
             // 
             // txtNombre
             // 

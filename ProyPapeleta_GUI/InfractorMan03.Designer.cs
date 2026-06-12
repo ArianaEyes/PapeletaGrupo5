@@ -54,7 +54,7 @@
             txtFiltroo.Location = new Point(574, 20);
             txtFiltroo.Name = "txtFiltroo";
             txtFiltroo.Size = new Size(495, 23);
-            txtFiltroo.TabIndex = 2;
+            txtFiltroo.TabIndex = 1;
             txtFiltroo.TextChanged += txtFiltroo_TextChanged;
             // 
             // dtgInfractor
@@ -75,7 +75,7 @@
             btnEliminar.Location = new Point(518, 607);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(130, 46);
-            btnEliminar.TabIndex = 5;
+            btnEliminar.TabIndex = 3;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
             btnEliminar.Click += btnEliminar_Click_1;
@@ -85,7 +85,7 @@
             btnSalir.Location = new Point(752, 607);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(122, 46);
-            btnSalir.TabIndex = 6;
+            btnSalir.TabIndex = 4;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
             btnSalir.Click += btnSalir_Click;
@@ -114,7 +114,7 @@
             btnInsertar.Location = new Point(208, 608);
             btnInsertar.Name = "btnInsertar";
             btnInsertar.Size = new Size(150, 44);
-            btnInsertar.TabIndex = 5;
+            btnInsertar.TabIndex = 2;
             btnInsertar.Text = "Insertar";
             btnInsertar.UseVisualStyleBackColor = true;
             btnInsertar.Click += btnInsertar_Click_1;

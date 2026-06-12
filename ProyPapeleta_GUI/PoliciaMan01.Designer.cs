@@ -118,7 +118,7 @@
             btnCargarFoto.Margin = new Padding(3, 2, 3, 2);
             btnCargarFoto.Name = "btnCargarFoto";
             btnCargarFoto.Size = new Size(82, 37);
-            btnCargarFoto.TabIndex = 1;
+            btnCargarFoto.TabIndex = 12;
             btnCargarFoto.Text = "Cargar Foto";
             btnCargarFoto.UseVisualStyleBackColor = true;
             btnCargarFoto.Click += btnCargarFoto_Click;
@@ -138,8 +138,8 @@
             btnInsertarPoli.Location = new Point(459, 323);
             btnInsertarPoli.Margin = new Padding(3, 2, 3, 2);
             btnInsertarPoli.Name = "btnInsertarPoli";
-            btnInsertarPoli.Size = new Size(82, 22);
-            btnInsertarPoli.TabIndex = 1;
+            btnInsertarPoli.Size = new Size(82, 24);
+            btnInsertarPoli.TabIndex = 13;
             btnInsertarPoli.Text = "Agregar";
             btnInsertarPoli.UseVisualStyleBackColor = true;
             btnInsertarPoli.Click += btnInsertarPoli_Click;
@@ -149,8 +149,8 @@
             btnAgregar.Location = new Point(572, 324);
             btnAgregar.Margin = new Padding(3, 2, 3, 2);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(82, 22);
-            btnAgregar.TabIndex = 1;
+            btnAgregar.Size = new Size(82, 23);
+            btnAgregar.TabIndex = 14;
             btnAgregar.Text = "Cancelar";
             btnAgregar.UseVisualStyleBackColor = true;
             btnAgregar.Click += btnAgregar_Click_1;
@@ -202,7 +202,7 @@
             cboDistrito.Margin = new Padding(3, 2, 3, 2);
             cboDistrito.Name = "cboDistrito";
             cboDistrito.Size = new Size(168, 23);
-            cboDistrito.TabIndex = 2;
+            cboDistrito.TabIndex = 11;
             // 
             // cboProvincia
             // 
@@ -211,7 +211,7 @@
             cboProvincia.Margin = new Padding(3, 2, 3, 2);
             cboProvincia.Name = "cboProvincia";
             cboProvincia.Size = new Size(168, 23);
-            cboProvincia.TabIndex = 2;
+            cboProvincia.TabIndex = 10;
             // 
             // cboDepartamento
             // 
@@ -220,7 +220,7 @@
             cboDepartamento.Margin = new Padding(3, 2, 3, 2);
             cboDepartamento.Name = "cboDepartamento";
             cboDepartamento.Size = new Size(168, 23);
-            cboDepartamento.TabIndex = 2;
+            cboDepartamento.TabIndex = 9;
             // 
             // cboRango
             // 
@@ -230,7 +230,7 @@
             cboRango.Margin = new Padding(3, 2, 3, 2);
             cboRango.Name = "cboRango";
             cboRango.Size = new Size(168, 23);
-            cboRango.TabIndex = 2;
+            cboRango.TabIndex = 8;
             cboRango.SelectedIndexChanged += cboRango_SelectedIndexChanged;
             // 
             // grpSexo
@@ -242,7 +242,7 @@
             grpSexo.Name = "grpSexo";
             grpSexo.Padding = new Padding(3, 2, 3, 2);
             grpSexo.Size = new Size(281, 55);
-            grpSexo.TabIndex = 3;
+            grpSexo.TabIndex = 7;
             grpSexo.TabStop = false;
             grpSexo.Text = "Sexo";
             // 
@@ -276,17 +276,17 @@
             txtApellidoMaterno.Margin = new Padding(3, 2, 3, 2);
             txtApellidoMaterno.Name = "txtApellidoMaterno";
             txtApellidoMaterno.Size = new Size(136, 23);
-            txtApellidoMaterno.TabIndex = 1;
+            txtApellidoMaterno.TabIndex = 3;
             txtApellidoMaterno.KeyPress += txtApellidoMaterno_KeyPress;
             // 
             // txtDNI
             // 
-            txtDNI.Location = new Point(446, 55);
+            txtDNI.Location = new Point(446, 60);
             txtDNI.Margin = new Padding(3, 2, 3, 2);
             txtDNI.MaxLength = 12345678;
             txtDNI.Name = "txtDNI";
             txtDNI.Size = new Size(168, 23);
-            txtDNI.TabIndex = 1;
+            txtDNI.TabIndex = 4;
             txtDNI.KeyPress += txtDNI_KeyPress;
             // 
             // txtApellidoPaterno
@@ -295,7 +295,7 @@
             txtApellidoPaterno.Margin = new Padding(3, 2, 3, 2);
             txtApellidoPaterno.Name = "txtApellidoPaterno";
             txtApellidoPaterno.Size = new Size(168, 23);
-            txtApellidoPaterno.TabIndex = 1;
+            txtApellidoPaterno.TabIndex = 2;
             txtApellidoPaterno.KeyPress += txtApellidoPaterno_KeyPress;
             // 
             // txtNombre

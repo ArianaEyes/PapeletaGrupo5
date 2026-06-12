@@ -109,7 +109,7 @@
             grpInfractor.Margin = new Padding(2, 1, 2, 1);
             grpInfractor.Name = "grpInfractor";
             grpInfractor.Padding = new Padding(2, 1, 2, 1);
-            grpInfractor.Size = new Size(812, 440);
+            grpInfractor.Size = new Size(812, 477);
             grpInfractor.TabIndex = 0;
             grpInfractor.TabStop = false;
             grpInfractor.Text = "Insertar Infractor";
@@ -121,7 +121,7 @@
             checkBox1.Margin = new Padding(2, 1, 2, 1);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(60, 19);
-            checkBox1.TabIndex = 29;
+            checkBox1.TabIndex = 14;
             checkBox1.Text = "Activo";
             checkBox1.UseVisualStyleBackColor = true;
             // 
@@ -141,7 +141,7 @@
             btnFoto.Margin = new Padding(2, 1, 2, 1);
             btnFoto.Name = "btnFoto";
             btnFoto.Size = new Size(81, 33);
-            btnFoto.TabIndex = 13;
+            btnFoto.TabIndex = 15;
             btnFoto.Text = "Subir Foto";
             btnFoto.UseVisualStyleBackColor = true;
             btnFoto.Click += btnFoto_Click;
@@ -151,8 +151,8 @@
             button2.Location = new Point(439, 415);
             button2.Margin = new Padding(2, 1, 2, 1);
             button2.Name = "button2";
-            button2.Size = new Size(81, 22);
-            button2.TabIndex = 27;
+            button2.Size = new Size(81, 38);
+            button2.TabIndex = 17;
             button2.Text = "Cancelar";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
@@ -162,8 +162,8 @@
             btnAgregar.Location = new Point(326, 415);
             btnAgregar.Margin = new Padding(2, 1, 2, 1);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(81, 22);
-            btnAgregar.TabIndex = 14;
+            btnAgregar.Size = new Size(81, 38);
+            btnAgregar.TabIndex = 16;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
             btnAgregar.Click += btnAgregar_Click;
@@ -197,7 +197,7 @@
             cboTipoBrevete.Margin = new Padding(2, 1, 2, 1);
             cboTipoBrevete.Name = "cboTipoBrevete";
             cboTipoBrevete.Size = new Size(184, 23);
-            cboTipoBrevete.TabIndex = 12;
+            cboTipoBrevete.TabIndex = 9;
             // 
             // label12
             // 
@@ -236,7 +236,7 @@
             cboDistrito.Margin = new Padding(2, 1, 2, 1);
             cboDistrito.Name = "cboDistrito";
             cboDistrito.Size = new Size(199, 23);
-            cboDistrito.TabIndex = 10;
+            cboDistrito.TabIndex = 13;
             // 
             // cboProvincia
             // 
@@ -245,7 +245,7 @@
             cboProvincia.Margin = new Padding(2, 1, 2, 1);
             cboProvincia.Name = "cboProvincia";
             cboProvincia.Size = new Size(199, 23);
-            cboProvincia.TabIndex = 9;
+            cboProvincia.TabIndex = 12;
             // 
             // cboDepartamento
             // 
@@ -254,7 +254,7 @@
             cboDepartamento.Margin = new Padding(2, 1, 2, 1);
             cboDepartamento.Name = "cboDepartamento";
             cboDepartamento.Size = new Size(199, 23);
-            cboDepartamento.TabIndex = 8;
+            cboDepartamento.TabIndex = 11;
             // 
             // txtCorreo
             // 
@@ -262,7 +262,7 @@
             txtCorreo.Margin = new Padding(2, 1, 2, 1);
             txtCorreo.Name = "txtCorreo";
             txtCorreo.Size = new Size(231, 23);
-            txtCorreo.TabIndex = 6;
+            txtCorreo.TabIndex = 7;
             // 
             // label9
             // 
@@ -283,7 +283,7 @@
             grpSexo.Name = "grpSexo";
             grpSexo.Padding = new Padding(2, 1, 2, 1);
             grpSexo.Size = new Size(305, 48);
-            grpSexo.TabIndex = 5;
+            grpSexo.TabIndex = 6;
             grpSexo.TabStop = false;
             grpSexo.Text = "Sexo:";
             // 
@@ -317,7 +317,7 @@
             dtpFecNacimiento.Margin = new Padding(2, 1, 2, 1);
             dtpFecNacimiento.Name = "dtpFecNacimiento";
             dtpFecNacimiento.Size = new Size(255, 23);
-            dtpFecNacimiento.TabIndex = 4;
+            dtpFecNacimiento.TabIndex = 5;
             // 
             // txtNumBrevete
             // 
@@ -325,7 +325,7 @@
             txtNumBrevete.Margin = new Padding(2, 1, 2, 1);
             txtNumBrevete.Name = "txtNumBrevete";
             txtNumBrevete.Size = new Size(184, 23);
-            txtNumBrevete.TabIndex = 11;
+            txtNumBrevete.TabIndex = 8;
             txtNumBrevete.KeyPress += txtNumBrevete_KeyPress;
             // 
             // txtDireccion
@@ -334,7 +334,7 @@
             txtDireccion.Margin = new Padding(2, 1, 2, 1);
             txtDireccion.Name = "txtDireccion";
             txtDireccion.Size = new Size(231, 23);
-            txtDireccion.TabIndex = 7;
+            txtDireccion.TabIndex = 10;
             // 
             // txtApePaterno
             // 
@@ -343,7 +343,7 @@
             txtApePaterno.Margin = new Padding(2, 1, 2, 1);
             txtApePaterno.Name = "txtApePaterno";
             txtApePaterno.Size = new Size(182, 23);
-            txtApePaterno.TabIndex = 1;
+            txtApePaterno.TabIndex = 2;
             txtApePaterno.KeyPress += txtApePaterno_KeyPress;
             // 
             // txtApeMaterno
@@ -353,7 +353,7 @@
             txtApeMaterno.Margin = new Padding(2, 1, 2, 1);
             txtApeMaterno.Name = "txtApeMaterno";
             txtApeMaterno.Size = new Size(182, 23);
-            txtApeMaterno.TabIndex = 2;
+            txtApeMaterno.TabIndex = 3;
             txtApeMaterno.KeyPress += txtApeMaterno_KeyPress;
             // 
             // txtDNI
@@ -362,7 +362,7 @@
             txtDNI.Margin = new Padding(2, 1, 2, 1);
             txtDNI.Name = "txtDNI";
             txtDNI.Size = new Size(182, 23);
-            txtDNI.TabIndex = 3;
+            txtDNI.TabIndex = 4;
             txtDNI.KeyPress += txtDNI_KeyPress;
             // 
             // txtNombres
@@ -372,7 +372,7 @@
             txtNombres.Margin = new Padding(2, 1, 2, 1);
             txtNombres.Name = "txtNombres";
             txtNombres.Size = new Size(209, 23);
-            txtNombres.TabIndex = 0;
+            txtNombres.TabIndex = 1;
             txtNombres.KeyPress += txtNombres_KeyPress;
             // 
             // label8
@@ -465,7 +465,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(834, 460);
+            ClientSize = new Size(834, 497);
             Controls.Add(grpInfractor);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(2, 1, 2, 1);
