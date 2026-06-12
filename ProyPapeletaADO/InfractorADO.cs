@@ -357,5 +357,37 @@ namespace ProyPapeletaADO
 
             return dt.Rows.Count > 0 ? dt.Rows[0] : null;
         }
+        public DataTable ListarMultasPorInfractor(string codigoInfractor, DateTime fecIni, DateTime fecFin)
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (SqlConnection cnx = new SqlConnection(Configuracion.PAPELETA))
+                {
+                    using (SqlCommand cmd = new SqlCommand("SP_LISTARMULTASINFRACTOR", cnx))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+
+                        cmd.Parameters.AddWithValue("@COD_INFRACTOR", codigoInfractor);
+
+                        cmd.Parameters.AddWithValue("@FECINI", new DateTime(2000, 1, 1));
+                        cmd.Parameters.AddWithValue("@FECFIN", new DateTime(2050, 12, 31));
+
+                        using (SqlDataAdapter ada = new SqlDataAdapter(cmd))
+                        {
+                            ada.Fill(dt);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al consultar las papeletas en ADO: " + ex.Message);
+            }
+
+            return dt;
+        }
     }
 }

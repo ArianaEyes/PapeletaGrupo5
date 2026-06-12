@@ -284,7 +284,7 @@ namespace ProyPapeletaADO
                 new SqlConnection(Configuracion.PAPELETA))
             {
                 SqlDataAdapter da = new SqlDataAdapter(
-                    "SELECT DISTINCT NOM_RANGO FROM TB_RANGO",
+                    "SELECT COD_RANGO, NOM_RANGO FROM TB_RANGO",
                     cnx);
 
                 da.Fill(dt);
@@ -293,7 +293,7 @@ namespace ProyPapeletaADO
             return dt;
         }
 
-          public DataTable ObtenerRangoPorPolicia(string codPolciia)
+        public DataTable ObtenerRangoPorPolicia(string codPolciia)
         {
             DataTable dt = new DataTable();
 

@@ -126,12 +126,20 @@ namespace ProyPapeleta_GUI
             infr03.MdiParent = this;
             infr03.Show();
         }
-
-        private void listadoExcelToolStripMenuItem_Click(object sender, EventArgs e)
+        //k
+        private void consultarMultasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmListadosPapeleta frmPapeleta = new frmListadosPapeleta();
-            frmPapeleta.MdiParent = this;
-            frmPapeleta.Show();
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f is MultasInfractor)
+                {
+                    f.Activate();
+                    return;
+                }
+            }
+            MultasInfractor multas01 = new MultasInfractor();
+            multas01.MdiParent = this;
+            multas01.Show();
         }
     }
 }

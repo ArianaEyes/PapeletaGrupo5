@@ -31,7 +31,6 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            label4 = new Label();
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
@@ -40,11 +39,10 @@
             label10 = new Label();
             label11 = new Label();
             dtpFecIni = new DateTimePicker();
-            dateTimePicker1 = new DateTimePicker();
+            dtpFecFin = new DateTimePicker();
             txtCod = new TextBox();
             lblNombre = new Label();
             lblTipoBrevete = new Label();
-            lblTel = new Label();
             lblDNI = new Label();
             lblApellido = new Label();
             lblNumBrevete = new Label();
@@ -78,20 +76,11 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(12, 87);
+            label3.Location = new Point(12, 95);
             label3.Name = "label3";
             label3.Size = new Size(92, 15);
             label3.TabIndex = 2;
             label3.Text = "Tipo de brevete:";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(12, 119);
-            label4.Name = "label4";
-            label4.Size = new Size(56, 15);
-            label4.TabIndex = 3;
-            label4.Text = "Teléfono:";
             // 
             // label5
             // 
@@ -164,25 +153,28 @@
             dtpFecIni.Name = "dtpFecIni";
             dtpFecIni.Size = new Size(148, 23);
             dtpFecIni.TabIndex = 11;
+            dtpFecIni.Visible = false;
             // 
-            // dateTimePicker1
+            // dtpFecFin
             // 
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(386, 162);
-            dateTimePicker1.Margin = new Padding(4, 3, 4, 3);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(148, 23);
-            dateTimePicker1.TabIndex = 12;
+            dtpFecFin.Format = DateTimePickerFormat.Short;
+            dtpFecFin.Location = new Point(386, 162);
+            dtpFecFin.Margin = new Padding(4, 3, 4, 3);
+            dtpFecFin.Name = "dtpFecFin";
+            dtpFecFin.Size = new Size(148, 23);
+            dtpFecFin.TabIndex = 12;
+            dtpFecFin.Visible = false;
             // 
             // txtCod
             // 
             txtCod.CharacterCasing = CharacterCasing.Upper;
             txtCod.Location = new Point(131, 15);
             txtCod.Margin = new Padding(4, 3, 4, 3);
-            txtCod.MaxLength = 4;
+            txtCod.MaxLength = 5;
             txtCod.Name = "txtCod";
             txtCod.Size = new Size(90, 23);
-            txtCod.TabIndex = 1;
+            txtCod.TabIndex = 13;
+            txtCod.KeyPress += txtCod_KeyPress_1;
             // 
             // lblNombre
             // 
@@ -196,20 +188,11 @@
             // lblTipoBrevete
             // 
             lblTipoBrevete.BorderStyle = BorderStyle.FixedSingle;
-            lblTipoBrevete.Location = new Point(109, 84);
+            lblTipoBrevete.Location = new Point(111, 95);
             lblTipoBrevete.Margin = new Padding(4, 0, 4, 0);
             lblTipoBrevete.Name = "lblTipoBrevete";
             lblTipoBrevete.Size = new Size(110, 26);
             lblTipoBrevete.TabIndex = 15;
-            // 
-            // lblTel
-            // 
-            lblTel.BorderStyle = BorderStyle.FixedSingle;
-            lblTel.Location = new Point(85, 119);
-            lblTel.Margin = new Padding(4, 0, 4, 0);
-            lblTel.Name = "lblTel";
-            lblTel.Size = new Size(116, 26);
-            lblTel.TabIndex = 16;
             // 
             // lblDNI
             // 
@@ -318,11 +301,10 @@
             Controls.Add(lblNumBrevete);
             Controls.Add(lblApellido);
             Controls.Add(lblDNI);
-            Controls.Add(lblTel);
             Controls.Add(lblTipoBrevete);
             Controls.Add(lblNombre);
             Controls.Add(txtCod);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(dtpFecFin);
             Controls.Add(dtpFecIni);
             Controls.Add(label11);
             Controls.Add(label10);
@@ -331,12 +313,12 @@
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
-            Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "MultasInfractor";
             Text = "MultasInfractor";
+            Load += MultasInfractor_Load_1;
             ((System.ComponentModel.ISupportInitialize)dtgMultas).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -347,7 +329,6 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private Label label4;
         private Label label5;
         private Label label6;
         private Label label7;
@@ -356,11 +337,10 @@
         private Label label10;
         private Label label11;
         private DateTimePicker dtpFecIni;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtpFecFin;
         private TextBox txtCod;
         private Label lblNombre;
         private Label lblTipoBrevete;
-        private Label lblTel;
         private Label lblDNI;
         private Label lblApellido;
         private Label lblNumBrevete;

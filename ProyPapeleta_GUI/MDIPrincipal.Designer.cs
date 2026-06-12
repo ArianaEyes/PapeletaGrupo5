@@ -42,8 +42,7 @@
             salirToolStripMenuItem = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
             lblUsuario = new ToolStripStatusLabel();
-            toolStripMenuItem1 = new ToolStripSeparator();
-            listadoExcelToolStripMenuItem = new ToolStripMenuItem();
+            consultarMultasToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
             SuspendLayout();
@@ -93,7 +92,7 @@
             // 
             // consultasToolStripMenuItem
             // 
-            consultasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { consultarDatosToolStripMenuItem, consultarPorInfractorToolStripMenuItem, consultarPorInfracciónToolStripMenuItem, toolStripMenuItem1, listadoExcelToolStripMenuItem });
+            consultasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { consultarDatosToolStripMenuItem, consultarPorInfractorToolStripMenuItem, consultarPorInfracciónToolStripMenuItem, consultarMultasToolStripMenuItem });
             consultasToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
             consultasToolStripMenuItem.Size = new Size(71, 22);
@@ -154,17 +153,12 @@
             lblUsuario.Size = new Size(93, 17);
             lblUsuario.Text = "Usuario Actual : ";
             // 
-            // toolStripMenuItem1
+            // consultarMultasToolStripMenuItem
             // 
-            toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(199, 6);
-            // 
-            // listadoExcelToolStripMenuItem
-            // 
-            listadoExcelToolStripMenuItem.Name = "listadoExcelToolStripMenuItem";
-            listadoExcelToolStripMenuItem.Size = new Size(202, 22);
-            listadoExcelToolStripMenuItem.Text = "Listado Excel";
-            listadoExcelToolStripMenuItem.Click += listadoExcelToolStripMenuItem_Click;
+            consultarMultasToolStripMenuItem.Name = "consultarMultasToolStripMenuItem";
+            consultarMultasToolStripMenuItem.Size = new Size(202, 22);
+            consultarMultasToolStripMenuItem.Text = "Consultar Multas";
+            consultarMultasToolStripMenuItem.Click += consultarMultasToolStripMenuItem_Click;
             // 
             // MDIPrincipal
             // 
@@ -201,7 +195,6 @@
         private ToolStripStatusLabel lblUsuario;
         private ToolStripMenuItem consultarPorInfractorToolStripMenuItem;
         private ToolStripMenuItem consultarPorInfracciónToolStripMenuItem;
-        private ToolStripSeparator toolStripMenuItem1;
-        private ToolStripMenuItem listadoExcelToolStripMenuItem;
+        private ToolStripMenuItem consultarMultasToolStripMenuItem;
     }
 }
