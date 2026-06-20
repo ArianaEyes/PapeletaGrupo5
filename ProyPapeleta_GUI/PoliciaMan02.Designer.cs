@@ -110,7 +110,7 @@
             btnCargarFoto.Margin = new Padding(3, 2, 3, 2);
             btnCargarFoto.Name = "btnCargarFoto";
             btnCargarFoto.Size = new Size(82, 37);
-            btnCargarFoto.TabIndex = 15;
+            btnCargarFoto.TabIndex = 12;
             btnCargarFoto.Text = "Cargar Foto";
             btnCargarFoto.UseVisualStyleBackColor = true;
             btnCargarFoto.Click += btnCargarFoto_Click_1;
@@ -133,7 +133,7 @@
             grpFoto.Name = "grpFoto";
             grpFoto.Padding = new Padding(3, 2, 3, 2);
             grpFoto.Size = new Size(171, 161);
-            grpFoto.TabIndex = 7;
+            grpFoto.TabIndex = 12;
             grpFoto.TabStop = false;
             grpFoto.Text = "Foto";
             // 

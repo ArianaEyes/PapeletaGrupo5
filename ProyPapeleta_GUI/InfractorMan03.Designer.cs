@@ -37,7 +37,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(208, 20);
+            label1.Location = new Point(381, 28);
             label1.Name = "label1";
             label1.Size = new Size(173, 15);
             label1.TabIndex = 0;
@@ -51,7 +51,7 @@
             // 
             // txtFiltroo
             // 
-            txtFiltroo.Location = new Point(574, 20);
+            txtFiltroo.Location = new Point(590, 25);
             txtFiltroo.Name = "txtFiltroo";
             txtFiltroo.Size = new Size(495, 23);
             txtFiltroo.TabIndex = 1;
@@ -66,15 +66,15 @@
             dtgInfractor.Name = "dtgInfractor";
             dtgInfractor.ReadOnly = true;
             dtgInfractor.RowHeadersWidth = 82;
-            dtgInfractor.Size = new Size(1365, 510);
-            dtgInfractor.TabIndex = 3;
+            dtgInfractor.Size = new Size(1365, 581);
+            dtgInfractor.TabIndex = 5;
             dtgInfractor.CellContentDoubleClick += dtgInfractor_CellDoubleClick;
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(518, 607);
+            btnEliminar.Location = new Point(401, 692);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(130, 46);
+            btnEliminar.Size = new Size(130, 28);
             btnEliminar.TabIndex = 3;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
@@ -82,9 +82,9 @@
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(752, 607);
+            btnSalir.Location = new Point(563, 692);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(122, 46);
+            btnSalir.Size = new Size(122, 28);
             btnSalir.TabIndex = 4;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
@@ -93,27 +93,27 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(1116, 614);
+            label3.Location = new Point(1121, 698);
             label3.Name = "label3";
             label3.Size = new Size(58, 15);
-            label3.TabIndex = 9;
+            label3.TabIndex = 40;
             label3.Text = "Registros:";
             label3.Click += label3_Click;
             // 
             // lblRegistros
             // 
             lblRegistros.BorderStyle = BorderStyle.FixedSingle;
-            lblRegistros.Location = new Point(1249, 614);
+            lblRegistros.Location = new Point(1208, 692);
             lblRegistros.Name = "lblRegistros";
             lblRegistros.Size = new Size(93, 34);
-            lblRegistros.TabIndex = 10;
+            lblRegistros.TabIndex = 40;
             lblRegistros.Click += lblRegistros_Click;
             // 
             // btnInsertar
             // 
-            btnInsertar.Location = new Point(208, 608);
+            btnInsertar.Location = new Point(213, 692);
             btnInsertar.Name = "btnInsertar";
-            btnInsertar.Size = new Size(150, 44);
+            btnInsertar.Size = new Size(150, 28);
             btnInsertar.TabIndex = 2;
             btnInsertar.Text = "Insertar";
             btnInsertar.UseVisualStyleBackColor = true;

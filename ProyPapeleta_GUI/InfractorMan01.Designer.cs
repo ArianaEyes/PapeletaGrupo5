@@ -109,7 +109,7 @@
             grpInfractor.Margin = new Padding(2, 1, 2, 1);
             grpInfractor.Name = "grpInfractor";
             grpInfractor.Padding = new Padding(2, 1, 2, 1);
-            grpInfractor.Size = new Size(812, 477);
+            grpInfractor.Size = new Size(812, 512);
             grpInfractor.TabIndex = 0;
             grpInfractor.TabStop = false;
             grpInfractor.Text = "Insertar Infractor";
@@ -137,7 +137,7 @@
             // 
             // btnFoto
             // 
-            btnFoto.Location = new Point(613, 370);
+            btnFoto.Location = new Point(431, 291);
             btnFoto.Margin = new Padding(2, 1, 2, 1);
             btnFoto.Name = "btnFoto";
             btnFoto.Size = new Size(81, 33);
@@ -148,7 +148,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(439, 415);
+            button2.Location = new Point(426, 444);
             button2.Margin = new Padding(2, 1, 2, 1);
             button2.Name = "button2";
             button2.Size = new Size(81, 38);
@@ -159,7 +159,7 @@
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(326, 415);
+            btnAgregar.Location = new Point(321, 444);
             btnAgregar.Margin = new Padding(2, 1, 2, 1);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(81, 38);
@@ -171,21 +171,21 @@
             // grpFoto
             // 
             grpFoto.Controls.Add(pcbFoto);
-            grpFoto.Location = new Point(538, 237);
+            grpFoto.Location = new Point(555, 257);
             grpFoto.Margin = new Padding(2, 1, 2, 1);
             grpFoto.Name = "grpFoto";
             grpFoto.Padding = new Padding(2, 1, 2, 1);
-            grpFoto.Size = new Size(186, 131);
-            grpFoto.TabIndex = 13;
+            grpFoto.Size = new Size(203, 166);
+            grpFoto.TabIndex = 15;
             grpFoto.TabStop = false;
             grpFoto.Text = "Foto";
             // 
             // pcbFoto
             // 
-            pcbFoto.Location = new Point(55, 16);
+            pcbFoto.Location = new Point(21, 27);
             pcbFoto.Margin = new Padding(2, 1, 2, 1);
             pcbFoto.Name = "pcbFoto";
-            pcbFoto.Size = new Size(108, 113);
+            pcbFoto.Size = new Size(169, 128);
             pcbFoto.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbFoto.TabIndex = 0;
             pcbFoto.TabStop = false;
@@ -193,7 +193,7 @@
             // cboTipoBrevete
             // 
             cboTipoBrevete.FormattingEnabled = true;
-            cboTipoBrevete.Location = new Point(576, 208);
+            cboTipoBrevete.Location = new Point(574, 211);
             cboTipoBrevete.Margin = new Padding(2, 1, 2, 1);
             cboTipoBrevete.Name = "cboTipoBrevete";
             cboTipoBrevete.Size = new Size(184, 23);
@@ -321,7 +321,7 @@
             // 
             // txtNumBrevete
             // 
-            txtNumBrevete.Location = new Point(576, 170);
+            txtNumBrevete.Location = new Point(574, 170);
             txtNumBrevete.Margin = new Padding(2, 1, 2, 1);
             txtNumBrevete.Name = "txtNumBrevete";
             txtNumBrevete.Size = new Size(184, 23);
@@ -465,7 +465,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(834, 497);
+            ClientSize = new Size(834, 532);
             Controls.Add(grpInfractor);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(2, 1, 2, 1);

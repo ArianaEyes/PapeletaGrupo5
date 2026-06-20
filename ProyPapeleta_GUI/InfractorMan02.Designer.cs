@@ -139,7 +139,7 @@
             // 
             // btnSubirFoto
             // 
-            btnSubirFoto.Location = new Point(587, 327);
+            btnSubirFoto.Location = new Point(421, 323);
             btnSubirFoto.Margin = new Padding(2, 1, 2, 1);
             btnSubirFoto.Name = "btnSubirFoto";
             btnSubirFoto.Size = new Size(81, 35);
@@ -151,12 +151,12 @@
             // grpFoto
             // 
             grpFoto.Controls.Add(pcbFoto);
-            grpFoto.Location = new Point(421, 275);
+            grpFoto.Location = new Point(523, 293);
             grpFoto.Margin = new Padding(2, 1, 2, 1);
             grpFoto.Name = "grpFoto";
             grpFoto.Padding = new Padding(2, 1, 2, 1);
             grpFoto.Size = new Size(152, 128);
-            grpFoto.TabIndex = 32;
+            grpFoto.TabIndex = 15;
             grpFoto.TabStop = false;
             grpFoto.Text = "Foto";
             // 

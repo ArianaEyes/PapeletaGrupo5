@@ -46,7 +46,7 @@
             dtgInfraccion.Name = "dtgInfraccion";
             dtgInfraccion.RowHeadersWidth = 82;
             dtgInfraccion.Size = new Size(789, 292);
-            dtgInfraccion.TabIndex = 0;
+            dtgInfraccion.TabIndex = 5;
             dtgInfraccion.CellContentClick += dtgInfraccion_CellContentClick;
             // 
             // label1
@@ -73,7 +73,7 @@
             btnInsertar.Margin = new Padding(3, 2, 3, 2);
             btnInsertar.Name = "btnInsertar";
             btnInsertar.Size = new Size(123, 25);
-            btnInsertar.TabIndex = 3;
+            btnInsertar.TabIndex = 2;
             btnInsertar.Text = "Insertar";
             btnInsertar.UseVisualStyleBackColor = true;
             btnInsertar.Click += btnInsertar_Click;
@@ -84,7 +84,7 @@
             btnEliminar.Margin = new Padding(3, 2, 3, 2);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(131, 25);
-            btnEliminar.TabIndex = 4;
+            btnEliminar.TabIndex = 3;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
             btnEliminar.Click += btnEliminar_Click;
@@ -113,7 +113,7 @@
             btnSalir.Margin = new Padding(3, 2, 3, 2);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(99, 25);
-            btnSalir.TabIndex = 5;
+            btnSalir.TabIndex = 4;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
             btnSalir.Click += btnSalir_Click;

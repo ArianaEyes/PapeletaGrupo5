@@ -50,7 +50,7 @@
             dtgPolicia.ReadOnly = true;
             dtgPolicia.RowHeadersWidth = 82;
             dtgPolicia.Size = new Size(1166, 396);
-            dtgPolicia.TabIndex = 6;
+            dtgPolicia.TabIndex = 5;
             dtgPolicia.CellDoubleClick += dtgPolicia_CellDoubleClick;
             // 
             // txtFiltrooo
@@ -86,7 +86,7 @@
             label3.Location = new Point(971, 537);
             label3.Name = "label3";
             label3.Size = new Size(58, 15);
-            label3.TabIndex = 16;
+            label3.TabIndex = 17;
             label3.Text = "Registros:";
             // 
             // btnSalir

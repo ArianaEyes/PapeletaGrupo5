@@ -106,7 +106,7 @@
             btnCargarFoto.Margin = new Padding(3, 2, 3, 2);
             btnCargarFoto.Name = "btnCargarFoto";
             btnCargarFoto.Size = new Size(82, 37);
-            btnCargarFoto.TabIndex = 15;
+            btnCargarFoto.TabIndex = 12;
             btnCargarFoto.Text = "Cargar Foto";
             btnCargarFoto.UseVisualStyleBackColor = true;
             btnCargarFoto.Click += btnCargarFoto_Click;
@@ -119,7 +119,7 @@
             grpFoto.Name = "grpFoto";
             grpFoto.Padding = new Padding(3, 2, 3, 2);
             grpFoto.Size = new Size(195, 161);
-            grpFoto.TabIndex = 7;
+            grpFoto.TabIndex = 12;
             grpFoto.TabStop = false;
             grpFoto.Text = "Foto";
             // 
@@ -140,7 +140,7 @@
             btnInsertarPoli.Margin = new Padding(3, 2, 3, 2);
             btnInsertarPoli.Name = "btnInsertarPoli";
             btnInsertarPoli.Size = new Size(82, 32);
-            btnInsertarPoli.TabIndex = 12;
+            btnInsertarPoli.TabIndex = 13;
             btnInsertarPoli.Text = "Agregar";
             btnInsertarPoli.UseVisualStyleBackColor = true;
             btnInsertarPoli.Click += btnInsertarPoli_Click;
@@ -203,7 +203,7 @@
             cboDistrito.Margin = new Padding(3, 2, 3, 2);
             cboDistrito.Name = "cboDistrito";
             cboDistrito.Size = new Size(168, 23);
-            cboDistrito.TabIndex = 10;
+            cboDistrito.TabIndex = 11;
             // 
             // cboProvincia
             // 
@@ -212,7 +212,7 @@
             cboProvincia.Margin = new Padding(3, 2, 3, 2);
             cboProvincia.Name = "cboProvincia";
             cboProvincia.Size = new Size(168, 23);
-            cboProvincia.TabIndex = 9;
+            cboProvincia.TabIndex = 10;
             // 
             // cboDepartamento
             // 
@@ -221,7 +221,7 @@
             cboDepartamento.Margin = new Padding(3, 2, 3, 2);
             cboDepartamento.Name = "cboDepartamento";
             cboDepartamento.Size = new Size(168, 23);
-            cboDepartamento.TabIndex = 8;
+            cboDepartamento.TabIndex = 9;
             // 
             // cboRango
             // 
@@ -231,7 +231,7 @@
             cboRango.Margin = new Padding(3, 2, 3, 2);
             cboRango.Name = "cboRango";
             cboRango.Size = new Size(168, 23);
-            cboRango.TabIndex = 7;
+            cboRango.TabIndex = 8;
             cboRango.SelectedIndexChanged += cboRango_SelectedIndexChanged;
             // 
             // grpSexo
