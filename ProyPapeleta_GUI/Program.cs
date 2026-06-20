@@ -1,3 +1,5 @@
+using OfficeOpenXml;
+
 namespace ProyPapeleta_GUI
 {
     internal static class Program
@@ -10,6 +12,8 @@ namespace ProyPapeleta_GUI
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
+            ExcelPackage.License.SetNonCommercialOrganization("ISIL");
+
             ApplicationConfiguration.Initialize();
             Application.Run(new frmLogin());
         }

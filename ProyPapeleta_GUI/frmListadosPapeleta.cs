@@ -1,4 +1,5 @@
 ﻿using OfficeOpenXml;
+using OfficeOpenXml.Style;
 using ProyPapeletaBL;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,8 @@ namespace ProyPapeleta_GUI
 {
     public partial class frmListadosPapeleta : Form
     {
+        private string rutaGuardarInfracciones;
+
         public frmListadosPapeleta()
         {
             InitializeComponent();
@@ -21,7 +24,6 @@ namespace ProyPapeleta_GUI
         private void frmListadosPapeleta_Load(object sender, EventArgs e)
         {
             MostrarControles(false);
-            ExcelPackage.License.SetNonCommercialOrganization("ISIL");
         }
 
         private void MostrarControles(Boolean mostrar)
@@ -31,29 +33,66 @@ namespace ProyPapeleta_GUI
             prgBar.Visible = mostrar;
         }
 
+        private string ElegirRutaGuardado (string nombreSugerido)
+        {
+            using (SaveFileDialog sfd = new SaveFileDialog())
+            {
+                sfd.Filter = "Archivos de Excel (*.xlsx)|*.xlsx*";
+                sfd.FileName = nombreSugerido;
+                sfd.Title = "Guardar listado como";
+
+                return sfd.ShowDialog() == DialogResult.OK ? sfd.FileName : null;
+            }
+        }
+
+        private void CrearEncabezado(ExcelWorksheet ws, string titulo, int colMergeIni, int colMergeFin, float fontSizeTitulo, float altoFilaTitulo, string[] headers, Dictionary<int, double> anchosColumna) {
+            ws.Cells[1, colMergeIni, 1, colMergeFin].Merge = true;
+            ws.Cells[1, colMergeIni].Value = titulo;
+            ws.Cells[1, colMergeIni].Style.Font.Bold = true;
+            ws.Cells[1, colMergeIni].Style.Font.Size = fontSizeTitulo;
+            ws.Cells[1, colMergeIni].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+            ws.Row(1).Height = altoFilaTitulo;
+
+            ws.Cells[2, colMergeIni].Value = "Fecha:";
+            ws.Cells[2, colMergeIni].Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
+            ws.Cells[2, colMergeIni + 1].Formula = "NOW()";
+            ws.Cells[2, colMergeIni + 1].Style.Numberformat.Format = "m/d/yy h:mm";
+
+            for (int i = 0; i < headers.Length; i++)
+            {
+                var celda = ws.Cells[4, i + 1];
+                celda.Value = headers[i];
+                celda.Style.Font.Bold = true;
+                celda.Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                celda.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+            }
+
+            foreach (var kvp in anchosColumna)
+            {
+                ws.Column(kvp.Key).Width = kvp.Value;
+            }
+        }
+
         private void btnListarPolicias_Click(object sender, EventArgs e)
         {
             try
             {
+                String nombreSugerido = "ListadoPolicias_" + clsCredenciales.Usuario + ".xlsx";
+                string ruta = ElegirRutaGuardado(nombreSugerido);
+                if (ruta == null) return;
+
                 MostrarControles(true);
+
                 PoliciaBL objPoliciaBL = new PoliciaBL();
                 DataTable dt = objPoliciaBL.ListarPolicia();
                 Int16 fila = 5;
 
-                ExcelPackage.License.SetNonCommercialOrganization("ISIL");
-                String rutaarchivo = @"C:\MisExcel\ListadoPolicias.xlsx";
-                using var pck = new ExcelPackage(new FileInfo(rutaarchivo));
-                ExcelWorksheet ws = pck.Workbook.Worksheets["Hoja1"];
+                using var pck = new ExcelPackage();
+                ExcelWorksheet ws = pck.Workbook.Worksheets.Add("Hoja1");
 
-                ws.Cells[4, 1].Value = "Código";
-                ws.Cells[4, 2].Value = "Nombre";
-                ws.Cells[4, 3].Value = "Apellido Paterno";
-                ws.Cells[4, 4].Value = "Apellido Materno";
-                ws.Cells[4, 5].Value = "DNI";
-                ws.Cells[4, 6].Value = "Fecha de Nacimiento";
-                ws.Cells[4, 7].Value = "Rango";
-                ws.Cells[4, 8].Value = "Estado";
-                ws.Cells[4, 9].Value = "Ubicación";
+                CrearEncabezado(ws, "LISTADO DE POLICIAS", 4, 5, 20f, 26.25f,
+                    new[] { "Código", "Nombre", "Apellido Paterno", "Apellido Materno", "DNI", "Fecha de Nacimiento", "Rango", "Estado", "Ubicación" },
+                    new Dictionary<int, double> { { 1, 14.14 }, { 2, 22.71 }, { 5, 19.29 }, { 6, 28.14 }, { 7, 24.43 }, { 8, 14.86 }, { 9, 34.29 } });
 
                 foreach (DataRow dr in dt.Rows)
                 {
@@ -69,12 +108,9 @@ namespace ProyPapeleta_GUI
                     fila++;
                 }
 
-                String filename = "ListadoPolicias_" + clsCredenciales.Usuario + ".xlsx";
-                FileStream fs = new FileStream(@"C:\MisExcel\" + filename, FileMode.Create);
-                pck.SaveAs(fs);
-                fs.Dispose();
+                pck.SaveAs(new FileInfo(ruta));
 
-                MessageBox.Show("Archivo " + filename + " generado con éxito.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Archivo generado con éxito en:\n" + ruta, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MostrarControles(false);
             }
             catch (Exception ex)
@@ -88,27 +124,22 @@ namespace ProyPapeleta_GUI
         {
             try
             {
+                String nombreSugerido = "ListadoInfractores_" + clsCredenciales.Usuario + ".xlsx";
+                string ruta = ElegirRutaGuardado(nombreSugerido);
+                if (ruta == null) return;
+
                 MostrarControles(true);
+
                 InfractorBL objInfractorBL = new InfractorBL();
                 DataTable dt = objInfractorBL.ListarInfractores();
                 Int16 fila = 5;
 
-                ExcelPackage.License.SetNonCommercialOrganization("ISIL");
-                String rutaarchivo = @"C:\MisExcel\ListadoInfractores.xlsx";
-                using var pck = new ExcelPackage(new FileInfo(rutaarchivo));
-                ExcelWorksheet ws = pck.Workbook.Worksheets["Hoja1"];
+                using var pck = new ExcelPackage();
+                ExcelWorksheet ws = pck.Workbook.Worksheets.Add("Hoja1");
 
-                ws.Cells[4, 1].Value = "Código";
-                ws.Cells[4, 2].Value = "Nombres";
-                ws.Cells[4, 3].Value = "Apellido Paterno";
-                ws.Cells[4, 4].Value = "Apellido Materno";
-                ws.Cells[4, 5].Value = "Email";
-                ws.Cells[4, 6].Value = "DNI";
-                ws.Cells[4, 7].Value = "Fecha de Nacimiento";
-                ws.Cells[4, 8].Value = "Nro Brevete";
-                ws.Cells[4, 9].Value = "Tipo Brevete";
-                ws.Cells[4, 10].Value = "Ubicación";
-
+                CrearEncabezado(ws, "LISTADO DE INFRACTORES", 5, 6, 16f, 21f,
+                    new[] { "Código", "Nombres", "Apellido Paterno", "Apellido Materno", "Email", "DNI", "Fecha de Nacimiento", "Nro Brevete", "Tipo Brevete", "Ubicación" },
+                    new Dictionary<int, double> { { 1, 12.43 }, { 2, 22.71 }, { 5, 32.86 }, { 6, 19.71 }, { 7, 26.29 }, { 8, 18.57 }, { 9, 14.0 }, { 10, 37.29 } });
 
                 foreach (DataRow dr in dt.Rows)
                 {
@@ -122,16 +153,12 @@ namespace ProyPapeleta_GUI
                     ws.Cells[fila, 8].Value = dr["NRO_BREVETE"].ToString();
                     ws.Cells[fila, 9].Value = dr["TIPO_BREVETE"].ToString();
                     ws.Cells[fila, 10].Value = dr["DEPARTAMENTO"].ToString() + "-" + dr["PROVINCIA"].ToString() + "-" + dr["DISTRITO"].ToString();
-
                     fila++;
                 }
 
-                String filename = "ListadoInfractores_" + clsCredenciales.Usuario + ".xlsx";
-                FileStream fs = new FileStream(@"C:\MisExcel\" + filename, FileMode.Create);
-                pck.SaveAs(fs);
-                fs.Dispose();
+                pck.SaveAs(new FileInfo(ruta));
 
-                MessageBox.Show("Archivo " + filename + " generado con éxito.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Archivo generado con éxito en:\n" + ruta, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MostrarControles(false);
             }
             catch (Exception ex)
@@ -145,6 +172,10 @@ namespace ProyPapeleta_GUI
         {
             try
             {
+                String nombreSugerido = "ListadoInfracciones_" + clsCredenciales.Usuario + ".xlsx";
+                rutaGuardarInfracciones = ElegirRutaGuardado(nombreSugerido);
+                if (rutaGuardarInfracciones == null) return;
+
                 MostrarControles(true);
                 bkgDatos.RunWorkerAsync();
             }
@@ -188,10 +219,12 @@ namespace ProyPapeleta_GUI
                 DataTable dt = (DataTable)e.Result;
                 Int16 fila = 5;
 
-                ExcelPackage.License.SetNonCommercialOrganization("ISIL");
-                String rutaarchivo = @"C:\MisExcel\ListadoInfracciones.xlsx";
-                using var pck = new ExcelPackage(new FileInfo(rutaarchivo));
-                ExcelWorksheet ws = pck.Workbook.Worksheets["Hoja1"];
+                using var pck = new ExcelPackage();
+                ExcelWorksheet ws = pck.Workbook.Worksheets.Add("Hoja1");
+
+                CrearEncabezado(ws, "LISTADO DE INFRACCIONES", 3, 4, 20f, 26.25f,
+                    new[] { "Código", "Descripción Sanción", "Calificación", "Puntos", "UIT" },
+                    new Dictionary<int, double> { { 1, 22.71 }, { 2, 65.86 }, { 3, 47.71 }, { 4, 38.57 }, { 5, 22.71 } });
 
                 foreach (DataRow dr in dt.Rows)
                 {
@@ -203,18 +236,9 @@ namespace ProyPapeleta_GUI
                     fila++;
                 }
 
-                ws.Column(1).Width = 15;
-                ws.Column(2).Width = 50;
-                ws.Column(3).Width = 20;
-                ws.Column(4).Width = 15;
-                ws.Column(5).Width = 15;
+                pck.SaveAs(new FileInfo(rutaGuardarInfracciones));
 
-                String filename = "ListadoInfracciones_" + clsCredenciales.Usuario + ".xlsx";
-                FileStream fs = new FileStream(@"C:\MisExcel\" + filename, FileMode.Create);
-                pck.SaveAs(fs);
-                fs.Dispose();
-
-                MessageBox.Show("Archivo " + filename + " generado con éxito.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Archivo generado con éxito en:\n" + rutaGuardarInfracciones, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MostrarControles(false);
             }
             catch (Exception ex)

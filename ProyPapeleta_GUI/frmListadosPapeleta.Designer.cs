@@ -77,7 +77,7 @@
             // lblMensaje
             // 
             lblMensaje.AutoSize = true;
-            lblMensaje.Location = new Point(169, 307);
+            lblMensaje.Location = new Point(167, 306);
             lblMensaje.Name = "lblMensaje";
             lblMensaje.Size = new Size(68, 15);
             lblMensaje.TabIndex = 4;
@@ -85,7 +85,7 @@
             // 
             // prgBar
             // 
-            prgBar.Location = new Point(87, 343);
+            prgBar.Location = new Point(85, 342);
             prgBar.Name = "prgBar";
             prgBar.Size = new Size(202, 23);
             prgBar.TabIndex = 5;
@@ -93,7 +93,7 @@
             // pcdImagen
             // 
             pcdImagen.Image = Properties.Resources.waiting;
-            pcdImagen.Location = new Point(145, 307);
+            pcdImagen.Location = new Point(143, 306);
             pcdImagen.Name = "pcdImagen";
             pcdImagen.Size = new Size(18, 15);
             pcdImagen.TabIndex = 6;
@@ -110,7 +110,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(385, 450);
+            ClientSize = new Size(367, 450);
             Controls.Add(pcdImagen);
             Controls.Add(prgBar);
             Controls.Add(lblMensaje);
