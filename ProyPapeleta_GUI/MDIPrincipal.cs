@@ -141,6 +141,13 @@ namespace ProyPapeleta_GUI
             multas01.MdiParent = this;
             multas01.Show();
         }
+
+        private void obtenerExcelsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListadosPapeleta frmPapeleta = new frmListadosPapeleta();
+            frmPapeleta.MdiParent = this;
+            frmPapeleta.Show();
+        }
     }
 }
 
