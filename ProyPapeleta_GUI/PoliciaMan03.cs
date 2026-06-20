@@ -76,18 +76,17 @@ namespace ProyPapeleta_GUI
                 dtgPolicia.Columns["MATERNO"]!.HeaderText = "Apellido Materno";
                 dtgPolicia.Columns["NOMBRE"]!.HeaderText = "Nombres";
                 dtgPolicia.Columns["DNI"]!.HeaderText = "DNI";
-                dtgPolicia.Columns["SEXO"]!.HeaderText = "Sexo";
-                dtgPolicia.Columns["COD_UBIGEO"]!.HeaderText = "Cód. Ubigeo";
-                dtgPolicia.Columns["DEPARTAMENTO"]!.HeaderText = "Departamento";
-                dtgPolicia.Columns["PROVINCIA"]!.HeaderText = "Provincia";
-                dtgPolicia.Columns["DISTRITO"]!.HeaderText = "Distrito";
                 dtgPolicia.Columns["ESTADO"]!.HeaderText = "Estado";
+                dtgPolicia.Columns["DEPARTAMENTO"]!.HeaderText = "Departamento";
 
-
-                // ocultar lo que no se necesita
+                if (dtgPolicia.Columns.Contains("COD_RANGO")) dtgPolicia.Columns["COD_RANGO"]!.Visible = false;
+                if (dtgPolicia.Columns.Contains("SEXO")) dtgPolicia.Columns["SEXO"]!.Visible = false;
+                if (dtgPolicia.Columns.Contains("FOTO")) dtgPolicia.Columns["FOTO"]!.Visible = false;
+                if (dtgPolicia.Columns.Contains("COD_UBIGEO")) dtgPolicia.Columns["COD_UBIGEO"]!.Visible = false;
+                if (dtgPolicia.Columns.Contains("DISTRITO")) dtgPolicia.Columns["DISTRITO"]!.Visible = false;
+                if (dtgPolicia.Columns.Contains("PROVINCIA")) dtgPolicia.Columns["PROVINCIA"]!.Visible = false;
                 if (dtgPolicia.Columns.Contains("FECHANACIMIENTO")) dtgPolicia.Columns["FECHANACIMIENTO"]!.Visible = false;
-                if (dtgPolicia.Columns.Contains("ESTADO")) dtgPolicia.Columns["ESTADO"]!.Visible = true;
-                if (dtgPolicia.Columns.Contains("FOTO")) dtgPolicia.Columns["FOTO"]!.Visible = true;
+                if (dtgPolicia.Columns.Contains("GRADO")) dtgPolicia.Columns["GRADO"]!.Visible = false;
 
                 dtgPolicia.AlternatingRowsDefaultCellStyle.BackColor = Color.AliceBlue;
             }
