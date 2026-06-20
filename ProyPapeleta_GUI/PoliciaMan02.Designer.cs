@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             grpDatosPolicia = new GroupBox();
+            btnCargarFoto = new Button();
             lblCodigo = new Label();
             grpFoto = new GroupBox();
-            btnCargarFoto = new Button();
             pcbFoto = new PictureBox();
             btnCancelar = new Button();
             btnAgregar = new Button();
@@ -67,6 +67,7 @@
             // 
             // grpDatosPolicia
             // 
+            grpDatosPolicia.Controls.Add(btnCargarFoto);
             grpDatosPolicia.Controls.Add(lblCodigo);
             grpDatosPolicia.Controls.Add(grpFoto);
             grpDatosPolicia.Controls.Add(btnCancelar);
@@ -97,11 +98,22 @@
             grpDatosPolicia.Margin = new Padding(3, 2, 3, 2);
             grpDatosPolicia.Name = "grpDatosPolicia";
             grpDatosPolicia.Padding = new Padding(3, 2, 3, 2);
-            grpDatosPolicia.Size = new Size(704, 410);
+            grpDatosPolicia.Size = new Size(715, 432);
             grpDatosPolicia.TabIndex = 1;
             grpDatosPolicia.TabStop = false;
             grpDatosPolicia.Text = "Actualizar Datos Policia";
             grpDatosPolicia.Enter += grpDatosPolicia_Enter;
+            // 
+            // btnCargarFoto
+            // 
+            btnCargarFoto.Location = new Point(373, 222);
+            btnCargarFoto.Margin = new Padding(3, 2, 3, 2);
+            btnCargarFoto.Name = "btnCargarFoto";
+            btnCargarFoto.Size = new Size(82, 37);
+            btnCargarFoto.TabIndex = 15;
+            btnCargarFoto.Text = "Cargar Foto";
+            btnCargarFoto.UseVisualStyleBackColor = true;
+            btnCargarFoto.Click += btnCargarFoto_Click_1;
             // 
             // lblCodigo
             // 
@@ -115,31 +127,19 @@
             // 
             // grpFoto
             // 
-            grpFoto.Controls.Add(btnCargarFoto);
             grpFoto.Controls.Add(pcbFoto);
-            grpFoto.Location = new Point(361, 180);
+            grpFoto.Location = new Point(483, 180);
             grpFoto.Margin = new Padding(3, 2, 3, 2);
             grpFoto.Name = "grpFoto";
             grpFoto.Padding = new Padding(3, 2, 3, 2);
-            grpFoto.Size = new Size(293, 161);
+            grpFoto.Size = new Size(171, 161);
             grpFoto.TabIndex = 7;
             grpFoto.TabStop = false;
             grpFoto.Text = "Foto";
             // 
-            // btnCargarFoto
-            // 
-            btnCargarFoto.Location = new Point(39, 65);
-            btnCargarFoto.Margin = new Padding(3, 2, 3, 2);
-            btnCargarFoto.Name = "btnCargarFoto";
-            btnCargarFoto.Size = new Size(82, 37);
-            btnCargarFoto.TabIndex = 12;
-            btnCargarFoto.Text = "Cargar Foto";
-            btnCargarFoto.UseVisualStyleBackColor = true;
-            btnCargarFoto.Click += btnCargarFoto_Click_1;
-            // 
             // pcbFoto
             // 
-            pcbFoto.Location = new Point(144, 20);
+            pcbFoto.Location = new Point(20, 20);
             pcbFoto.Margin = new Padding(3, 2, 3, 2);
             pcbFoto.Name = "pcbFoto";
             pcbFoto.Size = new Size(132, 125);
@@ -149,10 +149,10 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(572, 369);
+            btnCancelar.Location = new Point(570, 369);
             btnCancelar.Margin = new Padding(3, 2, 3, 2);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(82, 22);
+            btnCancelar.Size = new Size(82, 35);
             btnCancelar.TabIndex = 14;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
@@ -163,7 +163,7 @@
             btnAgregar.Location = new Point(465, 369);
             btnAgregar.Margin = new Padding(3, 2, 3, 2);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(82, 22);
+            btnAgregar.Size = new Size(82, 35);
             btnAgregar.TabIndex = 13;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
@@ -402,7 +402,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(742, 413);
+            ClientSize = new Size(737, 454);
             Controls.Add(grpDatosPolicia);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 2, 3, 2);
@@ -424,7 +424,6 @@
 
         private GroupBox grpDatosPolicia;
         private GroupBox grpFoto;
-        private Button btnCargarFoto;
         private PictureBox pcbFoto;
         private CheckBox chkActivo;
         private DateTimePicker dtpFechaNacimiento;
@@ -453,5 +452,6 @@
         private Label label11;
         private Button btnAgregar;
         private Button btnCancelar;
+        private Button btnCargarFoto;
     }
 }

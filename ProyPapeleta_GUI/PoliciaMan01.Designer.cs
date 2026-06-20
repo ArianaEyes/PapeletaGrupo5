@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             grpDatosPolicia = new GroupBox();
-            grpFoto = new GroupBox();
             btnCargarFoto = new Button();
+            grpFoto = new GroupBox();
             pcbFoto = new PictureBox();
             btnInsertarPoli = new Button();
             btnAgregar = new Button();
@@ -65,6 +65,7 @@
             // 
             // grpDatosPolicia
             // 
+            grpDatosPolicia.Controls.Add(btnCargarFoto);
             grpDatosPolicia.Controls.Add(grpFoto);
             grpDatosPolicia.Controls.Add(btnInsertarPoli);
             grpDatosPolicia.Controls.Add(btnAgregar);
@@ -93,52 +94,52 @@
             grpDatosPolicia.Margin = new Padding(3, 2, 3, 2);
             grpDatosPolicia.Name = "grpDatosPolicia";
             grpDatosPolicia.Padding = new Padding(3, 2, 3, 2);
-            grpDatosPolicia.Size = new Size(679, 368);
+            grpDatosPolicia.Size = new Size(706, 403);
             grpDatosPolicia.TabIndex = 0;
             grpDatosPolicia.TabStop = false;
             grpDatosPolicia.Text = "Datos Policia";
             grpDatosPolicia.Enter += grpDatosPolicia_Enter;
             // 
-            // grpFoto
-            // 
-            grpFoto.Controls.Add(btnCargarFoto);
-            grpFoto.Controls.Add(pcbFoto);
-            grpFoto.Location = new Point(361, 142);
-            grpFoto.Margin = new Padding(3, 2, 3, 2);
-            grpFoto.Name = "grpFoto";
-            grpFoto.Padding = new Padding(3, 2, 3, 2);
-            grpFoto.Size = new Size(293, 161);
-            grpFoto.TabIndex = 7;
-            grpFoto.TabStop = false;
-            grpFoto.Text = "Foto";
-            // 
             // btnCargarFoto
             // 
-            btnCargarFoto.Location = new Point(38, 65);
+            btnCargarFoto.Location = new Point(361, 204);
             btnCargarFoto.Margin = new Padding(3, 2, 3, 2);
             btnCargarFoto.Name = "btnCargarFoto";
             btnCargarFoto.Size = new Size(82, 37);
-            btnCargarFoto.TabIndex = 11;
+            btnCargarFoto.TabIndex = 15;
             btnCargarFoto.Text = "Cargar Foto";
             btnCargarFoto.UseVisualStyleBackColor = true;
             btnCargarFoto.Click += btnCargarFoto_Click;
             // 
+            // grpFoto
+            // 
+            grpFoto.Controls.Add(pcbFoto);
+            grpFoto.Location = new Point(459, 142);
+            grpFoto.Margin = new Padding(3, 2, 3, 2);
+            grpFoto.Name = "grpFoto";
+            grpFoto.Padding = new Padding(3, 2, 3, 2);
+            grpFoto.Size = new Size(195, 161);
+            grpFoto.TabIndex = 7;
+            grpFoto.TabStop = false;
+            grpFoto.Text = "Foto";
+            // 
             // pcbFoto
             // 
-            pcbFoto.Location = new Point(144, 20);
+            pcbFoto.Location = new Point(16, 20);
             pcbFoto.Margin = new Padding(3, 2, 3, 2);
             pcbFoto.Name = "pcbFoto";
-            pcbFoto.Size = new Size(132, 125);
+            pcbFoto.Size = new Size(164, 125);
             pcbFoto.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbFoto.TabIndex = 0;
             pcbFoto.TabStop = false;
+            pcbFoto.Click += pcbFoto_Click_1;
             // 
             // btnInsertarPoli
             // 
             btnInsertarPoli.Location = new Point(459, 323);
             btnInsertarPoli.Margin = new Padding(3, 2, 3, 2);
             btnInsertarPoli.Name = "btnInsertarPoli";
-            btnInsertarPoli.Size = new Size(82, 24);
+            btnInsertarPoli.Size = new Size(82, 32);
             btnInsertarPoli.TabIndex = 12;
             btnInsertarPoli.Text = "Agregar";
             btnInsertarPoli.UseVisualStyleBackColor = true;
@@ -146,10 +147,10 @@
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(572, 324);
+            btnAgregar.Location = new Point(572, 323);
             btnAgregar.Margin = new Padding(3, 2, 3, 2);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(82, 23);
+            btnAgregar.Size = new Size(82, 32);
             btnAgregar.TabIndex = 14;
             btnAgregar.Text = "Cancelar";
             btnAgregar.UseVisualStyleBackColor = true;
@@ -383,7 +384,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(707, 388);
+            ClientSize = new Size(726, 420);
             Controls.Add(grpDatosPolicia);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 2, 3, 2);
@@ -429,8 +430,8 @@
         private ComboBox cboDistrito;
         private Label label9;
         private GroupBox grpFoto;
-        private Button btnCargarFoto;
         private PictureBox pcbFoto;
         private Button btnInsertarPoli;
+        private Button btnCargarFoto;
     }
 }

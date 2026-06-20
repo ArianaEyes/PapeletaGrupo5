@@ -348,5 +348,15 @@ namespace ProyPapeleta_GUI
         {
             Close();
         }
+
+        private void pcbFoto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pcbFoto_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
