@@ -22,26 +22,6 @@ namespace ProyPapeleta_GUI
         {
             InitializeComponent();
         }
-        //private void CargarDatos(string strFiltro)
-        //{
-        //    try
-        //    {
-        //        if (dtv == null)
-        //        {
-        //            dtv = new DataView(objPoliciaBL.ListarPolicia());
-        //        }
-
-        //        dtv.RowFilter = $"COD_POLICIA LIKE '%{strFiltro}%'";
-
-        //        dtgPolicia.DataSource = dtv;
-
-        //        lblRegistros.Text = dtv.Count.ToString();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Error al filtrar los datos: " + ex.Message);
-        //    }
-        //}
         private void PoliciaMan05_Load(object sender, EventArgs e)
         {
             try
@@ -90,24 +70,24 @@ namespace ProyPapeleta_GUI
                 dtgPolicia.ReadOnly = true;
                 dtgPolicia.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
-                dtgPolicia.Columns["COD_POLICIA"].HeaderText = "Código";
-                dtgPolicia.Columns["COD_POLICIA"].Width = 70;
-                dtgPolicia.Columns["PATERNO"].HeaderText = "Apellido Paterno";
-                dtgPolicia.Columns["MATERNO"].HeaderText = "Apellido Materno";
-                dtgPolicia.Columns["NOMBRE"].HeaderText = "Nombres";
-                dtgPolicia.Columns["DNI"].HeaderText = "DNI";
-                dtgPolicia.Columns["SEXO"].HeaderText = "Sexo";
-                dtgPolicia.Columns["COD_UBIGEO"].HeaderText = "Cód. Ubigeo";
-                dtgPolicia.Columns["DEPARTAMENTO"].HeaderText = "Departamento";
-                dtgPolicia.Columns["PROVINCIA"].HeaderText = "Provincia";
-                dtgPolicia.Columns["DISTRITO"].HeaderText = "Distrito";
-                dtgPolicia.Columns["ESTADO"].HeaderText = "Estado";
+                dtgPolicia.Columns["COD_POLICIA"]!.HeaderText = "Código";
+                dtgPolicia.Columns["COD_POLICIA"]!.Width = 70;
+                dtgPolicia.Columns["PATERNO"]!.HeaderText = "Apellido Paterno";
+                dtgPolicia.Columns["MATERNO"]!.HeaderText = "Apellido Materno";
+                dtgPolicia.Columns["NOMBRE"]!.HeaderText = "Nombres";
+                dtgPolicia.Columns["DNI"]!.HeaderText = "DNI";
+                dtgPolicia.Columns["SEXO"]!.HeaderText = "Sexo";
+                dtgPolicia.Columns["COD_UBIGEO"]!.HeaderText = "Cód. Ubigeo";
+                dtgPolicia.Columns["DEPARTAMENTO"]!.HeaderText = "Departamento";
+                dtgPolicia.Columns["PROVINCIA"]!.HeaderText = "Provincia";
+                dtgPolicia.Columns["DISTRITO"]!.HeaderText = "Distrito";
+                dtgPolicia.Columns["ESTADO"]!.HeaderText = "Estado";
 
 
                 // ocultar lo que no se necesita
-                if (dtgPolicia.Columns.Contains("FECHANACIMIENTO")) dtgPolicia.Columns["FECHANACIMIENTO"].Visible = false;
-                if (dtgPolicia.Columns.Contains("ESTADO")) dtgPolicia.Columns["ESTADO"].Visible = true;
-                if (dtgPolicia.Columns.Contains("FOTO")) dtgPolicia.Columns["FOTO"].Visible = true;
+                if (dtgPolicia.Columns.Contains("FECHANACIMIENTO")) dtgPolicia.Columns["FECHANACIMIENTO"]!.Visible = false;
+                if (dtgPolicia.Columns.Contains("ESTADO")) dtgPolicia.Columns["ESTADO"]!.Visible = true;
+                if (dtgPolicia.Columns.Contains("FOTO")) dtgPolicia.Columns["FOTO"]!.Visible = true;
 
                 dtgPolicia.AlternatingRowsDefaultCellStyle.BackColor = Color.AliceBlue;
             }
@@ -201,11 +181,7 @@ namespace ProyPapeleta_GUI
             {
                 if (e.RowIndex < 0) return;
 
-                string codigo = dtgPolicia
-                    .Rows[e.RowIndex]
-                    .Cells["COD_POLICIA"]
-                    .Value
-                    .ToString();
+                string codigo = dtgPolicia.Rows[e.RowIndex].Cells["COD_POLICIA"].Value.ToString();
 
                 PoliciaMan02 frm = new PoliciaMan02();
 

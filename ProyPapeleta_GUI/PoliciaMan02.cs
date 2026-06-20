@@ -41,10 +41,7 @@ namespace ProyPapeleta_GUI
         {
             if (txtNombre.Text.Trim() == "")
             {
-                errorProvider1.SetError(txtNombre,
-                    "Ingrese nombres");
-
-
+                errorProvider1.SetError(txtNombre,"Ingrese nombres");
             }
             else
             {
@@ -56,9 +53,7 @@ namespace ProyPapeleta_GUI
         {
             if (txtApellidoPaterno.Text.Trim() == "")
             {
-                errorProvider1.SetError(txtApellidoPaterno,
-                    "Ingrese apellido paterno");
-
+                errorProvider1.SetError(txtApellidoPaterno,"Ingrese apellido paterno");
             }
             else
             {
@@ -70,9 +65,7 @@ namespace ProyPapeleta_GUI
         {
             if (txtApellidoMaterno.Text.Trim() == "")
             {
-                errorProvider1.SetError(txtApellidoMaterno,
-                    "Ingrese apellido materno");
-
+                errorProvider1.SetError(txtApellidoMaterno,"Ingrese apellido materno");
             }
             else
             {
@@ -85,9 +78,7 @@ namespace ProyPapeleta_GUI
             if (!char.IsDigit(e.KeyChar) &&
                 !char.IsControl(e.KeyChar))
             {
-                MessageBox.Show(
-                    "Solo se permiten números");
-
+                MessageBox.Show("Solo se permiten números");
                 e.Handled = true;
             }
         }
@@ -96,15 +87,11 @@ namespace ProyPapeleta_GUI
         {
             if (txtDNI.Text.Trim() == "")
             {
-                errorProvider1.SetError(txtDNI,
-                    "Ingrese DNI");
-
+                errorProvider1.SetError(txtDNI,"Ingrese DNI");
             }
             else if (txtDNI.Text.Length != 8)
             {
-                errorProvider1.SetError(txtDNI,
-                    "El DNI debe tener 8 dígitos");
-
+                errorProvider1.SetError(txtDNI,"El DNI debe tener 8 dígitos");
             }
         }
 
@@ -114,9 +101,7 @@ namespace ProyPapeleta_GUI
                 !char.IsWhiteSpace(e.KeyChar) &&
                 !char.IsControl(e.KeyChar))
             {
-                MessageBox.Show(
-                    "Solo se permiten letras");
-
+                MessageBox.Show("Solo se permiten letras");
                 e.Handled = true;
             }
         }
@@ -127,9 +112,7 @@ namespace ProyPapeleta_GUI
                 !char.IsWhiteSpace(e.KeyChar) &&
                 !char.IsControl(e.KeyChar))
             {
-                MessageBox.Show(
-                    "Solo se permiten letras");
-
+                MessageBox.Show("Solo se permiten letras");
                 e.Handled = true;
             }
         }
@@ -140,9 +123,7 @@ namespace ProyPapeleta_GUI
                 !char.IsWhiteSpace(e.KeyChar) &&
                 !char.IsControl(e.KeyChar))
             {
-                MessageBox.Show(
-                    "Solo se permiten letras");
-
+                MessageBox.Show("Solo se permiten letras");
                 e.Handled = true;
             }
         }
@@ -159,7 +140,7 @@ namespace ProyPapeleta_GUI
 
         private void lblCodigo_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void PoliciaMan02_Load(object sender, EventArgs e)
@@ -194,6 +175,7 @@ namespace ProyPapeleta_GUI
                 cboRango.DataSource = objPoliciaADO.ListarRango();
                 cboRango.DisplayMember = "NOM_RANGO";
                 cboRango.ValueMember = "COD_RANGO";
+                cboRango.SelectedValue = objPoliciaBE.COD_RANGO;
 
                 if (objPoliciaBE.FOTO != null)
                 {
@@ -231,15 +213,12 @@ namespace ProyPapeleta_GUI
             try
             {
                 PoliciaADO objPoliciaADO = new PoliciaADO();
-
-                cboProvincia.DataSource =
-                    objPoliciaADO.ListarProvincias(cboDepartamento.Text);
-
+                cboProvincia.DataSource = objPoliciaADO.ListarProvincias(cboDepartamento.Text);
                 cboProvincia.DisplayMember = "PROVINCIA";
             }
-            catch
+            catch (Exception ex)
             {
-
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
 
@@ -248,16 +227,13 @@ namespace ProyPapeleta_GUI
             try
             {
                 PoliciaADO objPoliciaADO = new PoliciaADO();
-
-                cboDistrito.DataSource =
-                    objPoliciaADO.ListarDistritos(cboProvincia.Text);
-
+                cboDistrito.DataSource = objPoliciaADO.ListarDistritos(cboProvincia.Text);
                 cboDistrito.DisplayMember = "DISTRITO";
                 cboDistrito.ValueMember = "COD_UBIGEO";
             }
-            catch
+            catch (Exception ex)
             {
-
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
 
@@ -269,8 +245,6 @@ namespace ProyPapeleta_GUI
         {
 
         }
-
-
 
         private void btnAgregar_Click_2(object sender, EventArgs e)
         {
@@ -302,6 +276,7 @@ namespace ProyPapeleta_GUI
                 if (bl.ActualizarPolicia(objPoliciaBE))
                 {
                     MessageBox.Show("Actualizado correctamente");
+                    Formulario?.RefrescarGrid();
                     this.Close();
                 }
                 else
@@ -318,13 +293,10 @@ namespace ProyPapeleta_GUI
         private void btnCargarFoto_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-
             ofd.Filter = "Archivos de Imagen|*.jpg;*.jpeg;*.png;*.bmp";
-
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 pcbFoto.Image = Image.FromFile(ofd.FileName);
-
                 pcbFoto.SizeMode = PictureBoxSizeMode.StretchImage;
             }
         }
@@ -334,9 +306,7 @@ namespace ProyPapeleta_GUI
             try
             {
                 OpenFileDialog ofd = new OpenFileDialog();
-
                 ofd.Filter = "Archivos de Imagen|*.jpg;*.jpeg;*.png;*.bmp";
-
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
                     pcbFoto.Image = Image.FromFile(ofd.FileName);

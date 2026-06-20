@@ -316,7 +316,7 @@ namespace ProyPapeleta_GUI
                 {
                     MessageBox.Show(
                         "Policia registrado correctamente");
-
+                    Formulario?.RefrescarGrid();
                     this.Close();
                 }
                 else
