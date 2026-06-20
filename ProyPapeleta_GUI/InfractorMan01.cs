@@ -401,5 +401,10 @@ namespace ProyPapeleta_GUI
                     PictureBoxSizeMode.StretchImage;
             }
         }
+
+        private void InfractorMan01_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -199,10 +199,7 @@ namespace ProyPapeleta_GUI
             }
         }
 
-        public void RefrescarGrid()
-        {
-            CargarPolicias();
-        }
+        
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
             txtFiltro.Text = ""; // Limpia el cuadro de texto

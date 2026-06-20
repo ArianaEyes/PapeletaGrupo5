@@ -473,6 +473,7 @@
             Name = "InfractorMan01";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Insertar Infractor";
+            Load += InfractorMan01_Load_1;
             grpInfractor.ResumeLayout(false);
             grpInfractor.PerformLayout();
             grpFoto.ResumeLayout(false);
