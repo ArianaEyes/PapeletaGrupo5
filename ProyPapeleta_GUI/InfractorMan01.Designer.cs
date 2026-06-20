@@ -326,6 +326,7 @@
             txtNumBrevete.Name = "txtNumBrevete";
             txtNumBrevete.Size = new Size(184, 23);
             txtNumBrevete.TabIndex = 8;
+            txtNumBrevete.TextChanged += txtNumBrevete_TextChanged;
             txtNumBrevete.KeyPress += txtNumBrevete_KeyPress;
             // 
             // txtDireccion

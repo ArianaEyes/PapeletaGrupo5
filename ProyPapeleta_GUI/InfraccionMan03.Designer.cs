@@ -85,7 +85,7 @@
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(131, 25);
             btnEliminar.TabIndex = 3;
-            btnEliminar.Text = "Eliminar";
+            btnEliminar.Text = "Desactivar";
             btnEliminar.UseVisualStyleBackColor = true;
             btnEliminar.Click += btnEliminar_Click;
             // 

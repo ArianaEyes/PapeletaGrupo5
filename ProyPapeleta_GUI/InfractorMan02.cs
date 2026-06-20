@@ -43,6 +43,7 @@ namespace ProyPapeleta_GUI
             txtNroBrevete.KeyPress += txtNroBrevete_KeyPress;
 
             txtDNI.MaxLength = 8;
+            txtNroBrevete.MaxLength = 8;
         }
 
         private void InfractorMan02_Load(object sender, EventArgs e)
@@ -231,12 +232,35 @@ namespace ProyPapeleta_GUI
 
         private void txtNroBrevete_Validating(object sender, CancelEventArgs e)
         {
-            if (txtNroBrevete.Text.Trim() == "") {
+            string brevete = txtNroBrevete.Text.Trim().ToUpper();
+
+            bool formatoValido = brevete.Length == 8 && brevete[0] == 'B';
+
+            if (formatoValido)
+            {
+                for (int i = 1; i < brevete.Length; i++)
+                {
+                    if (!char.IsDigit(brevete[i]))
+                    {
+                        formatoValido = false;
+                        break;
+                    }
+                }
+            }
+
+            if (brevete == "")
+            {
                 errorProvider1.SetError(txtNroBrevete, "Ingrese número de brevete");
+                e.Cancel = true;
+            }
+            else if (!formatoValido)
+            {
+                errorProvider1.SetError(txtNroBrevete, "El Brevete debe iniciar con 'B' seguido de 7 números (Ej: B1234567)");
                 e.Cancel = true;
             }
             else
             {
+                txtNroBrevete.Text = brevete;
                 errorProvider1.SetError(txtNroBrevete, "");
             }
         }
@@ -286,10 +310,24 @@ namespace ProyPapeleta_GUI
 
         private void txtNroBrevete_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) &&
-                !char.IsControl(e.KeyChar))
+            if (char.IsControl(e.KeyChar))
             {
-                MessageBox.Show("Solo se permiten números");
+                return;
+            }
+
+            if (txtNroBrevete.SelectionStart == 0)
+            {
+                if (char.ToUpper(e.KeyChar) != 'B')
+                {
+                    MessageBox.Show("El Brevete debe iniciar con la letra B");
+                    e.Handled = true;
+                    return;
+                }
+                e.KeyChar = 'B';
+            }
+            else if (!char.IsDigit(e.KeyChar))
+            {
+                MessageBox.Show("Después de la B solo se permiten números");
                 e.Handled = true;
             }
         }

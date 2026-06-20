@@ -38,6 +38,7 @@ namespace ProyPapeleta_GUI
             txtApeMaterno.KeyPress += txtApeMaterno_KeyPress;
 
             txtDNI.MaxLength = 8;
+            txtNumBrevete.MaxLength = 8;
         }
 
         private void InfractorMan01_Load(object sender, EventArgs e)
@@ -90,6 +91,7 @@ namespace ProyPapeleta_GUI
             if (txtNombres.Text.Trim() == "")
             {
                 errorProvider1.SetError(txtNombres, "Ingrese nombres");
+                e.Cancel = true;
             }
             else
             {
@@ -102,6 +104,7 @@ namespace ProyPapeleta_GUI
             if (txtApePaterno.Text.Trim() == "")
             {
                 errorProvider1.SetError(txtApePaterno, "Ingrese apellido paterno");
+                e.Cancel = true;
             }
             else
             {
@@ -114,6 +117,7 @@ namespace ProyPapeleta_GUI
             if (txtApeMaterno.Text.Trim() == "")
             {
                 errorProvider1.SetError(txtApeMaterno, "Ingrese apellido materno");
+                e.Cancel = true;
             }
             else
             {
@@ -135,11 +139,12 @@ namespace ProyPapeleta_GUI
             if (txtDNI.Text.Trim() == "")
             {
                 errorProvider1.SetError(txtDNI, "Ingrese DNI");
-
+                e.Cancel = true;
             }
             else if (txtDNI.Text.Length != 8)
             {
                 errorProvider1.SetError(txtDNI, "El DNI debe tener 8 dígitos");
+                e.Cancel = true;
             }
             else
             {
@@ -152,11 +157,13 @@ namespace ProyPapeleta_GUI
             if (txtCorreo.Text.Trim() == "")
             {
                 errorProvider1.SetError(txtCorreo, "Ingrese correo");
+                e.Cancel = true;
 
             }
             else if (!txtCorreo.Text.Contains("@") || !txtCorreo.Text.Contains("."))
             {
                 errorProvider1.SetError(txtCorreo, "Correo inválido");
+                e.Cancel = true;
             }
             else
             {
@@ -169,6 +176,7 @@ namespace ProyPapeleta_GUI
             if (txtDireccion.Text.Trim() == "")
             {
                 errorProvider1.SetError(txtDireccion, "Ingrese dirección");
+                e.Cancel = true;
             }
             else
             {
@@ -178,25 +186,59 @@ namespace ProyPapeleta_GUI
 
         private void txtNumBrevete_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            if (char.IsControl(e.KeyChar))
             {
-                MessageBox.Show("Solo se permiten números");
+                return;
+            }
+
+            if (txtNumBrevete.SelectionStart == 0)
+            {
+                if (char.ToUpper(e.KeyChar) != 'B')
+                {
+                    MessageBox.Show("El Brevete debe iniciar con la letra B");
+                    e.Handled = true;
+                    return;
+                }
+                e.KeyChar = 'B';
+            }
+            else if (!char.IsDigit(e.KeyChar))
+            {
+                MessageBox.Show("Después de la B solo se permiten números");
                 e.Handled = true;
             }
         }
 
         private void txtNumBrevete_Validating(object sender, CancelEventArgs e)
         {
-            if (txtNumBrevete.Text.Trim() == "")
+            string brevete = txtNumBrevete.Text.Trim().ToUpper();
+
+            bool formatoValido = brevete.Length == 8 && brevete[0] == 'B';
+
+            if (formatoValido)
+            {
+                for (int i = 1; i < brevete.Length; i++)
+                {
+                    if (!char.IsDigit(brevete[i]))
+                    {
+                        formatoValido = false;
+                        break;
+                    }
+                }
+            }
+
+            if (brevete == "")
             {
                 errorProvider1.SetError(txtNumBrevete, "Ingrese su Brevete");
+                e.Cancel = true;
             }
-            else if (txtNumBrevete.Text.Length != 8)
+            else if (!formatoValido)
             {
-                errorProvider1.SetError(txtNumBrevete, "El Brevete debe tener 8 dígitos");
+                errorProvider1.SetError(txtNumBrevete, "El Brevete debe iniciar con 'B' seguido de 7 números (Ej: B1234567)");
+                e.Cancel = true;
             }
             else
             {
+                txtNumBrevete.Text = brevete;
                 errorProvider1.SetError(txtNumBrevete, "");
             }
         }
@@ -273,10 +315,10 @@ namespace ProyPapeleta_GUI
                     objInfractorBE.SEXO = "F";
                 }
 
-                objInfractorBE.FEC_NACIMIENTO =  dtpFecNacimiento.Value;
+                objInfractorBE.FEC_NACIMIENTO = dtpFecNacimiento.Value;
                 objInfractorBE.NRO_BREVETE = txtNumBrevete.Text;
                 objInfractorBE.TIPO_BREVETE = cboTipoBrevete.Text;
-                objInfractorBE.USU_REGISTRO =  "ADMIN";
+                objInfractorBE.USU_REGISTRO = "ADMIN";
                 objInfractorBE.ESTADO = "A";
 
                 MemoryStream ms = new MemoryStream();
@@ -323,6 +365,11 @@ namespace ProyPapeleta_GUI
         }
 
         private void InfractorMan01_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNumBrevete_TextChanged(object sender, EventArgs e)
         {
 
         }
