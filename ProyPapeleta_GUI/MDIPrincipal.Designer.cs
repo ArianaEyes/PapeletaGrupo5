@@ -34,9 +34,6 @@
             infractoresToolStripMenuItem = new ToolStripMenuItem();
             infraccionesToolStripMenuItem = new ToolStripMenuItem();
             consultasToolStripMenuItem = new ToolStripMenuItem();
-            consultarDatosToolStripMenuItem = new ToolStripMenuItem();
-            consultarPorInfractorToolStripMenuItem = new ToolStripMenuItem();
-            consultarPorInfracciónToolStripMenuItem = new ToolStripMenuItem();
             consultarMultasToolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItem1 = new ToolStripSeparator();
             obtenerExcelsToolStripMenuItem = new ToolStripMenuItem();
@@ -73,7 +70,7 @@
             policíasToolStripMenuItem.Image = Properties.Resources.Usuario;
             policíasToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             policíasToolStripMenuItem.Name = "policíasToolStripMenuItem";
-            policíasToolStripMenuItem.Size = new Size(146, 30);
+            policíasToolStripMenuItem.Size = new Size(188, 30);
             policíasToolStripMenuItem.Text = "Policías";
             policíasToolStripMenuItem.Click += policíasToolStripMenuItem_Click;
             // 
@@ -82,7 +79,7 @@
             infractoresToolStripMenuItem.Image = Properties.Resources.users3;
             infractoresToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             infractoresToolStripMenuItem.Name = "infractoresToolStripMenuItem";
-            infractoresToolStripMenuItem.Size = new Size(146, 30);
+            infractoresToolStripMenuItem.Size = new Size(188, 30);
             infractoresToolStripMenuItem.Text = "Infractores";
             infractoresToolStripMenuItem.Click += infractoresToolStripMenuItem_Click;
             // 
@@ -91,66 +88,39 @@
             infraccionesToolStripMenuItem.Image = Properties.Resources.database_table;
             infraccionesToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             infraccionesToolStripMenuItem.Name = "infraccionesToolStripMenuItem";
-            infraccionesToolStripMenuItem.Size = new Size(146, 30);
+            infraccionesToolStripMenuItem.Size = new Size(188, 30);
             infraccionesToolStripMenuItem.Text = "Infracciones";
             infraccionesToolStripMenuItem.Click += infraccionesToolStripMenuItem_Click;
             // 
             // consultasToolStripMenuItem
             // 
-            consultasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { consultarDatosToolStripMenuItem, consultarPorInfractorToolStripMenuItem, consultarPorInfracciónToolStripMenuItem, consultarMultasToolStripMenuItem, toolStripMenuItem1, obtenerExcelsToolStripMenuItem });
+            consultasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { consultarMultasToolStripMenuItem, toolStripMenuItem1, obtenerExcelsToolStripMenuItem });
             consultasToolStripMenuItem.Image = Properties.Resources.Buscar;
             consultasToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
             consultasToolStripMenuItem.Size = new Size(87, 22);
             consultasToolStripMenuItem.Text = "Consultas";
             // 
-            // consultarDatosToolStripMenuItem
-            // 
-            consultarDatosToolStripMenuItem.Image = Properties.Resources.Usuario;
-            consultarDatosToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
-            consultarDatosToolStripMenuItem.Name = "consultarDatosToolStripMenuItem";
-            consultarDatosToolStripMenuItem.Size = new Size(210, 30);
-            consultarDatosToolStripMenuItem.Text = "Consultar por Policia";
-            consultarDatosToolStripMenuItem.Click += consultarDatosToolStripMenuItem_Click;
-            // 
-            // consultarPorInfractorToolStripMenuItem
-            // 
-            consultarPorInfractorToolStripMenuItem.Image = Properties.Resources.group_delete;
-            consultarPorInfractorToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
-            consultarPorInfractorToolStripMenuItem.Name = "consultarPorInfractorToolStripMenuItem";
-            consultarPorInfractorToolStripMenuItem.Size = new Size(210, 30);
-            consultarPorInfractorToolStripMenuItem.Text = "Consultar por Infractor";
-            consultarPorInfractorToolStripMenuItem.Click += consultarPorInfractorToolStripMenuItem_Click;
-            // 
-            // consultarPorInfracciónToolStripMenuItem
-            // 
-            consultarPorInfracciónToolStripMenuItem.Image = Properties.Resources.book;
-            consultarPorInfracciónToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
-            consultarPorInfracciónToolStripMenuItem.Name = "consultarPorInfracciónToolStripMenuItem";
-            consultarPorInfracciónToolStripMenuItem.Size = new Size(210, 30);
-            consultarPorInfracciónToolStripMenuItem.Text = "Consultar por Infracción";
-            consultarPorInfracciónToolStripMenuItem.Click += consultarPorInfracciónToolStripMenuItem_Click;
-            // 
             // consultarMultasToolStripMenuItem
             // 
             consultarMultasToolStripMenuItem.Image = Properties.Resources.book_open;
             consultarMultasToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             consultarMultasToolStripMenuItem.Name = "consultarMultasToolStripMenuItem";
-            consultarMultasToolStripMenuItem.Size = new Size(210, 30);
+            consultarMultasToolStripMenuItem.Size = new Size(188, 30);
             consultarMultasToolStripMenuItem.Text = "Consultar Multas";
             consultarMultasToolStripMenuItem.Click += consultarMultasToolStripMenuItem_Click;
             // 
             // toolStripMenuItem1
             // 
             toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(207, 6);
+            toolStripMenuItem1.Size = new Size(185, 6);
             // 
             // obtenerExcelsToolStripMenuItem
             // 
             obtenerExcelsToolStripMenuItem.Image = Properties.Resources.form_green;
             obtenerExcelsToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             obtenerExcelsToolStripMenuItem.Name = "obtenerExcelsToolStripMenuItem";
-            obtenerExcelsToolStripMenuItem.Size = new Size(210, 30);
+            obtenerExcelsToolStripMenuItem.Size = new Size(188, 30);
             obtenerExcelsToolStripMenuItem.Text = "Listado de Excel";
             obtenerExcelsToolStripMenuItem.Click += obtenerExcelsToolStripMenuItem_Click;
             // 
@@ -168,7 +138,7 @@
             salirToolStripMenuItem.Image = Properties.Resources.arrow_right;
             salirToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            salirToolStripMenuItem.Size = new Size(96, 22);
+            salirToolStripMenuItem.Size = new Size(180, 22);
             salirToolStripMenuItem.Text = "Salir";
             salirToolStripMenuItem.Click += salirToolStripMenuItem_Click;
             // 
@@ -203,6 +173,7 @@
             Controls.Add(menuStrip1);
             IsMdiContainer = true;
             Name = "MDIPrincipal";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "MDIPrincipal";
             WindowState = FormWindowState.Maximized;
             Load += MDIPrincipal_Load;
@@ -222,13 +193,10 @@
         private ToolStripMenuItem infractoresToolStripMenuItem;
         private ToolStripMenuItem infraccionesToolStripMenuItem;
         private ToolStripMenuItem consultasToolStripMenuItem;
-        private ToolStripMenuItem consultarDatosToolStripMenuItem;
         private ToolStripMenuItem salirDelSistemaToolStripMenuItem;
         private ToolStripMenuItem salirToolStripMenuItem;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel lblUsuario;
-        private ToolStripMenuItem consultarPorInfractorToolStripMenuItem;
-        private ToolStripMenuItem consultarPorInfracciónToolStripMenuItem;
         private ToolStripMenuItem consultarMultasToolStripMenuItem;
         private ToolStripSeparator toolStripMenuItem1;
         private ToolStripMenuItem obtenerExcelsToolStripMenuItem;
