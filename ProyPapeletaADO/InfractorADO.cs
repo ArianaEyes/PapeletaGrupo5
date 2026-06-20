@@ -323,8 +323,8 @@ namespace ProyPapeletaADO
 
                         cmd.Parameters.AddWithValue("@COD_INFRACTOR", codigoInfractor);
 
-                        cmd.Parameters.AddWithValue("@FECINI", new DateTime(2000, 1, 1));
-                        cmd.Parameters.AddWithValue("@FECFIN", new DateTime(2050, 12, 31));
+                        cmd.Parameters.AddWithValue("@FECINI", fecIni);
+                        cmd.Parameters.AddWithValue("@FECFIN", fecFin);
 
                         using (SqlDataAdapter ada = new SqlDataAdapter(cmd))
                         {
