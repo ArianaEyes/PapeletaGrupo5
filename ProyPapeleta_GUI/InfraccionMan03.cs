@@ -103,7 +103,7 @@ namespace ProyPapeleta_GUI
                 dtgInfraccion.Columns["CALIFICACION"].HeaderText = "Calificación";
                 dtgInfraccion.Columns["PUNTOS"].HeaderText = "Puntos";
                 dtgInfraccion.Columns["UIT"].HeaderText = "UIT (%)";
-                
+
 
                 if (dtgInfraccion.Columns.Contains("FEC_REGISTRO")) dtgInfraccion.Columns["FEC_REGISTRO"].Visible = false;
                 if (dtgInfraccion.Columns.Contains("USU_REGISTRO")) dtgInfraccion.Columns["USU_REGISTRO"].Visible = false;
@@ -199,12 +199,12 @@ namespace ProyPapeleta_GUI
             }
         }
 
-        
+
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
             txtFiltro.Text = ""; // Limpia el cuadro de texto
             dtv = null;          // Fuerza a traer los datos limpios de la BD
-            CargarDatos("");     
+            CargarDatos("");
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -215,6 +215,11 @@ namespace ProyPapeleta_GUI
         private void txtFiltro_TextChanged(object sender, EventArgs e)
         {
             CargarDatos(txtFiltro.Text.Trim());
+        }
+
+        private void lblRegistros_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

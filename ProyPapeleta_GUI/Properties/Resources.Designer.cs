@@ -183,6 +183,16 @@ namespace ProyPapeleta_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Trafico {
+            get {
+                object obj = ResourceManager.GetObject("Trafico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap users3 {
             get {
                 object obj = ResourceManager.GetObject("users3", resourceCulture);

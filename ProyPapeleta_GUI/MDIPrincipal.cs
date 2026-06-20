@@ -150,4 +150,3 @@ namespace ProyPapeleta_GUI
         }
     }
 }
-

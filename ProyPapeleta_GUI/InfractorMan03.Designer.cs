@@ -133,7 +133,7 @@
             Controls.Add(label1);
             Name = "InfractorMan03";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "InfractorMan03";
+            Text = "Listado de Infractores";
             Load += InfractorMan03_Load_1;
             ((System.ComponentModel.ISupportInitialize)dtgInfractor).EndInit();
             ((System.ComponentModel.ISupportInitialize)infractorBLBindingSource).EndInit();
