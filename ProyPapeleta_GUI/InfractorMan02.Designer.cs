@@ -30,7 +30,7 @@
         {
             groupBox1 = new GroupBox();
             label13 = new Label();
-            checkBox1 = new CheckBox();
+            chkActivo = new CheckBox();
             btnSubirFoto = new Button();
             grpFoto = new GroupBox();
             pcbFoto = new PictureBox();
@@ -75,7 +75,7 @@
             // 
             groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             groupBox1.Controls.Add(label13);
-            groupBox1.Controls.Add(checkBox1);
+            groupBox1.Controls.Add(chkActivo);
             groupBox1.Controls.Add(btnSubirFoto);
             groupBox1.Controls.Add(grpFoto);
             groupBox1.Controls.Add(txtNroBrevete);
@@ -126,16 +126,16 @@
             label13.TabIndex = 33;
             label13.Text = "Estado:";
             // 
-            // checkBox1
+            // chkActivo
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(133, 378);
-            checkBox1.Margin = new Padding(2, 1, 2, 1);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(60, 19);
-            checkBox1.TabIndex = 14;
-            checkBox1.Text = "Activo";
-            checkBox1.UseVisualStyleBackColor = true;
+            chkActivo.AutoSize = true;
+            chkActivo.Location = new Point(133, 378);
+            chkActivo.Margin = new Padding(2, 1, 2, 1);
+            chkActivo.Name = "chkActivo";
+            chkActivo.Size = new Size(60, 19);
+            chkActivo.TabIndex = 14;
+            chkActivo.Text = "Activo";
+            chkActivo.UseVisualStyleBackColor = true;
             // 
             // btnSubirFoto
             // 
@@ -530,6 +530,6 @@
         private Button btnSubirFoto;
         private PictureBox pcbFoto;
         private Label label13;
-        private CheckBox checkBox1;
+        private CheckBox chkActivo;
     }
 }

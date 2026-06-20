@@ -52,91 +52,42 @@ namespace ProyPapeletaADO
         }
         public Boolean ActualizarInfractor(InfractorBE objBE)
         {
-            IConfigurationBuilder builder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json");
-
-            IConfigurationRoot configuration = builder.Build();
-
-            string cadena =
-                configuration.GetConnectionString("Papeleta");
-
-            SqlConnection cnx = new SqlConnection(cadena);
-
-            SqlCommand cmd =
-                new SqlCommand("SP_ACTUALIZAR_INFRACTOR", cnx);
-
-            cmd.CommandType = CommandType.StoredProcedure;
-
-            cmd.Parameters.AddWithValue("@COD_INFRACTOR",
-                                         objBE.COD_INFRACTOR);
-
-            cmd.Parameters.AddWithValue("@NOMBRES",
-                                         objBE.NOMBRES);
-
-            cmd.Parameters.AddWithValue("@APE_PATERNO",
-                                         objBE.APE_PATERNO);
-
-            cmd.Parameters.AddWithValue("@APE_MATERNO",
-                                         objBE.APE_MATERNO);
-
-            cmd.Parameters.AddWithValue("@DNI",
-                                         objBE.DNI);
-
-            cmd.Parameters.AddWithValue("@CORREO",
-                                         objBE.CORREO);
-
-            cmd.Parameters.AddWithValue("@DIRECCION",
-                                         objBE.DIRECCION);
-
-            cmd.Parameters.AddWithValue("@COD_UBIGEO",
-                                         objBE.COD_UBIGEO);
-
-            cmd.Parameters.AddWithValue("@NRO_BREVETE",
-                             objBE.NRO_BREVETE);
-
-            cmd.Parameters.AddWithValue("@TIPO_BREVETE",
-                                         objBE.TIPO_BREVETE);
-
-            cmd.Parameters.AddWithValue("@FEC_NACIMIENTO",
-                                         objBE.FEC_NACIMIENTO);
-
-            cmd.Parameters.AddWithValue("@SEXO",
-                                         objBE.SEXO);
-
-            cmd.Parameters.AddWithValue("@ESTADO",
-                                         objBE.ESTADO);
-
-            cmd.Parameters.AddWithValue("@USU_ULT_MODIFICACION", "ADMIN");
-
-            SqlParameter pcbFoto = new SqlParameter("@FOTO", SqlDbType.VarBinary);
-
-            if (objBE.FOTO != null)
-            {
-                pcbFoto.Value = objBE.FOTO;
-            }
-            else
-            {
-                pcbFoto.Value = DBNull.Value;
-            }
-
-            cmd.Parameters.Add(pcbFoto);
-
             try
             {
-                cnx.Open();
+                using (SqlConnection cnx = new SqlConnection(Configuracion.PAPELETA))
+                {
+                    using (SqlCommand cmd = new SqlCommand("SP_ACTUALIZAR_INFRACTOR", cnx))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.ExecuteNonQuery();
+                        cmd.Parameters.AddWithValue("@COD_INFRACTOR", objBE.COD_INFRACTOR);
+                        cmd.Parameters.AddWithValue("@NOMBRES", objBE.NOMBRES);
+                        cmd.Parameters.AddWithValue("@APE_PATERNO", objBE.APE_PATERNO);
+                        cmd.Parameters.AddWithValue("@APE_MATERNO", objBE.APE_MATERNO);
+                        cmd.Parameters.AddWithValue("@DNI", objBE.DNI);
+                        cmd.Parameters.AddWithValue("@CORREO", objBE.CORREO);
+                        cmd.Parameters.AddWithValue("@DIRECCION", objBE.DIRECCION);
+                        cmd.Parameters.AddWithValue("@COD_UBIGEO", objBE.COD_UBIGEO);
+                        cmd.Parameters.AddWithValue("@NRO_BREVETE", objBE.NRO_BREVETE);
+                        cmd.Parameters.AddWithValue("@TIPO_BREVETE", objBE.TIPO_BREVETE);
+                        cmd.Parameters.AddWithValue("@FEC_NACIMIENTO", objBE.FEC_NACIMIENTO);
+                        cmd.Parameters.AddWithValue("@SEXO", objBE.SEXO);
+                        cmd.Parameters.AddWithValue("@ESTADO", objBE.ESTADO);
+                        cmd.Parameters.AddWithValue("@USU_ULT_MODIFICACION", "ADMIN");
 
-                return true;
+                        SqlParameter pcbFoto = new SqlParameter("@FOTO", SqlDbType.VarBinary, -1);
+                        pcbFoto.Value = (object)objBE.FOTO ?? DBNull.Value;
+                        cmd.Parameters.Add(pcbFoto);
+
+                        cnx.Open();
+                        cmd.ExecuteNonQuery();
+                        return true;
+                    }
+                }
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
-            }
-            finally
-            {
-                cnx.Close();
+                throw new Exception("Error al actualizar Infractor: " + ex.Message);
             }
         }
 

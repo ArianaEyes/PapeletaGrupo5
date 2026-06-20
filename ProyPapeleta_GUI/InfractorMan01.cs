@@ -45,15 +45,9 @@ namespace ProyPapeleta_GUI
             try
             {
                 InfractorADO objInfractorADO = new InfractorADO();
-
-                cboDepartamento.DataSource =
-                    objInfractorADO.ListarDepartamentos();
-
+                cboDepartamento.DataSource = objInfractorADO.ListarDepartamentos();
                 cboDepartamento.DisplayMember = "DEPARTAMENTO";
-
-                cboTipoBrevete.DataSource =
-                    objInfractorADO.ListarTiposBrevete();
-
+                cboTipoBrevete.DataSource = objInfractorADO.ListarTiposBrevete();
                 cboTipoBrevete.DisplayMember = "TIPO_BREVETE";
             }
             catch (Exception ex)
@@ -67,15 +61,12 @@ namespace ProyPapeleta_GUI
             try
             {
                 InfractorADO objInfractorADO = new InfractorADO();
-
-                cboProvincia.DataSource =
-                    objInfractorADO.ListarProvincias(cboDepartamento.Text);
-
+                cboProvincia.DataSource = objInfractorADO.ListarProvincias(cboDepartamento.Text);
                 cboProvincia.DisplayMember = "PROVINCIA";
             }
-            catch
+            catch (Exception ex)
             {
-
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
 
@@ -84,16 +75,13 @@ namespace ProyPapeleta_GUI
             try
             {
                 InfractorADO objInfractorADO = new InfractorADO();
-
-                cboDistrito.DataSource =
-                    objInfractorADO.ListarDistritos(cboProvincia.Text);
-
+                cboDistrito.DataSource = objInfractorADO.ListarDistritos(cboProvincia.Text);
                 cboDistrito.DisplayMember = "DISTRITO";
                 cboDistrito.ValueMember = "COD_UBIGEO";
             }
-            catch
+            catch (Exception ex)
             {
-
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
 
@@ -101,10 +89,7 @@ namespace ProyPapeleta_GUI
         {
             if (txtNombres.Text.Trim() == "")
             {
-                errorProvider1.SetError(txtNombres,
-                    "Ingrese nombres");
-
-
+                errorProvider1.SetError(txtNombres, "Ingrese nombres");
             }
             else
             {
@@ -116,9 +101,7 @@ namespace ProyPapeleta_GUI
         {
             if (txtApePaterno.Text.Trim() == "")
             {
-                errorProvider1.SetError(txtApePaterno,
-                    "Ingrese apellido paterno");
-
+                errorProvider1.SetError(txtApePaterno, "Ingrese apellido paterno");
             }
             else
             {
@@ -130,9 +113,7 @@ namespace ProyPapeleta_GUI
         {
             if (txtApeMaterno.Text.Trim() == "")
             {
-                errorProvider1.SetError(txtApeMaterno,
-                    "Ingrese apellido materno");
-
+                errorProvider1.SetError(txtApeMaterno, "Ingrese apellido materno");
             }
             else
             {
@@ -142,12 +123,9 @@ namespace ProyPapeleta_GUI
 
         private void txtDNI_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) &&
-                !char.IsControl(e.KeyChar))
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
-                MessageBox.Show(
-                    "Solo se permiten números");
-
+                MessageBox.Show("Solo se permiten números");
                 e.Handled = true;
             }
         }
@@ -156,15 +134,12 @@ namespace ProyPapeleta_GUI
         {
             if (txtDNI.Text.Trim() == "")
             {
-                errorProvider1.SetError(txtDNI,
-                    "Ingrese DNI");
+                errorProvider1.SetError(txtDNI, "Ingrese DNI");
 
             }
             else if (txtDNI.Text.Length != 8)
             {
-                errorProvider1.SetError(txtDNI,
-                    "El DNI debe tener 8 dígitos");
-
+                errorProvider1.SetError(txtDNI, "El DNI debe tener 8 dígitos");
             }
             else
             {
@@ -176,16 +151,12 @@ namespace ProyPapeleta_GUI
         {
             if (txtCorreo.Text.Trim() == "")
             {
-                errorProvider1.SetError(txtCorreo,
-                    "Ingrese correo");
+                errorProvider1.SetError(txtCorreo, "Ingrese correo");
 
             }
-            else if (!txtCorreo.Text.Contains("@") ||
-                     !txtCorreo.Text.Contains("."))
+            else if (!txtCorreo.Text.Contains("@") || !txtCorreo.Text.Contains("."))
             {
-                errorProvider1.SetError(txtCorreo,
-                    "Correo inválido");
-
+                errorProvider1.SetError(txtCorreo, "Correo inválido");
             }
             else
             {
@@ -197,9 +168,7 @@ namespace ProyPapeleta_GUI
         {
             if (txtDireccion.Text.Trim() == "")
             {
-                errorProvider1.SetError(txtDireccion,
-                    "Ingrese dirección");
-
+                errorProvider1.SetError(txtDireccion, "Ingrese dirección");
             }
             else
             {
@@ -209,12 +178,9 @@ namespace ProyPapeleta_GUI
 
         private void txtNumBrevete_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) &&
-                !char.IsControl(e.KeyChar))
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
-                MessageBox.Show(
-                    "Solo se permiten números");
-
+                MessageBox.Show("Solo se permiten números");
                 e.Handled = true;
             }
         }
@@ -223,15 +189,11 @@ namespace ProyPapeleta_GUI
         {
             if (txtNumBrevete.Text.Trim() == "")
             {
-                errorProvider1.SetError(txtNumBrevete,
-                    "Ingrese su Brevete");
-
+                errorProvider1.SetError(txtNumBrevete, "Ingrese su Brevete");
             }
             else if (txtNumBrevete.Text.Length != 8)
             {
-                errorProvider1.SetError(txtNumBrevete,
-                    "El Brevete debe tener 8 dígitos");
-
+                errorProvider1.SetError(txtNumBrevete, "El Brevete debe tener 8 dígitos");
             }
             else
             {
@@ -245,9 +207,7 @@ namespace ProyPapeleta_GUI
                 !char.IsWhiteSpace(e.KeyChar) &&
                 !char.IsControl(e.KeyChar))
             {
-                MessageBox.Show(
-                    "Solo se permiten letras");
-
+                MessageBox.Show("Solo se permiten letras");
                 e.Handled = true;
             }
         }
@@ -258,9 +218,7 @@ namespace ProyPapeleta_GUI
                 !char.IsWhiteSpace(e.KeyChar) &&
                 !char.IsControl(e.KeyChar))
             {
-                MessageBox.Show(
-                    "Solo se permiten letras");
-
+                MessageBox.Show("Solo se permiten letras");
                 e.Handled = true;
             }
         }
@@ -271,9 +229,7 @@ namespace ProyPapeleta_GUI
                 !char.IsWhiteSpace(e.KeyChar) &&
                 !char.IsControl(e.KeyChar))
             {
-                MessageBox.Show(
-                    "Solo se permiten letras");
-
+                MessageBox.Show("Solo se permiten letras");
                 e.Handled = true;
             }
         }
@@ -300,26 +256,13 @@ namespace ProyPapeleta_GUI
                 InfractorBE objInfractorBE =
                     new InfractorBE();
 
-                objInfractorBE.NOMBRES =
-                    txtNombres.Text;
-
-                objInfractorBE.APE_PATERNO =
-                    txtApePaterno.Text;
-
-                objInfractorBE.APE_MATERNO =
-                    txtApeMaterno.Text;
-
-                objInfractorBE.DNI =
-                    txtDNI.Text;
-
-                objInfractorBE.CORREO =
-                    txtCorreo.Text;
-
-                objInfractorBE.DIRECCION =
-                    txtDireccion.Text;
-
-                objInfractorBE.COD_UBIGEO =
-                    cboDistrito.SelectedValue.ToString();
+                objInfractorBE.NOMBRES = txtNombres.Text;
+                objInfractorBE.APE_PATERNO = txtApePaterno.Text;
+                objInfractorBE.APE_MATERNO = txtApeMaterno.Text;
+                objInfractorBE.DNI = txtDNI.Text;
+                objInfractorBE.CORREO = txtCorreo.Text;
+                objInfractorBE.DIRECCION = txtDireccion.Text;
+                objInfractorBE.COD_UBIGEO = cboDistrito.SelectedValue.ToString();
 
                 if (optMasculino.Checked)
                 {
@@ -330,47 +273,29 @@ namespace ProyPapeleta_GUI
                     objInfractorBE.SEXO = "F";
                 }
 
-                objInfractorBE.FEC_NACIMIENTO =
-                    dtpFecNacimiento.Value;
+                objInfractorBE.FEC_NACIMIENTO =  dtpFecNacimiento.Value;
+                objInfractorBE.NRO_BREVETE = txtNumBrevete.Text;
+                objInfractorBE.TIPO_BREVETE = cboTipoBrevete.Text;
+                objInfractorBE.USU_REGISTRO =  "ADMIN";
+                objInfractorBE.ESTADO = "A";
 
-                objInfractorBE.NRO_BREVETE =
-                    txtNumBrevete.Text;
-
-                objInfractorBE.TIPO_BREVETE =
-                    cboTipoBrevete.Text;
-
-                objInfractorBE.USU_REGISTRO =
-                    "ADMIN";
-
-                MemoryStream ms =
-                    new MemoryStream();
-
-                pcbFoto.Image.Save(
-                    ms,
-                    System.Drawing.Imaging.ImageFormat.Jpeg);
-
-                objInfractorBE.FOTO =
-                    ms.ToArray();
-
-                InfractorADO objInfractorADO =
-                    new InfractorADO();
+                MemoryStream ms = new MemoryStream();
+                pcbFoto.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                objInfractorBE.FOTO = ms.ToArray();
+                InfractorADO objInfractorADO = new InfractorADO();
 
                 if (objInfractorADO.InsertarInfractor(objInfractorBE))
                 {
-                    MessageBox.Show(
-                        "Infractor registrado correctamente");
-
+                    MessageBox.Show("Infractor registrado correctamente");
                     if (Formulario != null)
                     {
                         Formulario.RefrescarGrid();
                     }
-
                     this.Close();
                 }
                 else
                 {
-                    MessageBox.Show(
-                        "No se pudo registrar");
+                    MessageBox.Show("No se pudo registrar");
                 }
             }
             catch (Exception ex)
@@ -386,19 +311,14 @@ namespace ProyPapeleta_GUI
 
         private void btnFoto_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofd =
-                new OpenFileDialog();
+            OpenFileDialog ofd = new OpenFileDialog();
 
-            ofd.Filter =
-                "Archivos de Imagen|*.jpg;*.jpeg;*.png;*.bmp";
+            ofd.Filter = "Archivos de Imagen|*.jpg;*.jpeg;*.png;*.bmp";
 
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                pcbFoto.Image =
-                    Image.FromFile(ofd.FileName);
-
-                pcbFoto.SizeMode =
-                    PictureBoxSizeMode.StretchImage;
+                pcbFoto.Image = Image.FromFile(ofd.FileName);
+                pcbFoto.SizeMode = PictureBoxSizeMode.StretchImage;
             }
         }
 
