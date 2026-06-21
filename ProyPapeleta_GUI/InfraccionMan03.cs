@@ -179,14 +179,11 @@ namespace ProyPapeleta_GUI
             {
                 if (e.RowIndex < 0) return;
 
-                string codigo =
-                    dtgInfraccion.Rows[e.RowIndex].Cells["COD_INFRACCION"].Value.ToString();
-
+                string codigo = dtgInfraccion.Rows[e.RowIndex].Cells["COD_INFRACCION"].Value.ToString();
                 dtgInfraccion.AlternatingRowsDefaultCellStyle.BackColor = Color.AliceBlue;
-
                 InfraccionMan02 frm = new InfraccionMan02();
-
                 frm.Codigo = codigo;
+                frm.Formulario = this;
 
                 frm.ShowDialog();
 
@@ -197,6 +194,12 @@ namespace ProyPapeleta_GUI
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+        }
+
+        public void RefrescarGrid()
+        {
+            dtv = null;
+            CargarDatos(txtFiltro.Text.Trim());
         }
 
 

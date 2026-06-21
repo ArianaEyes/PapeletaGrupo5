@@ -14,6 +14,7 @@ namespace ProyPapeleta_GUI
     public partial class InfraccionMan02 : Form
     {
         public string Codigo = "";
+        public InfraccionMan03 Formulario;
 
         string[] calificacion = {
                 
@@ -103,6 +104,7 @@ namespace ProyPapeleta_GUI
                 if (bl.ActualizarInfraccion(objBE))
                 {
                     MessageBox.Show("Actualizado correctamente");
+                    Formulario?.RefrescarGrid();
                     this.Close();
                 }
                 else

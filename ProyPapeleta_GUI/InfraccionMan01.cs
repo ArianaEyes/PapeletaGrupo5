@@ -88,7 +88,7 @@ namespace ProyPapeleta_GUI
                 {
                     MessageBox.Show(
                         "Infraccion registrado correctamente");
-
+                    Formulario?.RefrescarGrid();
                     this.Close();
                 }
                 else

@@ -148,12 +148,9 @@ namespace ProyPapeleta_GUI
 
         private void PoliciaMan01_Load(object sender, EventArgs e)
         {
-
             try
             {
-
                 PoliciaADO objPoliciaADO = new PoliciaADO();
-                cboRango.SelectedIndex = 0;
                 cboDepartamento.DataSource = objPoliciaADO.ListarDepartamentos();
                 cboDepartamento.DisplayMember = "DEPARTAMENTO";
 
@@ -235,7 +232,7 @@ namespace ProyPapeleta_GUI
                 return false;
             }
 
-            if (cboRango.SelectedIndex <= 0)
+            if (cboRango.SelectedIndex == -1)
             {
                 MessageBox.Show("Seleccione Rango");
                 cboRango.Focus();

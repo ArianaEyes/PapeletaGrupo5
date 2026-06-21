@@ -162,7 +162,7 @@ namespace ProyPapeleta_GUI
 
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
-            txtFiltroo.Text = ""; // pa limpiar
+            txtFiltroo.Text = "";
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
